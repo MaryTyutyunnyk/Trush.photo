@@ -4,22 +4,16 @@
 
 .about {
 	&__container {
-		flex-direction: row;
 		padding: 4.5rem 2rem 8.3125rem;
 		width: 100%;
 	}
 
 	.portraitSection {
 		justify-content: inherit;
-		//width: 48%;
-		margin-right: 15%;
-		// Нужно добавить еще один контейнер вокруг фото
 
 		&__portrait {
 			width: 386px;
 			height: 386px;
-			object-fit: contain;
-			background-image: url("../../../png/portrait_tablet.png");
 
 			&::after {
 				right: -38px;
@@ -30,16 +24,10 @@
 		}
 
 		.socialSection {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			position: absolute;
 			left: 0;
-			//bottom: 5.5rem;
-			bottom: 8.5rem;
+			bottom: -64px;
 
 			&__item {
-				display: inline-flex;
 				margin-right: 1.5rem;
 
 				&:last-child {
@@ -48,7 +36,6 @@
 			}
 
 			&__link {
-				display: flex;
 				align-items: center;
 			}
 
@@ -68,7 +55,6 @@
 	}
 
 	.infoSection {
-		//width: 48%;
 
 		&__name {
 			font-size: 3rem;
@@ -89,6 +75,7 @@
 		}
 
 		&__description {
+			width: 100%;
 			margin-bottom: 4.5rem;
 			font-size: 1rem;
 		}

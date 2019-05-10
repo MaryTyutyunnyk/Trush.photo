@@ -4,7 +4,6 @@
 @import "../../components/navbar/_mobile.scss";
 
 .navbar {
-
 	.logo {
 		&__svg {
 			fill: $secondary;
@@ -34,7 +33,7 @@
 		width: 100%;
 		margin-bottom: 1.5rem;
 
-		&__container {
+		&__portraitContainer {
 			position: relative;
 		}
 
@@ -42,9 +41,8 @@
 			position: relative;
 			width: 212px;
 			height: 212px;
-			background-image: url("../../../png/portrait_mobile.png");
+			background-image: url("../../../png/portrait_desktop.png");
 			background-size: cover;
-			object-fit: contain;
 
 			&::after {
 				position: absolute;
@@ -63,7 +61,7 @@
 			justify-content: space-between;
 			position: absolute;
 			left: 90%;
-			bottom: 9%;
+			bottom: 8%;
 
 			&__item {
 				display: inline-flex;
@@ -73,6 +71,10 @@
 				&:active .socialSection__svg {
 					fill: $primary_dark;
 				}
+			}
+
+			&__link {
+				display: inline-flex;
 			}
 
 			&__svg {
@@ -124,9 +126,8 @@
 			}
 		}
 
-
 		&__description {
-			width: 70%;
+			width: 100%;
 			margin-bottom: 2.5rem;
 			font-family: $navigation;
 			font-size: 0.875rem;
@@ -179,6 +180,20 @@
 	}
 }
 
+@media screen and (min-width: 480px) {
+	.about {
+		.portraitSection {
+			justify-content: center;
+		}
+
+		.infoSection {
+			&__description {
+				width: 70%;
+			}
+		}
+	}
+}
+
 @media screen and (min-width: 768px) {
 	.about {
 		&__container {
@@ -189,15 +204,15 @@
 			justify-content: center;
 			margin-right: 4%;
 			margin-bottom: 0;
-			//width: 48%;
+			width: 48%;
 
 			.socialSection {
-				bottom: 50%;
+				bottom: 8%;
 			}
 		}
 
 		.infoSection {
-			//width: 48%;
+			width: 48%;
 		}
 	}
 }
