@@ -21,6 +21,16 @@
 		border: none;
 		padding: 0;
 		cursor: pointer;
+
+		&__cross {
+			transition: .3s;
+		}
+
+		&:hover .brief__cross {
+			path {
+				fill: $primary;
+			}
+		}
 	}
 
 	&__content {
