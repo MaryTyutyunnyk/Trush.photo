@@ -4,21 +4,40 @@
 
 .about {
 	&__container {
+		position: relative;
+		overflow: hidden;
 		padding: 4.5rem 6.75rem 8.3125rem;
 	}
 
-	.portraitSection {
-		&__portrait {
-			width: 496px;
-			height: 496px;
+	.infoSection {
+		&__description {
+			width: 70%;
+		}
+	}
+}
 
-			&::after {
-				bottom: 110px;
+@media screen and (min-width: 1440px) {
+	.about {
+		.portraitSection {
+			&__portrait {
+				width: 496px;
+				height: 496px;
+
+				&::after {
+					bottom: 110px;
+				}
+			}
+
+			.socialSection {
+				left: 15%;
 			}
 		}
 
-		.socialSection {
-			left: 15%;
+		&__circle {
+			display: block;
+			position: absolute;
+			top: 36px;
+			right: -272px;
 		}
 	}
 }

@@ -23,12 +23,14 @@
 
 .about {
 	&__container {
+		border: 1px solid red;
 		padding: 0 1rem 2.25rem;
 		display: flex;
 		flex-direction: column;
 	}
 
 	.portraitSection {
+		border: 1px solid red;
 		display: flex;
 		width: 100%;
 		margin-bottom: 1.5rem;
@@ -90,6 +92,7 @@
 	}
 
 	.infoSection {
+		border: 1px solid red;
 		width: 100%;
 
 		&__name {
@@ -178,6 +181,10 @@
 			}
 		}
 	}
+
+	&__circle {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 480px) {
@@ -198,6 +205,7 @@
 	.about {
 		&__container {
 			flex-direction: row;
+			padding: 2.5rem 1rem;
 		}
 
 		.portraitSection {
