@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Interior Gallery</title>
+	<link rel="stylesheet" href="css/pages/interiorGallery/mobile.css">
+	<link rel="stylesheet" href="css/pages/interiorGallery/tablet.css" media="(min-width: 960px)">
+	<link rel="stylesheet" href="css/pages/interiorGallery/desktop.css" media="(min-width: 1200px)">
+</head>
+<body>
+//= ../components/navbar.html
+<main class="interiorGallery">
+	<div class="interiorGallery__container container">
+		<div class="interiorGallery__header">
+			<div class="interiorGallery__arrow">
+				<svg class="interiorGallery__svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
+					<path fill="#4C4944" fill-rule="evenodd" d="M3.375 15.97l13.827 13.828L16 31 .97 15.97 16 .942l1.202 1.203L3.375 15.97z" clip-rule="evenodd"/>
+				</svg>
+			</div>
+			<div class="interiorGallery__title">Интерьер кухни</div>
+		</div>
+		<div class="interiorGallery__masonry">
+			<div class="grid-sizer"></div>
+			<div class="gutter-sizer"></div>
+			<div class="interiorGallery__item">
+				<img class="interiorGallery__img" src="png/kitchen_2.png" alt="Kitchen interior">
+			</div>
+			<div class="interiorGallery__item">
+				<img class="interiorGallery__img" src="png/kitchen_3.png" alt="Kitchen interior">
+			</div>
+			<div class="interiorGallery__item">
+				<img class="interiorGallery__img" src="png/kitchen_4.png" alt="Kitchen interior">
+			</div>
+			<div class="interiorGallery__item">
+				<img class="interiorGallery__img" src="png/kitchen_2.png" alt="Kitchen interior">
+			</div>
+			<div class="interiorGallery__item">
+				<img class="interiorGallery__img" src="png/kitchen_3.png" alt="Kitchen interior">
+			</div>
+		</div>
+	</div>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/components/masonry.pkgd.min.js"></script>
+<script src="js/components/imagesloaded.pkgd.min.js"></script>
+<script src="js/components/menu.js"></script>
+<script src="js/components/interiorGallery.js"></script>
+</body>
+</html>

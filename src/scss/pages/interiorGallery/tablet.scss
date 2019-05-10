@@ -1,0 +1,45 @@
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+@import "../../components/navbar/_tablet.scss";
+
+.navbar {
+	position: inherit;
+	z-index: inherit;
+}
+
+.interiorGallery {
+	margin-top: 0;
+
+	&__container {
+		padding: 4.5rem 2rem 5.5625rem 2rem;
+	}
+
+	.grid-sizer {
+		width: 32%;
+	}
+
+	.gutter-sizer {
+		width: 2%;
+	}
+
+	&__header {
+		margin-bottom: 1.5rem;
+	}
+
+	&__svg {
+		width: 32px;
+		height: 32px;
+	}
+
+	&__title {
+		font-size: 2rem;
+	}
+
+	&__item {
+		width: 32%;
+		margin-bottom: 1.5rem;
+	}
+}
+
+
+

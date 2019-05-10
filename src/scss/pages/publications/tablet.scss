@@ -1,0 +1,116 @@
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+@import "../../components/navbar/_tablet.scss";
+
+body {
+	height: 100vh;
+}
+
+.navbar {
+	position: inherit;
+	z-index: inherit;
+}
+
+.publications {
+	margin-top: 0;
+
+	&__container {
+		flex-direction: column;
+		justify-content: flex-end;
+		//height: calc(100vh - 109px);
+		height: calc(100vh - 85px);
+		overflow: hidden;
+	}
+
+	.publicationsCarousel {
+		display: flex;
+		position: relative;
+		overflow: hidden;
+		padding: 4.5rem 0 2.5rem 2rem;
+		margin-bottom: 0;
+
+		&__arrow {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: $primary;
+			position: absolute;
+			bottom: 50%;
+			width: 32px;
+			height: 32px;
+			padding: 12px;
+			z-index: 1;
+			cursor: pointer;
+
+			&_previous {
+				left: 2rem;
+			}
+
+			&_next {
+				right: 2rem;
+			}
+
+			&__svg {
+				path {
+					transition: .3s;
+				}
+			}
+
+			&:hover .publicationsCarousel__svg {
+				path {
+					fill-opacity: 1;
+				}
+			}
+		}
+	}
+
+	.publicationsCarouselList {
+		flex-direction: row;
+		justify-content: flex-start;
+		flex-wrap: nowrap;
+	}
+
+	.publicationsCarouselListItem {
+		display: inline-block;
+		position: relative;
+		margin-bottom: 0;
+		margin-right: 1.125rem;
+
+		&__imgBox {
+			height: 440px;
+			margin-bottom: 1rem;
+		}
+
+		&__img {
+			height: 100%;
+			max-width: none;
+		}
+
+		&__company {
+			margin-bottom: 0.5rem;
+		}
+
+		&__title {
+			font-size: 1.25rem;
+		}
+	}
+
+	.publicationsBlockLinkBox {
+		position: inherit;
+		height: 64px;
+		box-shadow: none;
+
+		&__btn {
+			width: 94px;
+			margin-right: 1.5rem;
+		}
+
+		&__item {
+			margin-right: 2rem;
+		}
+	}
+}
+
+
+
+

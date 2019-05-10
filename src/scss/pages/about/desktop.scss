@@ -1,0 +1,29 @@
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+@import "../../components/navbar/_desktop.scss";
+
+.about {
+	&__container {
+		padding: 4.5rem 6.75rem 8.3125rem;
+		//padding: 7.5rem 6.75rem 12.375rem;
+	}
+
+	.portraitSection {
+		&__portrait {
+			width: 496px;
+			height: 496px;
+			background-image: url("../../../png/portrait_desktop.png");
+
+			&::after {
+				right: -38px;
+				bottom: 110px;
+				height: 4px;
+			}
+		}
+
+		.socialSection {
+			left: 15%;
+			bottom: -0.5rem;
+		}
+	}
+}

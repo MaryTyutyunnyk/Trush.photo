@@ -1,0 +1,203 @@
+@import "../../common/_reset.scss";
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+@import "../../components/navbar/_mobile.scss";
+
+.navbar {
+
+	.logo {
+		&__svg {
+			fill: $secondary;
+		}
+	}
+
+	&__rectangle {
+		display: none;
+	}
+
+	#navbarBurger {
+		.navbarBurger__line {
+			background-color: $secondary;
+		}
+	}
+}
+
+.about {
+	&__container {
+		padding: 0 1rem 2.25rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.portraitSection {
+		display: flex;
+		width: 100%;
+		margin-bottom: 1.5rem;
+
+		&__container {
+			position: relative;
+		}
+
+		&__portrait {
+			position: relative;
+			width: 212px;
+			height: 212px;
+			background-image: url("../../../png/portrait_mobile.png");
+			background-size: cover;
+			object-fit: contain;
+
+			&::after {
+				position: absolute;
+				left: 64%;
+				bottom: 16px;
+				width: 152px;
+				height: 2px;
+				background-color: $primary;
+				content: "";
+			}
+		}
+
+		.socialSection {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			position: absolute;
+			left: 90%;
+			bottom: 9%;
+
+			&__item {
+				display: inline-flex;
+
+				&:hover .socialSection__svg,
+				&:focus .socialSection__svg,
+				&:active .socialSection__svg {
+					fill: $primary_dark;
+				}
+			}
+
+			&__svg {
+				width: 32px;
+				height: 32px;
+				transition: .3s;
+			}
+
+			&__name {
+				display: none;
+			}
+		}
+	}
+
+	.infoSection {
+		width: 100%;
+
+		&__name {
+			font-family: $name;
+			font-size: 1.5rem;
+			font-weight: bold;
+			color: $secondary;
+		}
+
+		.infoSectionContacts {
+			display: inline-flex;
+			margin: 1rem 0;
+
+			&__link {
+				display: inline-flex;
+				align-items: center;
+				margin-right: 1.5rem;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			&__icon {
+				width: 16px;
+				height: 16px;
+				margin-right: 0.25rem;
+			}
+
+			&__name {
+				color: $secondary;
+				font-family: $navigation;
+				font-size: 0.875rem;
+			}
+		}
+
+
+		&__description {
+			width: 70%;
+			margin-bottom: 2.5rem;
+			font-family: $navigation;
+			font-size: 0.875rem;
+			line-height: 1.3rem;
+			color: $secondary;
+		}
+
+		&__title {
+			font-family: $name;
+			font-size: 1rem;
+			font-weight: bold;
+			color: $secondary;
+			margin-bottom: 0.5rem;
+		}
+
+		.infoSectionClients {
+			margin-bottom: 2.5rem;
+
+			&__text {
+				font-family: $navigation;
+				font-size: 0.875rem;
+				color: $secondary;
+			}
+		}
+
+		.infoSectionCertificates {
+			.infoSectionCertificatesLogo {
+				display: flex;
+				align-items: center;
+
+				&__img {
+					margin-right: 1.625rem;
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					&_QEP {
+						width: 80px;
+						height: 76px;
+					}
+
+					&_UAPF {
+						width: 182px;
+						height: 74px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.about {
+		&__container {
+			flex-direction: row;
+		}
+
+		.portraitSection {
+			justify-content: center;
+			margin-right: 4%;
+			margin-bottom: 0;
+			//width: 48%;
+
+			.socialSection {
+				bottom: 50%;
+			}
+		}
+
+		.infoSection {
+			//width: 48%;
+		}
+	}
+}

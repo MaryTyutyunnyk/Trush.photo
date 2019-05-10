@@ -1,0 +1,280 @@
+@import "../../common/_reset.scss";
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+@import "../../components/navbar/_mobile.scss";
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: $secondary_white;
+	z-index: 1;
+
+	.logo {
+		&__svg {
+			fill: $secondary;
+		}
+	}
+
+	&__rectangle {
+		display: none;
+	}
+
+	#navbarBurger {
+		.navbarBurger__line {
+			background-color: $secondary;
+		}
+	}
+}
+
+.portfolio {
+	margin-top: 64px;
+
+	&__container {
+		display: flex;
+	}
+
+	.portfolioBlock {
+		padding: 0 1rem;
+	}
+
+	.portfolioBlock.portfolioBlockImage {
+		display: flex;
+		//display: none;
+	}
+
+	.portfolioCarousel {
+		width: 100%;
+
+		&__arrow {
+			display: none;
+		}
+	}
+
+	.portfolioCarouselList {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.portfolioCarouselListItem {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+		margin-bottom: 1.5rem;
+		margin-right: 0;
+		box-sizing: border-box;
+
+		&__imgBox {
+			position: relative;
+			margin-bottom: 0.5rem;
+			cursor: pointer;
+
+			&:hover .portfolioCarouselListItem__detailsBox {
+				opacity: 1;
+			}
+		}
+
+		&__img {
+			max-width: 100%;
+		}
+
+		&__detailsBox {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			padding: 1.5rem;
+			opacity: 0;
+			transition: .6s;
+			box-sizing: border-box;
+		}
+
+		&__details {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: rgba(241, 109, 100, 0.5);
+			width: 100%;
+			height: 100%;
+		}
+
+		&__title {
+			font-family: $name;
+			font-size: 1rem;
+			font-weight: bold;
+			color: $secondary;
+			margin-bottom: 0.25rem;
+		}
+
+		&__text {
+			font-family: $navigation;
+			font-size: 0.875rem;
+			color: $secondary;
+		}
+	}
+
+	.portfolioBlockLinkBox {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: fixed;
+		bottom: 0;
+		left: -1rem;
+		width: 100%;
+		height: 48px;
+		padding-left: 2rem;
+		background-color: $secondary_white;
+		box-shadow: 4px 0 8px 0 rgba(76, 73, 68, 0.15);
+
+		&__title {
+			font-family: $navigation;
+			font-size: 1.125rem;
+			color: $secondary;
+
+			&_bold {
+				font-weight: bold;
+			}
+
+			&_light {
+				font-weight: normal;
+			}
+		}
+	}
+
+	.portfolioBlockLinkBoxBtn {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		width: 29%;
+		height: 100%;
+		padding-right: 2rem;
+		background-color: $primary;
+		cursor: pointer;
+
+		&__arrow {
+			width: 40px;
+			height: 15px;
+
+			path {
+				transition: .3s;
+			}
+		}
+
+		&:hover .portfolioBlockLinkBoxBtn__arrow {
+			path {
+				fill-opacity: 1;
+			}
+		}
+	}
+
+	.portfolioBlock.portfolioBlockCatalogue {
+		//display: flex;
+		display: none;
+	}
+
+	.modal {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $secondary_white;
+		z-index: 9;
+
+		//:target {
+		//	opacity: 1;
+		//	display: block;
+		//	transition: opacity 1s, visibility 1s;
+		//}
+		//
+		//&:not(:target) {
+		//	opacity: 0;
+		//	display: none;
+		//	transition: opacity 1s, visibility 1s;
+		//}
+
+		&__crossBlock {
+			text-align: right;
+			padding: 1rem;
+		}
+
+		&__crossLink {
+			display: inline-flex;
+			cursor: pointer;
+		}
+
+		.modalCarousel {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 1rem;
+
+			&__arrow {
+				cursor: pointer;
+				transition: .3s;
+
+				&:hover .modalCarousel__svg {
+					path {
+						fill: $primary;
+					}
+				}
+			}
+
+			.modalCarouselList {
+				width: 70%;
+				height: 100%;
+
+				&__item {
+					display: none;
+					height: 100%;
+					width: 100%;
+
+					&_current {
+						display: inline-block;
+					}
+				}
+
+				&__img {
+					//max-width: 100%;
+					//max-height: 100%;
+					width: 100%;
+					height: auto;
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+
+@media (min-width: 560px) {
+	.portfolio {
+		.portfolioBlock {
+			padding: 0 0.5rem 0 0.5rem;
+		}
+
+		.portfolioCarouselList {
+			justify-content: flex-start;
+		}
+
+		.portfolioCarouselListItem {
+			width: 50%;
+			padding: 0 0.5rem 0 0.5rem;
+		}
+
+		.portfolioBlockLinkBox {
+			height: 64px;
+		}
+	}
+}
+
+@media (min-width: 960px) {
+	.portfolio {
+		.portfolioCarouselListItem {
+			width: 25%;
+		}
+	}
+}
+

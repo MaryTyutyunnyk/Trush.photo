@@ -1,0 +1,37 @@
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+
+.navbar {
+	&__container {
+		//padding: 2.5rem 6.75rem 0;
+		padding: 1rem 6.75rem 0;
+	}
+
+	.logo {
+		&__svg {
+			width: 302px;
+			height: 56px;
+		}
+	}
+
+	&__rectangle {
+		width: 37%;
+	}
+
+	&__content {
+		width: 63%;
+	}
+
+	.navbarMenu {
+		.navbarNav {
+			&__item {
+				margin-right: 2.5rem;
+			}
+		}
+
+		&__btn {
+			margin-right: 2rem;
+		}
+	}
+}
+

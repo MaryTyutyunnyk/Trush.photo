@@ -1,0 +1,9 @@
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+@import "../../components/navbar/_desktop.scss";
+
+.error {
+	&__container {
+		padding: 4.5rem 9.125rem 7.5rem 9.875rem;
+	}
+}

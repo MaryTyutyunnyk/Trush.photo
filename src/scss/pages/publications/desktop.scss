@@ -1,0 +1,38 @@
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+@import "../../components/navbar/_desktop.scss";
+
+
+.publications {
+	.publicationsCarousel {
+		padding: 5.5rem 0 5.6875rem 6.75rem;
+
+		&__arrow {
+			&_previous {
+				left: 6.75rem;
+			}
+
+			&_next {
+				right: 6.75rem;
+			}
+		}
+	}
+
+	.publicationsCarouselListItem {
+		margin-right: 1.5rem;
+
+		&__imgBox {
+			height: 605px;
+		}
+
+		&__title {
+			font-size: 1.5rem;
+		}
+	}
+
+	.publicationsBlockLinkBox {
+		&__btn {
+			width: 188px;
+		}
+	}
+}

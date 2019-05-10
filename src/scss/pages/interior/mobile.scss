@@ -1,0 +1,139 @@
+@import "../../common/_reset.scss";
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+@import "../../components/navbar/_mobile.scss";
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: $secondary_white;
+	z-index: 1;
+
+	.logo {
+		&__svg {
+			fill: $secondary;
+		}
+	}
+
+	&__rectangle {
+		display: none;
+	}
+
+	#navbarBurger {
+		.navbarBurger__line {
+			background-color: $secondary;
+		}
+	}
+}
+
+.interior {
+	margin-top: 64px;
+	&__container {
+		padding: 0 1rem 0 1rem;
+	}
+
+	.grid-sizer {
+		width: 100%;
+	}
+
+	.gutter-sizer {
+		width: 0;
+	}
+
+	&__item {
+		width: 100%;
+		position: relative;
+		margin-bottom: 1.5rem;
+		cursor: pointer;
+	}
+
+
+	&__item.hide {
+		display: none;
+	}
+
+	&__img {
+		max-width: 100%;
+		margin-bottom: 0.5rem;
+	}
+
+	&__title {
+		font-family: $navigation;
+		font-size: 1rem;
+		color: $secondary;
+	}
+
+	&__count {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		padding: 0.25rem 0.375rem;
+		border-radius: 3px;
+		background-color: rgba(255, 255, 255, 0.5);
+		font-family: $navigation;
+		font-size: 0.875rem;
+		color: $secondary;
+	}
+
+	&__loader {
+		display: flex;
+		justify-content: center;
+		margin-top: 1.5rem;
+		height: 47px;
+	}
+
+	&__btn {
+		@include btn;
+		font-size: 1.25rem;
+		color: $primary;
+		cursor: pointer;
+	}
+
+	&__bubbles {
+		display: none;
+		align-items: center;
+		padding: 12px 16px;
+	}
+
+	&__bubble {
+		width: 15px;
+		height: 15px;
+		margin-right: 1.25rem;
+		background-color: $primary;
+		border-radius: 50%;
+		animation: loader 2s infinite;
+
+		&:first-child {
+			animation-delay: .3s;
+		}
+
+		&:nth-child(2) {
+			animation-delay: .6s
+		}
+
+		&:last-child {
+			animation-delay: .9s;
+			margin-right: 0;
+		}
+	}
+
+
+	@keyframes loader {
+		0% {
+			opacity: 1
+		}
+		50% {
+			opacity: 0.5
+		}
+		100% {
+			opacity: 1
+		}
+	}
+}
+
+
+

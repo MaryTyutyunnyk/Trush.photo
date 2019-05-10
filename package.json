@@ -1,0 +1,30 @@
+{
+  "name": "trush.photo",
+  "version": "1.0.0",
+  "description": "Trush.photo website project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mary Tyutyunnik",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "browser-sync": "2.26.3",
+    "gulp-clean": "0.4.0",
+    "gulp-sequence": "1.0.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "4.0.2",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-autoprefixer": "6.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-concat": "2.6.1",
+    "gulp-uglify": "3.0.2",
+    "gulp-imagemin": "^5.0.3",
+    "imagemin-webp": "^5.0.0"
+  },
+  "dependencies": {
+    "socket.io-client": "^2.2.0"
+  }
+}

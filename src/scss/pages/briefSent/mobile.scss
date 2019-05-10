@@ -1,0 +1,54 @@
+@import "../../common/_reset.scss";
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+
+.briefSent {
+
+	&__crossBlock {
+		padding: 1rem 1rem 2rem 0;
+		text-align: right;
+	}
+
+	&__crossButton {
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-image: url("../../../svg/camera_mobile.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: 576px;
+		padding: 3rem 0 20rem;
+		text-align: center;
+	}
+
+	&__envelope {
+		margin-bottom: 1.5rem;
+	}
+
+	&__title {
+		font-family: $navigation;
+		font-size: 1.5rem;
+		color: $primary;
+		margin-bottom: 0.5rem;
+	}
+
+	&__text {
+		margin-bottom: 1.5rem;
+		width: 233px;
+		font-family: $navigation;
+		font-size: 1rem;
+		color: $secondary;
+	}
+
+	&__btn {
+		@include btn_switchToHomePage;
+	}
+}

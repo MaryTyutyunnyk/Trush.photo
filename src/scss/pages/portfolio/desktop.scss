@@ -1,0 +1,60 @@
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+@import "../../components/navbar/_desktop.scss";
+
+
+.portfolio {
+	.portfolioBlock {
+		padding: 5.5rem 0 0 6.75rem;
+	}
+
+	.portfolioCarousel {
+		&__arrow {
+			&_next {
+				right: 108px;
+			}
+		}
+	}
+
+	.portfolioCarouselListItem {
+		flex: 1 0 384px;
+		padding: 0 2rem 11.5625rem 0;
+
+		&::after {
+			height: 153px;
+		}
+
+		&__text {
+			font-size: 1rem;
+		}
+	}
+
+	.portfolioBlockLinkBox {
+		&__title {
+			font-size: 3rem;
+			margin-bottom: 12.5rem;
+		}
+	}
+
+	.portfolioBlockLinkBoxBtn {
+		margin-left: -6.75rem;
+	}
+
+	.portfolioBlockCatalogue {
+		.portfolioCarouselListItem {
+			width: 864px;
+			padding: 0 2rem 11.4375rem 0;
+		}
+	}
+
+	.modal {
+		.modalCarousel {
+			padding: 0 6.75rem;
+		}
+
+		.modalCarouselList {
+			width: 586px;
+			padding: 0 18rem;
+		}
+	}
+}

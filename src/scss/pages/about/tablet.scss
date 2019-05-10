@@ -1,0 +1,135 @@
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+@import "../../components/navbar/_tablet.scss";
+
+.about {
+	&__container {
+		flex-direction: row;
+		padding: 4.5rem 2rem 8.3125rem;
+		width: 100%;
+	}
+
+	.portraitSection {
+		justify-content: inherit;
+		//width: 48%;
+		margin-right: 15%;
+		// Нужно добавить еще один контейнер вокруг фото
+
+		&__portrait {
+			width: 386px;
+			height: 386px;
+			object-fit: contain;
+			background-image: url("../../../png/portrait_tablet.png");
+
+			&::after {
+				right: -38px;
+				bottom: 62px;
+				width: 176px;
+				height: 4px;
+			}
+		}
+
+		.socialSection {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			position: absolute;
+			left: 0;
+			//bottom: 5.5rem;
+			bottom: 8.5rem;
+
+			&__item {
+				display: inline-flex;
+				margin-right: 1.5rem;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			&__link {
+				display: flex;
+				align-items: center;
+			}
+
+			&__svg {
+				width: 40px;
+				height: 40px;
+				fill: $primary;
+			}
+
+			&__name {
+				display: inline-block;
+				font-family: $navigation;
+				font-size: 1rem;
+				color: #4c4944;
+			}
+		}
+	}
+
+	.infoSection {
+		//width: 48%;
+
+		&__name {
+			font-size: 3rem;
+		}
+
+		.infoSectionContacts {
+			margin: 2rem 0 1.5rem;
+
+			&__icon {
+				width: 24px;
+				height: 24px;
+				margin-right: 0.5rem;
+			}
+
+			&__name {
+				font-size: 1rem;
+			}
+		}
+
+		&__description {
+			margin-bottom: 4.5rem;
+			font-size: 1rem;
+		}
+
+		&__title {
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+		}
+
+		.infoSectionClients {
+			margin-bottom: 4.5rem;
+
+			&__text {
+				font-size: 1rem;
+			}
+		}
+
+		.infoSectionCertificates {
+			.infoSectionCertificatesLogo {
+				&__img {
+					margin-right: 3rem;
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					&_QEP {
+						width: 100px;
+						height: 95px;
+					}
+
+					&_UAPF {
+						width: 228px;
+						height: 93px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+

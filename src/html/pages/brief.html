@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Brief</title>
+	<link rel="stylesheet" href="css/pages/brief/mobile.css">
+	<link rel="stylesheet" href="css/pages/brief/tablet.css" media="(min-width: 960px)">
+	<link rel="stylesheet" href="css/pages/brief/desktop.css" media="(min-width: 1200px)">
+</head>
+<body>
+<section class="brief">
+	<div class="brief__container container">
+		<svg
+				class="brief__circle brief__circle_left"
+				xmlns="http://www.w3.org/2000/svg"
+				width="544"
+				height="544"
+				fill="none"
+				viewBox="0 0 544 544">
+			<path fill="#B5BAB6" fill-opacity=".2" fill-rule="evenodd" d="M272 544c150.221 0 272-121.779 272-272S422.221 0 272 0 0 121.779 0 272s121.779 272 272 272zm0-88.816c101.17 0 183.184-82.014 183.184-183.184S373.17 88.816 272 88.816 88.816 170.83 88.816 272 170.83 455.184 272 455.184z" clip-rule="evenodd"/>
+		</svg>
+		<div class="brief__crossBlock">
+			<button class="brief__crossButton">
+				<svg
+						class="brief__cross"
+						xmlns="http://www.w3.org/2000/svg"
+						width="32"
+						height="32"
+						fill="none"
+						viewBox="0 0 32 32">
+					<path fill="#4C4944" fill-rule="evenodd"
+					      d="M17.916 15.714L27 6.43 25.601 5l-9.1 9.3-9.169-9.17-1.445 1.383 9.216 9.216-9.084 9.284 1.398 1.43 9.1-9.3 9.17 9.17 1.444-1.384-9.215-9.215z"
+					      clip-rule="evenodd"/>
+				</svg>
+			</button>
+		</div>
+		<div class="brief__content">
+			<h1 class="brief__title">Заполнить бриф</h1>
+			<form
+				class="briefForm"
+				action="#"
+				autocomplete="on"
+				method="post"
+				name="brief"
+				target="_self"
+				id="brief"
+			>
+				<div class="briefForm__block">
+					<label class="briefForm__label" for="name">Имя *</label>
+					<input class="briefForm__input"
+					       id="name"
+					       type="text"
+					       name="name"
+					       autofocus="autofocus"
+					       autocomplete="on"
+					       required
+					>
+					<p id="errorMessage" class="briefForm__errorMessage">Поле обязательно для заполнения</p>
+				</div>
+
+				<div class="briefForm__block">
+					<label class="briefForm__label" for="phone">Телефон *</label>
+					<input class="briefForm__input"
+					       id="phone"
+					       type="tel"
+					       name="phone"
+					       autocomplete="on"
+					       required
+					>
+					<p class="briefForm__errorMessage">Поле обязательно для заполнения</p>
+				</div>
+
+				<div class="briefForm__block">
+					<label class="briefForm__label" for="email">E-mail *</label>
+					<input class="briefForm__input"
+					       id="email"
+					       type="email"
+					       name="email"
+					       autocomplete="on"
+				           required
+			        >
+					<p class="briefForm__errorMessage">Поле обязательно для заполнения</p>
+				</div>
+
+				<div class="briefForm__block">
+					<label class="briefForm__label" for="product">Товар или группа товаров (услуг) *</label>
+					<input class="briefForm__input"
+					       id="product"
+					       type="text"
+					       name="product"
+					       placeholder="Чем является продукт?"
+					       required
+					>
+					<p class="briefForm__errorMessage">Поле обязательно для заполнения</p>
+				</div>
+
+				<div class="briefForm__block">
+					<label class="briefForm__label" for="features">Особенности, нюансы (товара, услуги)</label>
+					<input class="briefForm__input" id="features" type="text" name="features">
+				</div>
+
+				<div class="briefForm__block">
+					<label class="briefForm__label" for="audience">ЦА вашего потенциального потребителя</label>
+					<input class="briefForm__input" id="audience" type="text" name="audience" placeholder="Опишите ЦА">
+				</div>
+
+				<div class="briefFormFieldset">
+					<p class="briefFormFieldset__title">Где будут использоваться материалы</p>
+
+					<div class="briefFormFieldset__container">
+						<div class="briefFormFieldset__container_flex">
+							<div class="briefFormFieldset__block_flex">
+								<input class="briefFormFieldset__checkbox" id="social-media"
+								       type="checkbox" checked name="social-media">
+								<label class="briefFormFieldset__label" for="social-media">Соц.
+									сети</label>
+							</div>
+
+							<div class="briefFormFieldset__block_flex">
+								<input class="briefFormFieldset__checkbox" id="print-media" type="checkbox"
+								       name="print-media">
+								<label class="briefFormFieldset__label" for="print-media">Печатные</label>
+							</div>
+						</div>
+						<div class="briefFormFieldset__container_flex">
+							<div class="briefFormFieldset__block_flex">
+								<input class="briefFormFieldset__checkbox" id="high-resolution-devices" type="checkbox"
+								       name="text">
+								<label class="briefFormFieldset__label" for="high-resolution-devices">Устройства
+									высокого
+									разрешения</label>
+							</div>
+
+							<div class="briefFormFieldset__block_flex">
+								<input class="briefFormFieldset__checkbox" id="printing-large-formats" type="checkbox"
+								       name="text">
+								<label class="briefFormFieldset__label" for="printing-large-formats">Печать крупных
+									форматов
+									свыше А3</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="briefForm__block">
+					<label class="briefForm__label" for="references">Референсы (ссылки)</label>
+					<input class="briefForm__input" id="references" type="text" name="references"
+					       placeholder="Если есть или что то нравиться">
+				</div>
+
+				<div class="briefFormFieldset">
+					<p class="briefFormFieldset__title">В каком формате (виде) хотите получить материалы</p>
+
+					<div class="briefFormFieldset__container">
+
+						<div class="briefFormFieldset__block">
+							<input class="briefFormFieldset__checkbox" id="tiff"
+							       type="checkbox" checked name="tiff">
+							<label class="briefFormFieldset__label briefFormFieldset__label_checked"
+							       for="tiff">TIFF</label>
+						</div>
+
+						<div class="briefFormFieldset__block">
+							<input class="briefFormFieldset__checkbox" id="tiff-and-layers" type="checkbox"
+							       name="tiff-and-layers">
+							<label class="briefFormFieldset__label" for="tiff-and-layers">TIFF + слои</label>
+						</div>
+
+						<div class="briefFormFieldset__block">
+							<input class="briefFormFieldset__checkbox" id="raw" type="checkbox" name="raw">
+							<label class="briefFormFieldset__label" for="raw">RAW</label>
+						</div>
+
+						<div class="briefFormFieldset__block">
+							<input class="briefFormFieldset__checkbox" id="jpg" type="checkbox" name="jpg">
+							<label class="briefFormFieldset__label" for="jpg">JPG</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="briefFormFieldset">
+					<p class="briefFormFieldset__title">Post Production</p>
+
+					<div class="briefFormFieldset__container">
+						<div class="briefFormFieldset__block">
+							<input class="briefFormFieldset__checkbox" id="retouch"
+							       type="checkbox" checked name="retouch">
+							<label class="briefFormFieldset__label"
+							       for="retouch">Ретушь</label>
+						</div>
+
+						<div class="briefFormFieldset__block">
+							<input class="briefFormFieldset__checkbox" id="design" type="checkbox" name="design">
+							<label class="briefFormFieldset__label" for="design">Дизайн</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="briefForm__block">
+					<label class="briefForm__label" for="deadlines">Сроки</label>
+					<input class="briefForm__input" id="deadlines" type="text" name="deadlines">
+				</div>
+
+				<div class="briefFormFieldset">
+					<p class="briefFormFieldset__title">Оплата</p>
+
+					<div class="briefFormFieldset__container_radio">
+						<div class="briefFormFieldset__block briefFormFieldset__block_radio">
+							<input class="briefFormFieldset__radio" id="cash" name="cash" type="radio" checked>
+							<label class="briefFormFieldset__label" for="cash">Наличные</label>
+						</div>
+
+						<div class="briefFormFieldset__block briefFormFieldset__block_radio">
+							<input class="briefFormFieldset__radio" id="cashless" name="cash" type="radio">
+							<label class="briefFormFieldset__label" for="cashless">Безналичные + 10%</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="briefFormFieldset">
+					<p class="briefFormFieldset__title">Бюджет</p>
+
+					<div class="briefFormFieldset__container_radio">
+						<div class="briefFormFieldset__block briefFormFieldset__block_radio">
+							<input class="briefFormFieldset__radio" id="uah" type="radio" checked name="currency">
+							<label class="briefFormFieldset__label" for="uah">UAH</label>
+						</div>
+
+						<div class="briefFormFieldset__block briefFormFieldset__block_radio">
+							<input class="briefFormFieldset__radio" id="usd" type="radio" name="currency">
+							<label class="briefFormFieldset__label" for="usd">USD</label>
+						</div>
+
+						<div class="briefFormFieldset__block briefFormFieldset__block_radio">
+							<input class="briefFormFieldset__radio" id="eur" type="radio" name="currency">
+							<label class="briefFormFieldset__label" for="eur">EUR</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="briefForm__block">
+					<label class="briefForm__label" for="comments">Комментарии</label>
+					<input class="briefForm__input" id="comments" type="text" name="comments">
+				</div>
+
+				<div class="briefForm__block">
+					<div class="recaptcha">RECAPTCHA</div>
+				</div>
+
+				<button class="briefForm__btn" type="submit" form="brief">Отправить</button>
+			</form>
+		</div>
+		<svg
+				class="brief__circle brief__circle_right"
+				xmlns="http://www.w3.org/2000/svg"
+				width="544"
+				height="544"
+				fill="none"
+				viewBox="0 0 544 544">
+			<path fill="#B5BAB6" fill-opacity=".2" fill-rule="evenodd" d="M272 544c150.221 0 272-121.779 272-272S422.221 0 272 0 0 121.779 0 272s121.779 272 272 272zm0-88.816c101.17 0 183.184-82.014 183.184-183.184S373.17 88.816 272 88.816 88.816 170.83 88.816 272 170.83 455.184 272 455.184z" clip-rule="evenodd"/>
+		</svg>
+	</div>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--<script src="js/components/brief.js"></script>-->
+</body>
+</html>

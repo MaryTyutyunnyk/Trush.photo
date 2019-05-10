@@ -1,0 +1,52 @@
+@import "../../common/_reset.scss";
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+@import "../../components/navbar/_mobile.scss";
+
+body {
+	background-color: #f1f1f1;
+}
+
+.navbar {
+	.logo {
+		&__svg {
+			fill: $secondary;
+		}
+	}
+
+	&__rectangle {
+		display: none;
+	}
+
+	#navbarBurger {
+		.navbarBurger__line {
+			background-color: $secondary;
+		}
+	}
+}
+
+.error {
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-image: url("../../../svg/404_mobile.svg");
+		background-position: top, center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 12rem 0 21rem;
+		text-align: center;
+	}
+
+	&__text {
+		margin-bottom: 1rem;
+		width: 233px;
+		font-family: $navigation;
+		font-size: 1rem;
+		color: $secondary;
+	}
+
+	&__btn {
+		@include btn_switchToHomePage;
+	}
+}

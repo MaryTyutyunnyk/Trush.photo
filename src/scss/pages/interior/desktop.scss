@@ -1,0 +1,9 @@
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+@import "../../components/navbar/_desktop.scss";
+
+.interior {
+	&__container {
+		padding: 4.5rem 6.75rem 2.875rem 6.75rem;
+	}
+}

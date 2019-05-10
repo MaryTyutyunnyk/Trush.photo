@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Publications</title>
+	<link rel="stylesheet" href="css/pages/publications/mobile.css">
+	<link rel="stylesheet" href="css/pages/publications/tablet.css" media="(min-width: 960px)">
+	<link rel="stylesheet" href="css/pages/publications/desktop.css" media="(min-width: 1200px)">
+</head>
+<body>
+//= ../components/navbar.html
+<main class="publications">
+	<div class="publications__container container">
+		<div class="publicationsCarousel">
+			<div id="previous_arrow" class="publicationsCarousel__arrow publicationsCarousel__arrow_previous">
+				<svg
+						class="publicationsCarousel__svg"
+						xmlns="http://www.w3.org/2000/svg"
+						width="32"
+						height="32"
+						fill="none"
+						viewBox="0 0 32 32">
+					<path fill="#fff" fill-opacity=".5" fill-rule="evenodd" d="M3.375 15.97l13.827 13.828L16 31 .97 15.97 16 .942l1.202 1.203L3.375 15.97z" clip-rule="evenodd"/>
+				</svg>
+			</div>
+
+			<div class="publicationsCarouselList">
+
+				<div data-filter="cata" class="publicationsCarouselListItem">
+					<div class="publicationsCarouselListItem__imgBox">
+						<img src="png/publications_1.png" alt="Photo"
+						     class="publicationsCarouselListItem__img">
+					</div>
+					<p class="publicationsCarouselListItem__company">САТА</p>
+					<h2 class="publicationsCarouselListItem__title">Каталог бытовой техники</h2>
+				</div>
+
+				<div data-filter="zvenugora" class="publicationsCarouselListItem">
+					<div class="publicationsCarouselListItem__imgBox">
+						<img src="png/publications_2.png" alt="Photo"
+						     class="publicationsCarouselListItem__img">
+					</div>
+					<p class="publicationsCarouselListItem__company">Звенигора</p>
+					<h2 class="publicationsCarouselListItem__title">Рекламная компания</h2>
+				</div>
+
+				<div data-filter="pyramida" class="publicationsCarouselListItem">
+					<div class="publicationsCarouselListItem__imgBox">
+						<img src="png/publications_3.png" alt="Photo"
+						     class="publicationsCarouselListItem__img">
+					</div>
+					<p class="publicationsCarouselListItem__company">Pyramida</p>
+					<h2 class="publicationsCarouselListItem__title">Наружная реклама</h2>
+				</div>
+
+				<div data-filter="cata" class="publicationsCarouselListItem">
+					<div class="publicationsCarouselListItem__imgBox">
+						<img src="png/publications_1.png" alt="Photo"
+						     class="publicationsCarouselListItem__img">
+					</div>
+					<p class="publicationsCarouselListItem__company">САТА</p>
+					<h2 class="publicationsCarouselListItem__title">Каталог бытовой техники</h2>
+				</div>
+
+				<div data-filter="zvenugora" class="publicationsCarouselListItem">
+					<div class="publicationsCarouselListItem__imgBox">
+						<img src="png/publications_2.png" alt="Photo"
+						     class="publicationsCarouselListItem__img">
+					</div>
+					<p class="publicationsCarouselListItem__company">Звенигора</p>
+					<h2 class="publicationsCarouselListItem__title">Рекламная компания</h2>
+				</div>
+
+				<div data-filter="pyramida" class="publicationsCarouselListItem">
+					<div class="publicationsCarouselListItem__imgBox">
+						<img src="png/publications_3.png" alt="Photo"
+						     class="publicationsCarouselListItem__img">
+					</div>
+					<p class="publicationsCarouselListItem__company">Pyramida</p>
+					<h2 class="publicationsCarouselListItem__title">Наружная реклама</h2>
+				</div>
+			</div>
+
+			<div id="next_arrow" class="publicationsCarousel__arrow publicationsCarousel__arrow_next">
+				<svg
+						class="publicationsCarousel__svg"
+						xmlns="http://www.w3.org/2000/svg"
+						width="32"
+						height="32"
+						fill="none"
+						viewBox="0 0 32 32">
+					<path fill="#fff" fill-opacity=".5" fill-rule="evenodd"
+					      d="M28.625 15.97L14.798 2.145 16 .94l15.03 15.03L16 31l-1.202-1.202L28.625 15.97z"
+					      clip-rule="evenodd"/>
+				</svg>
+			</div>
+		</div>
+		<div class="publicationsBlockLinkBox">
+				<div class="publicationsBlockLinkBox__btn"></div>
+				<ul class="publicationsBlockLinkBox__list">
+					<li class="publicationsBlockLinkBox__item">
+						<a data-filter="all" href="javascript://" class="publicationsBlockLinkBox__link publicationsBlockLinkBox__link_active">Все</a>
+					</li>
+					<li class="publicationsBlockLinkBox__item">
+						<a data-filter="pyramida" href="javascript://" class="publicationsBlockLinkBox__link">Pyramida</a>
+					</li>
+					<li class="publicationsBlockLinkBox__item">
+						<a data-filter="yastreb" href="javascript://" class="publicationsBlockLinkBox__link">Украшения Lena Yastreb</a>
+					</li>
+					<li class="publicationsBlockLinkBox__item">
+						<a data-filter="zvenugora" href="javascript://" class="publicationsBlockLinkBox__link">Звенигора</a>
+					</li>
+					<li class="publicationsBlockLinkBox__item">
+						<a data-filter="cata" href="javascript://" class="publicationsBlockLinkBox__link">САТА</a>
+					</li>
+				</ul>
+			</div>
+	</div>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/components/menu.js"></script>
+<script src="js/components/publications.js"></script>
+</body>
+</html>

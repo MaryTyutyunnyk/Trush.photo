@@ -1,0 +1,264 @@
+@import "../../common/_reset.scss";
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+@import "../../components/navbar/_mobile.scss";
+
+.homePageContent {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+
+		.personalInfo {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-end;
+			position: absolute;
+			bottom: 35px;
+			left: 10%;
+
+			.personalInfoSocial {
+				display: flex;
+				flex-direction: column;
+
+				&__link {
+					margin-bottom: 1rem;
+				}
+
+				circle, path {
+					transition: .3s;
+				}
+
+				&__img {
+					width: 32px;
+					height: 32px;
+
+					&:hover circle {
+						stroke-opacity: 1;
+					}
+
+					&:hover path {
+						fill-opacity: 1;
+					}
+				}
+			}
+
+			&__line {
+				margin-bottom: 5rem;
+				width: 2px;
+				height: 57px;
+				background-color: rgba(255, 255, 255, 0.5);
+			}
+
+			&__text {
+				display: flex;
+				align-items: center;
+				width: 67px;
+				height: 45px;
+				font-size: 1rem;
+				line-height: 1.25rem;
+				color: $secondary_white;
+				transform: rotate(-90deg);
+				transform-origin: 15% top 0;
+			}
+
+			.personalInfoImg {
+				display: none;
+			}
+		}
+
+		.homePageSlider {
+			padding: 0 3.625rem 1rem 1rem;
+
+			.homePageSliderBox {
+				width: 100%;
+				position: relative;
+				overflow: hidden;
+
+				.homePageSliderList {
+					display: flex;
+					flex-wrap: nowrap;
+
+					&__img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+				.homePageSliderDots {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					position: absolute;
+					left: 32px;
+					bottom: 45%;
+
+					&__item {
+						width: 8px;
+						height: 8px;
+						border-radius: 50%;
+						border: solid 1px $secondary_white;
+						margin-bottom: 0.5rem;
+
+						&:last-child {
+							margin-bottom: 0;
+						}
+
+						&_active {
+							background-color: $secondary_white;
+						}
+					}
+				}
+			}
+		}
+
+		.contentBlock {
+			&__title {
+				display: none;
+			}
+
+			.contentBlockPicture {
+				display: flex;
+
+				&__darkRectangle {
+					flex: 1 1 auto;
+					background-color: $secondary;
+				}
+
+				&__img {
+					width: 188px;
+					height: 287px;
+				}
+			}
+
+			.contentBlockArrow {
+				display: flex;
+				justify-content: flex-end;
+				height: 48px;
+
+				&__link {
+					display: inline-flex;
+					align-items: center;
+					justify-content: flex-end;
+					width: 188px;
+					background-color: $primary;
+
+					path {
+						transition: .3s;
+					}
+
+					&:hover .contentBlockArrow__arrow {
+						path {
+							fill-opacity: 1;
+						}
+					}
+				}
+
+				&__arrow {
+					display: inline-block;
+					margin-right: 1rem;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width: 560px) {
+	.navbar {
+		&__rectangle {
+			width: 40%;
+		}
+	}
+
+	.homePageContent {
+		&__container {
+			flex-direction: row;
+			align-items: flex-end;
+			padding: 0 0 1rem 1rem;
+
+			.personalInfo {
+				left: 54%;
+				bottom: 56px;
+			}
+
+			.homePageSlider {
+				width: 49%;
+				padding: 0 0 0 0;
+				margin-right: 2%;
+			}
+
+			.contentBlock {
+				width: 49%;
+
+				.contentBlockPicture {
+					&__img {
+						width: 198px;
+						height: 302px;
+					}
+				}
+
+				.contentBlockArrow {
+					&__link {
+						width: 198px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 610px) {
+	.homePageContent {
+		.contentBlock {
+			&__title {
+				display: inline-block;
+				margin-bottom: 2rem;
+				text-transform: uppercase;
+				color: $secondary;
+				text-align: left;
+
+				&_bold {
+					font-size: 1.9rem;
+					font-family: $title;
+					font-weight: bold;
+					letter-spacing: 0.2rem;
+				}
+
+				&_light {
+					font-family: $subTitle;
+					font-size: 1.5rem;
+					letter-spacing: 0.625rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.navbar {
+		.logo {
+			&__svg{
+				width: 260px;
+				height: 48px;
+			}
+		}
+	}
+
+	.homePageContent {
+		.contentBlock {
+			&__title {
+				margin-bottom: 6rem;
+
+				&_bold {
+					font-size: 2.5rem;
+				}
+
+				&_light {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}

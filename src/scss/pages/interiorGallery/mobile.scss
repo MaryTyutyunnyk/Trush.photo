@@ -1,0 +1,88 @@
+@import "../../common/_reset.scss";
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+@import "../../components/navbar/_mobile.scss";
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: $secondary_white;
+	z-index: 1;
+
+	.logo {
+		&__svg {
+			fill: $secondary;
+		}
+	}
+
+	&__rectangle {
+		display: none;
+	}
+
+	#navbarBurger {
+		.navbarBurger__line {
+			background-color: $secondary;
+		}
+	}
+}
+
+.interiorGallery {
+	margin-top: 64px;
+	&__container {
+		padding: 0 1rem 0 1rem;
+	}
+
+	.grid-sizer {
+		width: 100%;
+	}
+
+	.gutter-sizer {
+		width: 0;
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		margin-bottom: 0.5rem;
+	}
+
+	&__arrow {
+		display: inline-flex;
+		margin-right: 0.5rem;
+		cursor: pointer;
+		transition: .3s;
+
+		&:hover .interiorGallery__svg {
+			path {
+				fill: $primary;
+			}
+		}
+	}
+
+	&__svg {
+		width: 15px;
+		height: 15px;
+	}
+
+	&__title {
+		font-family: $name;
+		font-size: 1rem;
+		font-weight: 500;
+		color: $secondary;
+	}
+
+	&__item {
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+
+	&__img {
+		max-width: 100%;
+	}
+}
+
+
+
+
+

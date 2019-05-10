@@ -1,0 +1,49 @@
+@import "./_variables.scss";
+
+@mixin btn {
+  display: inline-block;
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-family: $navigation;
+  transition: .3s;
+}
+
+@mixin btn_brief {
+  @include btn;
+  background-color: $secondary_white;
+  color: $primary;
+  font-size: 18px;
+  border: solid 1px $primary;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $primary;
+    color: $secondary_white;
+  }
+}
+
+@mixin btn_switchToHomePage {
+  @include btn;
+  background-color: $primary;
+  color: $secondary_white;
+  font-size: 16px;
+  border: solid 1px $primary;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $primary_dark;
+    border: solid 1px $primary_dark;
+  }
+}
+
+@mixin btn_disabled {
+  @include btn;
+  background-color: $secondary_light;
+  color: $secondary_white;
+  font-size: 16px;
+  border: solid 1px $secondary_light;
+}
+
+

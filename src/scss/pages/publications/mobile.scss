@@ -1,0 +1,154 @@
+@import "../../common/_reset.scss";
+@import "../../common/_variables.scss";
+@import "../../common/_mixins.scss";
+@import "../../components/navbar/_mobile.scss";
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: $secondary_white;
+	z-index: 1;
+
+	.logo {
+		&__svg {
+			fill: $secondary;
+		}
+	}
+
+	&__rectangle {
+		display: none;
+	}
+
+	#navbarBurger {
+		.navbarBurger__line {
+			background-color: $secondary;
+		}
+	}
+}
+
+.publications {
+	margin-top: 64px;
+
+	&__container {
+		display: flex;
+	}
+
+	.publicationsCarousel {
+		padding: 0 1rem;
+		width: 100%;
+		//margin-bottom: 4.5rem;
+		margin-bottom: 1.5rem;
+
+		&__arrow {
+			display: none;
+		}
+	}
+
+	.publicationsCarouselList {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.publicationsCarouselListItem {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+		margin-bottom: 1.5rem;
+
+		&__imgBox {
+			margin-bottom: 0.5rem;
+		}
+
+		&__img {
+			max-width: 100%;
+		}
+
+		&__company {
+			font-family: $navigation;
+			font-size: 0.875rem;
+			color: rgba(76, 73, 68, 0.5);;
+			margin-bottom: 0.25rem;
+		}
+
+		&__title {
+			font-family: $name;
+			font-weight: bold;
+			font-size: 1rem;
+			color: $secondary;
+		}
+	}
+
+	.publicationsBlockLinkBox {
+		display: flex;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 48px;
+		background-color: $secondary_white;
+		box-shadow: 4px 0 8px 0 rgba(76, 73, 68, 0.15);
+
+		&__btn {
+			display: block;
+			margin-right: 1rem;
+			width: 24px;
+			height: 100%;
+			background-color: $primary;
+		}
+
+		&__list {
+			display: flex;
+			align-items: center;
+		}
+
+		&__item {
+			margin-right: 1rem;
+			cursor: pointer;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&__link {
+			font-family: $navigation;
+			font-size: 1rem;
+			white-space: nowrap;
+			color: rgba(241, 109, 100, 0.5);
+
+			&_active {
+				color: $primary;
+				border-bottom: 1px solid $primary;
+			}
+		}
+	}
+}
+
+
+@media screen and (orientation:portrait and (min-width: 560px)) {
+	.publications {
+		.publicationsCarouselList {
+			justify-content: space-between;
+		}
+
+		.publicationsCarouselListItem {
+			width: 49%;
+
+			&__imgBox {
+				height: 300px;
+			}
+
+			&__img {
+				height: 100%;
+			}
+		}
+
+		.publicationsBlockLinkBox {
+			height: 64px;
+		}
+	}
+}
+
+
