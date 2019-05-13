@@ -127,12 +127,24 @@
 		}
 
 		&__description {
+			position: relative;
 			width: 100%;
+			height: 36px;
+			overflow: hidden;
+		}
+
+		&____descriptionText {
 			margin-bottom: 2.5rem;
 			font-family: $navigation;
 			font-size: 0.875rem;
 			line-height: 1.3rem;
 			color: $secondary;
+		}
+
+		&__arrow {
+			position: absolute;
+			right: 0;
+			bottom: 98%;
 		}
 
 		&__title {

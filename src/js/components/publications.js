@@ -8,15 +8,16 @@ $(function () {
 		$(this).addClass("publicationsBlockLinkBox__link_active");
 
 		publicationToShow = $(this).attr("data-filter"); // determines which tab is clicked
-		let filter = $(".publicationsCarouselListItem").attr("data-filter");
+		let carouselListItem = $(".publicationsCarouselListItem").attr("data-attr");
+		console.log(carouselListItem)
 		// if the picture data attribute 'data-filter' match to the tab attribute 'data-filter' with value 'all', then all pictures are shown
 		if (publicationToShow === "all") {
-			filter.show();
+			carouselListItem.show();
 		} else {
 			// if the picture data attribute doesn't match to the tab attribute, then the picture is hidden
-			filter.not(publicationToShow).hide();
+			carouselListItem.not(publicationToShow).hide();
 			// if the picture data attribute match to the menu tab attribute, then the picture is shown
-			filter.filter(publicationToShow).show();
+			carouselListItem.filter(publicationToShow).show();
 		}
 	});
 });

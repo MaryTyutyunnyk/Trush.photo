@@ -11,3 +11,7 @@ $('#navbarBurger').click(function(e){
 //     $('#navbarBurger').removeClass('open');
 // });
 
+$("#lang").change(function() {
+    translateValidationMessages(this.value);
+    console.log("Setting language to " + this.value);
+});
