@@ -75,9 +75,17 @@
 		}
 
 		&__description {
-			width: 100%;
+			position: inherit;
 			margin-bottom: 4.5rem;
+			overflow: auto;
+		}
+
+		&__descriptionText {
 			font-size: 1rem;
+		}
+
+		&__arrow {
+			display: none;
 		}
 
 		&__title {
