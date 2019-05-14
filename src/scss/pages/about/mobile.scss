@@ -131,7 +131,12 @@
 			position: relative;
 			margin-bottom: 2.5rem;
 			width: 100%;
+			height: 36px;
 			overflow: hidden;
+		}
+
+		.openDescription {
+			height: auto;
 		}
 
 		&__descriptionText {
@@ -148,6 +153,10 @@
 			bottom: 0;
 			width: 10%;
 			cursor: pointer;
+		}
+
+		.arrowUp {
+			transform: rotate(-180deg);
 		}
 
 		&__title {
@@ -204,12 +213,6 @@
 		.portraitSection {
 			justify-content: center;
 		}
-
-		//.infoSection {
-		//	&__description {
-		//		width: 70%;
-		//	}
-		//}
 	}
 }
 
@@ -233,6 +236,16 @@
 
 		.infoSection {
 			width: 48%;
+
+			&__description {
+				position: inherit;
+				height: auto;
+				overflow: inherit;
+			}
+
+			&__arrow {
+				display: none;
+			}
 		}
 	}
 }
