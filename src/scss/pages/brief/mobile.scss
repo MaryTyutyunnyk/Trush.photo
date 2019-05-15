@@ -72,6 +72,7 @@
 			box-sizing: border-box;
 			width: 288px;
 			height: 40px;
+			background-color: $secondary_white;
 			color: $secondary;
 			outline: none;
 
@@ -272,7 +273,7 @@
 	display: none;
 
 	&__crossBlock {
-		padding: 1rem 1rem 2rem 0;
+		padding: 1rem 1rem 1rem 0;
 		text-align: right;
 	}
 
@@ -300,13 +301,14 @@
 		background-image: url("../../../svg/camera_mobile.svg");
 		background-position: center;
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-color: #f7f7f7;
 		min-height: 576px;
-		padding: 3rem 0 20rem;
 		text-align: center;
 	}
 
+
 	&__envelope {
+		margin-top: 3rem;
 		margin-bottom: 1.5rem;
 	}
 

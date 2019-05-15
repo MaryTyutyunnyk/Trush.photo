@@ -7,9 +7,12 @@ $(function () {
 				columnWidth: '.grid-sizer',
 				gutter: '.gutter-sizer ',
 				percentPosition: true,
-				horizontalOrder: true
+				horizontalOrder: true,
+				isResizeBound: true
 			});
 		});
+
+
 
 
 	let interiorButton = $(".interior__btn");
@@ -17,7 +20,6 @@ $(function () {
 	let hideImages = $(".interior__item.hide");
 
 	interiorButton.click(function () {
-		interiorButton.hide(); // button hiding
 		bubblesAnimation.css("display", "flex"); // animation showing
 		setTimeout(function () {
 			bubblesAnimation.fadeOut(300); // animation hiding after 2s and with the delay - 300ms
