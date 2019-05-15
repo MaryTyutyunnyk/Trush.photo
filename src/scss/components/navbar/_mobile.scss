@@ -145,9 +145,13 @@
 				color: $secondary;
 				transition: .3s;
 
-				&:hover {
+				&_active {
 					color: $primary;
 				}
+			}
+
+			&__arrow {
+				display: none;
 			}
 
 			.navbarNavSubMenu {
@@ -220,6 +224,10 @@
 						visibility: visible;
 					}
 				}
+			}
+
+			&__arrow {
+				display: none;
 			}
 		}
 	}

@@ -117,10 +117,15 @@
 			font-size: 1rem;
 			white-space: nowrap;
 			color: rgba(241, 109, 100, 0.5);
+			transition: .3s;
 
 			&_active {
 				color: $primary;
 				border-bottom: 1px solid $primary;
+			}
+
+			&:hover {
+				color: $primary;
 			}
 		}
 	}

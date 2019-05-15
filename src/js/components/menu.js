@@ -1,17 +1,30 @@
-$('#navbarBurger').click(function(e){
-    e.stopPropagation();
-    $(this).toggleClass('open');
-    $('.navbarMenu').toggleClass('navbarMenu_open');
-
-    console.log("======================")
+$(function () {
+	$('#navbarBurger').click(function (e) {
+		e.stopPropagation();
+		$(this).toggleClass('open');
+		$('.navbarMenu').toggleClass('navbarMenu_open');
+	});
 });
 
-// $('html').click(function () {
-//     $('.navbar__menu').removeClass('navbar__menu_open');
-//     $('#navbarBurger').removeClass('open');
+$(function () {
+	let navbarNavLink = $(".navbarNav__link");
+	navbarNavLink.click(function () {
+		$(".navbarNav__link.navbarNav__link_active").removeClass("navbarNav__link_active");
+		$(this).addClass("navbarNav__link_active");
+	});
+});
+
+
+$(function () {
+	let navbarLanguageLink = $(".navbarLanguage__link");
+	navbarLanguageLink.click(function () {
+		$(".navbarLanguage__link.navbarLanguage__link_active").removeClass("navbarLanguage__link_active");
+		$(this).addClass("navbarLanguage__link_active");
+	});
+});
+
+
+// $("#lang").change(function() {
+//     translateValidationMessages(this.value);
+//     console.log("Setting language to " + this.value);
 // });
-
-$("#lang").change(function() {
-    translateValidationMessages(this.value);
-    console.log("Setting language to " + this.value);
-});

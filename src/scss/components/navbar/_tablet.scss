@@ -3,7 +3,6 @@
 
 .navbar {
 	&__container {
-		//padding: 2.5rem 2rem 0;
 		padding: 1rem 2rem 0;
 	}
 
@@ -49,6 +48,23 @@
 				margin-bottom: 0;
 			}
 
+			&__link {
+				&_portfolio {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					//:hover .navbarNav.navbarNavSubMenu {
+					//	display: block;
+					//}
+				}
+			}
+
+			&__arrow {
+				display: inline-block;
+			}
+
+
 			.navbarNavSubMenu {
 				display: none;
 				flex-direction: column;
@@ -84,11 +100,39 @@
 			display: none;
 		}
 
+		.navbarLanguageBlock {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
 		.navbarLanguage {
 			flex-direction: column;
+			height: 24px;
+			overflow: hidden;
 
 			&__item {
 				margin-right: 0;
+			}
+
+			&__link {
+				opacity: 1;
+
+				&_active {
+					opacity: 1;
+
+					&::after {
+						visibility: hidden;
+					}
+				}
+
+				&:hover {
+					border-bottom: 1px solid $secondary;
+				}
+			}
+
+			&__arrow {
+				display: inline-block;
 			}
 		}
 	}
