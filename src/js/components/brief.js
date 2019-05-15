@@ -32,7 +32,7 @@ $(function () {
 
 	$.validator.setDefaults({
 		submitHandler: function () {
-			$('.brief')
+			$('.brief__content')
 				.css({'display': 'none'});
 			$('.briefSent')
 				.css({'display': 'block'})

@@ -2,10 +2,15 @@
 @import "../../common/_mixins.scss";
 
 .brief {
-	&__container {
+
+	&__crossBlock {
+		padding: 1rem 2rem 1rem;
+	}
+
+	&__content {
 		position: relative;
 		overflow: hidden;
-		padding: 2.5rem 2rem 2rem;
+		padding: 0 2rem 2rem;
 	}
 
 	&__circle {
@@ -80,9 +85,6 @@
 }
 
 .briefSent {
-	&__crossBlock {
-		padding: 1rem 2rem 1rem;
-	}
 
 	&__content {
 		background-image: url("../../../svg/camera_desktop.svg");

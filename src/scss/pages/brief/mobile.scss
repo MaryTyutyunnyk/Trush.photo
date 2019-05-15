@@ -4,16 +4,8 @@
 
 .brief {
 
-	&__container {
-		padding: 1rem 1rem 2.5rem;
- 	}
-
-	&__circle {
-		display: none;
-	}
-
 	&__crossBlock {
-		margin-bottom: 2rem;
+		padding: 1rem;
 		text-align: right;
 	}
 
@@ -38,6 +30,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		padding: 0 1rem 2.5rem;
+	}
+
+	&__circle {
+		display: none;
 	}
 
 	&__title {
@@ -272,28 +269,6 @@
 .briefSent {
 	display: none;
 
-	&__crossBlock {
-		padding: 1rem 1rem 1rem 0;
-		text-align: right;
-	}
-
-	&__crossButton {
-		background-color: transparent;
-		border: none;
-		padding: 0;
-		cursor: pointer;
-
-		&__cross {
-			transition: .3s;
-		}
-
-		&:hover .briefSent__cross {
-			path {
-				fill: $primary;
-			}
-		}
-	}
-
 	&__content {
 		display: flex;
 		flex-direction: column;
@@ -305,7 +280,6 @@
 		min-height: 576px;
 		text-align: center;
 	}
-
 
 	&__envelope {
 		margin-top: 3rem;
