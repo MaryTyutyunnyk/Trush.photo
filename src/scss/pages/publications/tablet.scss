@@ -16,9 +16,7 @@ body {
 
 	&__container {
 		flex-direction: column;
-		justify-content: flex-end;
-		//height: calc(100vh - 109px);
-		height: calc(100vh - 85px);
+		height: calc(100vh - 64px);
 		overflow: hidden;
 	}
 
@@ -96,7 +94,6 @@ body {
 	}
 
 	.publicationsBlockLinkBox {
-		position: inherit;
 		height: 64px;
 		box-shadow: none;
 
@@ -109,6 +106,10 @@ body {
 			margin-right: 2rem;
 		}
 	}
+}
+
+@media screen and (orientation:portrait) {
+
 }
 
 

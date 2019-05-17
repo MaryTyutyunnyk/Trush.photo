@@ -66,15 +66,14 @@
 		}
 
 		&__company {
-			font-family: $navigation;
+			font-family: $FiraSansRegular;
 			font-size: 0.875rem;
 			color: rgba(76, 73, 68, 0.5);;
 			margin-bottom: 0.25rem;
 		}
 
 		&__title {
-			font-family: $name;
-			font-weight: bold;
+			font-family: $FiraSansMedium;
 			font-size: 1rem;
 			color: $secondary;
 		}
@@ -113,7 +112,7 @@
 		}
 
 		&__link {
-			font-family: $navigation;
+			font-family: $FiraSansRegular;
 			font-size: 1rem;
 			white-space: nowrap;
 			color: rgba(241, 109, 100, 0.5);

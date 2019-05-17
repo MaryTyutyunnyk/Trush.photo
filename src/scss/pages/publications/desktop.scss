@@ -4,6 +4,11 @@
 
 
 .publications {
+
+	&__container {
+		height: calc(100vh - 72px);
+	}
+
 	.publicationsCarousel {
 		padding: 5.5rem 0 2.5rem 6.75rem;
 

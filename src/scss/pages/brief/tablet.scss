@@ -13,24 +13,9 @@
 		padding: 0 2rem 2rem;
 	}
 
-	&__circle {
-		display: block;
-		position: absolute;
-
-		&_left {
-			left: -272px;
-			top: 51%;
-		}
-
-		&_right {
-			right: -272px;
-			top: 18%;
-		}
-	}
-
 	&__title {
 		margin-bottom: 3rem;
-		font-size: 3rem;
+		font-size: 2rem;
 		letter-spacing: 0.5px;
 	}
 

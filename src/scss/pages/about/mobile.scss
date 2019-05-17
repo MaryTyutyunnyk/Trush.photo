@@ -93,9 +93,8 @@
 		width: 100%;
 
 		&__name {
-			font-family: $name;
+			font-family: $FiraSansMedium;
 			font-size: 1.5rem;
-			font-weight: bold;
 			color: $secondary;
 		}
 
@@ -121,7 +120,7 @@
 
 			&__name {
 				color: $secondary;
-				font-family: $navigation;
+				font-family: $FiraSansRegular;
 				font-size: 0.875rem;
 			}
 		}
@@ -141,7 +140,7 @@
 
 		&__descriptionText {
 			width: 90%;
-			font-family: $navigation;
+			font-family: $FiraSansRegular;
 			font-size: 0.875rem;
 			line-height: 1.3rem;
 			color: $secondary;
@@ -160,9 +159,8 @@
 		}
 
 		&__title {
-			font-family: $name;
+			font-family: $FiraSansMedium;
 			font-size: 1rem;
-			font-weight: bold;
 			color: $secondary;
 			margin-bottom: 0.5rem;
 		}
@@ -171,7 +169,7 @@
 			margin-bottom: 2.5rem;
 
 			&__text {
-				font-family: $navigation;
+				font-family: $FiraSansRegular;
 				font-size: 0.875rem;
 				color: $secondary;
 			}

@@ -2,99 +2,108 @@
 @import "../../common/_mixins.scss";
 @import "../../components/navbar/_tablet.scss";
 
-//@media screen and (min-aspect-ratio: 16/9) {
 
-	html, body {
-		height: 100vh;
+html, body {
+	height: 100vh;
+}
+
+.homePageContent {
+
+	&__container {
+		display: flex;
+		height: calc(100vh - 64px);
+		padding: 4.5rem 2rem 0;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: space-between;
 	}
 
+	.personalInfo {
+		position: static;
+		padding-bottom: 67px;
+		width: 11%;
+		height: 100%;
 
-	.homePageContent {
-		//margin-top: 4.5rem;
+		&__line {
+			margin-bottom: 6rem;
+			height: 26%;
+		}
 
-		&__container {
-			display: flex;
-			//height: calc(100vh - 109px);
-			height: calc(100vh - 85px);
-			padding: 0 2rem;
-			flex-direction: row;
-			align-items: flex-end;
-			justify-content: space-between;
+		&__text {
+			font-size: 1.25rem;
+			line-height: 2rem;
+		}
+	}
 
-			.personalInfo {
-				position: static;
-				margin-bottom: 67px;
-				width: 11%;
-				margin-right: 6%;
-				//height: 100%;
+	.personalInfoSocial {
+		&__img {
+			width: 40px;
+			height: 40px;
+		}
+	}
 
-				.personalInfoSocial {
-					&__img {
-						width: 40px;
-						height: 40px;
-					}
-				}
+	.personalInfoImg {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 100px;
+		height: 100px;
+		border: solid 2px rgba(255, 255, 255, 0.5);
+		border-radius: 50%;
 
-				&__line {
-					margin-bottom: 6rem;
-					height: 11rem;
-				}
+		&__img {
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+		}
+	}
 
-				&__text {
-					font-size: 1.25rem;
-					line-height: 2rem;
-				}
+	.homePageSlider {
+		width: 53vh;
+		padding: 0 0 0 0;
+	}
+	.homePageSliderBox {
+		width: 100%;
+	}
 
-				.personalInfoImg {
-					display: inline-flex;
-					justify-content: center;
-					align-items: center;
-					width: 100px;
-					height: 100px;
-					border: solid 2px rgba(255, 255, 255, 0.5);
-					border-radius: 50%;
+	.contentBlock {
+		width: 53vh;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		margin-right: -2rem;
 
-					&__img {
-						width: 80px;
-						height: 80px;
-						border-radius: 50%;
-					}
-				}
+		&::before {
+			display: inline-block;
+			position: absolute;
+			bottom: 0;
+			width: 2px;
+			height: 78%;
+			background-color: $secondary;
+			content: "";
+		}
+
+		&__title {
+			display: inline-block;
+			text-transform: uppercase;
+			color: $secondary;
+			text-align: left;
+			margin-bottom: 7.0625rem;
+
+			&_bold {
+				font-size: 2.5rem;
+				font-family: $FiraSansBold;
+				letter-spacing: 0.4375rem;
 			}
 
-			.homePageSlider {
-				width: 392px;
-			}
-
-			// Начиная с 1024px увеличить ширину в % для серого блока
-
-			.contentBlock {
-				//width: 38%;
-				display: flex;
-				flex-direction: column;
-				position: relative;
-				margin-right: -2rem;
-
-				&::before {
-					display: inline-block;
-					position: absolute;
-					bottom: 0;
-					width: 2px;
-					height: 78%;
-					background-color: $secondary;
-					content: "";
-				}
-
-				&__title {
-					margin-bottom: 7.0625rem;
-				}
-
-				.contentBlockArrow {
-					height: 64px;
-				}
+			&_light {
+				font-family: $FiraSansLight;
+				font-size: 2rem;
+				letter-spacing: 0.625rem;
 			}
 		}
 	}
-//}
+}
+
 
 

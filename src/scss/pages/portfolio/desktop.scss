@@ -4,8 +4,12 @@
 
 
 .portfolio {
+	&__container {
+		height: calc(100vh - 72px);
+	}
+
 	.portfolioBlock {
-		padding: 5.5rem 0 0 6.75rem;
+		padding: 4.5rem 0 0 6.75rem;
 	}
 
 	.portfolioCarousel {
@@ -17,12 +21,7 @@
 	}
 
 	.portfolioCarouselListItem {
-		flex: 1 0 384px;
-		padding: 0 2rem 11.5625rem 0;
-
-		&::after {
-			height: 153px;
-		}
+		padding: 0 2rem 0 0;
 
 		&__text {
 			font-size: 1rem;
@@ -32,7 +31,6 @@
 	.portfolioBlockLinkBox {
 		&__title {
 			font-size: 3rem;
-			margin-bottom: 12.5rem;
 		}
 	}
 
@@ -42,8 +40,7 @@
 
 	.portfolioBlockCatalogue {
 		.portfolioCarouselListItem {
-			width: 864px;
-			padding: 0 2rem 11.4375rem 0;
+			padding: 0 2rem 0 0;
 		}
 	}
 
@@ -55,6 +52,20 @@
 		.modalCarouselList {
 			width: 586px;
 			padding: 0 18rem;
+		}
+	}
+}
+
+@media screen and (min-width: 1440px) and (min-height: 1024px) {
+	.portfolio {
+		.portfolioBlock {
+			padding: 5.5rem 0 0 6.75rem;
+		}
+
+		.portfolioCarouselListItem {
+			&:after {
+				height: 15%;
+			}
 		}
 	}
 }

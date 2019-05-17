@@ -1,49 +1,49 @@
 @font-face {
 	font-family: "FiraSansRegular";
-	src: url("../../../fonts/FiraSansRegular/FiraSansRegular.eot");
-	src: url("../../../fonts/FiraSansRegular/FiraSansRegular.eot?#iefix") format("embedded-opentype");
-	src: url("../../../fonts/FiraSansRegular/FiraSansRegular.woff") format("woff");
-	src: url("../../../fonts/FiraSansRegular/FiraSansRegular.ttf") format("truetype");
+	src: url("./../../../fonts/FiraSansRegular/FiraSansRegular.eot");
+	src: url("./../../../fonts/FiraSansRegular/FiraSansRegular.eot?#iefix") format("embedded-opentype");
+	src: url("./../../../fonts/FiraSansRegular/FiraSansRegular.woff") format("woff");
+	src: url("./../../../fonts/FiraSansRegular/FiraSansRegular.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: "FiraSansLight";
-	src: url("../../../fonts/FiraSansLight/FiraSansLight.eot");
-	src: url("../../../fonts/FiraSansLight/FiraSansLight.eot?#iefix") format("embedded-opentype");
-	src: url("../../../fonts/FiraSansLight/FiraSansLight.woff") format("woff");
-	src: url("../../../fonts/FiraSansLight/FiraSansLight.ttf") format("truetype");
+	src: url("./../../../fonts/FiraSansLight/FiraSansLight.eot");
+	src: url("./../../../fonts/FiraSansLight/FiraSansLight.eot?#iefix") format("embedded-opentype");
+	src: url("./../../../fonts/FiraSansLight/FiraSansLight.woff") format("woff");
+	src: url("./../../../fonts/FiraSansLight/FiraSansLight.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: "FiraSansBold";
-	src: url("../../../fonts/FiraSansBold/FiraSansBold.eot");
-	src: url("../../../fonts/FiraSansBold/FiraSansBold.eot?#iefix") format("embedded-opentype");
-	src: url("../../../fonts/FiraSansBold/FiraSansBold.woff") format("woff");
-	src: url("../../../fonts/FiraSansBold/FiraSansBold.ttf") format("truetype");
+	src: url("./../../../fonts/FiraSansBold/FiraSansBold.eot");
+	src: url("./../../../fonts/FiraSansBold/FiraSansBold.eot?#iefix") format("embedded-opentype");
+	src: url("./../../../fonts/FiraSansBold/FiraSansBold.woff") format("woff");
+	src: url("./../../../fonts/FiraSansBold/FiraSansBold.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: "FiraMonoRegular";
-	src: url("../../../fonts/FiraMono/FiraMonoRegular.eot");
-	src: url("../../../fonts/FiraMono/FiraMonoRegular.eot?#iefix") format("embedded-opentype");
-	src: url("../../../fonts/FiraMono/FiraMonoRegular.woff") format("woff");
-	src: url("../../../fonts/FiraMono/FiraMonoRegular.ttf") format("truetype");
+	src: url("./../../../fonts/FiraMono/FiraMonoRegular.eot");
+	src: url("./../../../fonts/FiraMono/FiraMonoRegular.eot?#iefix") format("embedded-opentype");
+	src: url("./../../../fonts/FiraMono/FiraMonoRegular.woff") format("woff");
+	src: url("./../../../fonts/FiraMono/FiraMonoRegular.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: "FiraSansMedium";
-	src: url("../../../fonts/FiraSansMedium/FiraSansMedium.eot");
-	src: url("../../../fonts/FiraSansMedium/FiraSansMedium.eot?#iefix") format("embedded-opentype");
-	src: url("../../../fonts/FiraSansMedium/FiraSansMedium.woff") format("woff");
-	src: url("../../../fonts/FiraSansMedium/FiraSansMedium.ttf") format("truetype");
+	src: url("./../../../fonts/FiraSansMedium/FiraSansMedium.eot");
+	src: url("./../../../fonts/FiraSansMedium/FiraSansMedium.eot?#iefix") format("embedded-opentype");
+	src: url("./../../../fonts/FiraSansMedium/FiraSansMedium.woff") format("woff");
+	src: url("./../../../fonts/FiraSansMedium/FiraSansMedium.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
 }
@@ -64,6 +64,11 @@ $navigation: "FiraSansRegular";
 $language: "FiraMonoRegular";
 $name: "FiraSansMedium";
 
+$FiraSansBold: "FiraSansBold";
+$FiraSansLight: "FiraSansLight";
+$FiraSansRegular: "FiraSansRegular";
+$FiraMonoRegular: "FiraMonoRegular";
+$FiraSansMedium: "FiraSansMedium";
 
 // Container
 .container {
