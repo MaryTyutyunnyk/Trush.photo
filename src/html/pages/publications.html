@@ -7,13 +7,16 @@
 	<link rel="stylesheet" href="css/pages/publications/mobile.css">
 	<link rel="stylesheet" href="css/pages/publications/tablet.css" media="(min-width: 960px)">
 	<link rel="stylesheet" href="css/pages/publications/desktop.css" media="(min-width: 1200px)">
+	<!-- <link rel="stylesheet" href="css/vendor/slick.css"> -->
+	<link rel="stylesheet" href="css/vendor/owl.carousel.css">
+	<link rel="stylesheet" href="css/vendor/custom.css">
 </head>
 <body>
 //= ../components/navbar.html
 <main class="publications">
 	<div class="publications__container container">
 		<div class="publicationsCarousel">
-			<div id="previous_arrow" class="publicationsCarousel__arrow publicationsCarousel__arrow_previous">
+			<!-- <div id="previous_arrow" class="publicationsCarousel__arrow publicationsCarousel__arrow_previous">
 				<svg
 						class="publicationsCarousel__svg"
 						xmlns="http://www.w3.org/2000/svg"
@@ -23,66 +26,108 @@
 						viewBox="0 0 32 32">
 					<path fill="#fff" fill-opacity=".5" fill-rule="evenodd" d="M3.375 15.97l13.827 13.828L16 31 .97 15.97 16 .942l1.202 1.203L3.375 15.97z" clip-rule="evenodd"/>
 				</svg>
+			</div> -->
+			<div class="carousel_wrapper">
+				<div id="prev_arrow" class="publicationsCarousel__arrow publicationsCarousel__arrow_previous">
+					<svg
+							class="publicationsCarousel__svg"
+							xmlns="http://www.w3.org/2000/svg"
+							width="32"
+							height="32"
+							fill="none"
+							viewBox="0 0 32 32">
+						<path fill="#fff" fill-opacity=".5" fill-rule="evenodd" d="M3.375 15.97l13.827 13.828L16 31 .97 15.97 16 .942l1.202 1.203L3.375 15.97z" clip-rule="evenodd"/>
+					</svg>
+				</div>
+				<div id="pub_carousel" class="owl-carousel publications_carousel">
+					<div class="item" data-attr="cata">
+						<img src="/png/publications_2.png" alt="Photo" class="publications_carousel-item">
+					</div>
+					<div class="item" data-attr="zvenugora">
+						<img src="/png/publications_3.png" alt="Photo" class="publications_carousel-item">
+					</div>
+					<div class="item" data-attr="pyramida">
+						<img src="/png/publications_1.png" alt="Photo" class="publications_carousel-item">
+					</div>
+					<div class="item" data-attr="cata">
+						<img src="/png/publications_2.png" alt="Photo" class="publications_carousel-item">
+					</div>
+					<div class="item" data-attr="pyramida">
+						<img src="/png/publications_3.png" alt="Photo" class="publications_carousel-item">
+					</div>
+				</div>
+				<div id="next_arrow" class="publicationsCarousel__arrow publicationsCarousel__arrow_next">
+					<svg
+							class="publicationsCarousel__svg"
+							xmlns="http://www.w3.org/2000/svg"
+							width="32"
+							height="32"
+							fill="none"
+							viewBox="0 0 32 32">
+						<path fill="#fff" fill-opacity=".5" fill-rule="evenodd"
+								d="M28.625 15.97L14.798 2.145 16 .94l15.03 15.03L16 31l-1.202-1.202L28.625 15.97z"
+								clip-rule="evenodd"/>
+					</svg>
+				</div>
 			</div>
-
-			<div class="publicationsCarouselList">
-
-				<div data-attr="cata" class="publicationsCarouselListItem">
+			
+			<!-- <div id="pub_carousel" class="publicationsCarouselList owl-carousel">
+				<div data-attr="cata" class="item">
 					<div class="publicationsCarouselListItem__imgBox">
-						<img src="png/publications_1.png" alt="Photo"
+						<img src="./png/publications_1.png" alt="Photo"
 						     class="publicationsCarouselListItem__img">
 					</div>
 					<p class="publicationsCarouselListItem__company">САТА</p>
 					<h2 class="publicationsCarouselListItem__title">Каталог бытовой техники</h2>
 				</div>
 
-				<div data-attr="zvenugora" class="publicationsCarouselListItem">
+				<div data-attr="zvenugora" class="item">
 					<div class="publicationsCarouselListItem__imgBox">
-						<img src="png/publications_2.png" alt="Photo"
+						<img src="./png/publications_2.png" alt="Photo"
 						     class="publicationsCarouselListItem__img">
 					</div>
 					<p class="publicationsCarouselListItem__company">Звенигора</p>
 					<h2 class="publicationsCarouselListItem__title">Рекламная компания</h2>
 				</div>
 
-				<div data-attr="pyramida" class="publicationsCarouselListItem">
+				<div data-attr="pyramida" class="item">
 					<div class="publicationsCarouselListItem__imgBox">
-						<img src="png/publications_3.png" alt="Photo"
+						<img src="./png/publications_3.png" alt="Photo"
 						     class="publicationsCarouselListItem__img">
 					</div>
 					<p class="publicationsCarouselListItem__company">Pyramida</p>
 					<h2 class="publicationsCarouselListItem__title">Наружная реклама</h2>
 				</div>
 
-				<div data-attr="cata" class="publicationsCarouselListItem">
+				<div data-attr="cata" class="item">
 					<div class="publicationsCarouselListItem__imgBox">
-						<img src="png/publications_1.png" alt="Photo"
+						<img src="./png/publications_1.png" alt="Photo"
 						     class="publicationsCarouselListItem__img">
 					</div>
 					<p class="publicationsCarouselListItem__company">САТА</p>
 					<h2 class="publicationsCarouselListItem__title">Каталог бытовой техники</h2>
 				</div>
 
-				<div data-attr="zvenugora" class="publicationsCarouselListItem">
+				<div data-attr="zvenugora" class="item">
 					<div class="publicationsCarouselListItem__imgBox">
-						<img src="png/publications_2.png" alt="Photo"
+						<img src="./png/publications_2.png" alt="Photo"
 						     class="publicationsCarouselListItem__img">
 					</div>
 					<p class="publicationsCarouselListItem__company">Звенигора</p>
 					<h2 class="publicationsCarouselListItem__title">Рекламная компания</h2>
 				</div>
 
-				<div data-attr="pyramida" class="publicationsCarouselListItem">
+				<div data-attr="pyramida" class="item">
 					<div class="publicationsCarouselListItem__imgBox">
-						<img src="png/publications_3.png" alt="Photo"
+						<img src="./png/publications_3.png" alt="Photo"
 						     class="publicationsCarouselListItem__img">
 					</div>
 					<p class="publicationsCarouselListItem__company">Pyramida</p>
 					<h2 class="publicationsCarouselListItem__title">Наружная реклама</h2>
 				</div>
-			</div>
+			</div> -->
 
-			<div id="next_arrow" class="publicationsCarousel__arrow publicationsCarousel__arrow_next">
+			<!-- <div id="next_arrow" class="publicationsCarousel__arrow publicationsCarousel__arrow_next">
 				<svg
 						class="publicationsCarousel__svg"
 						xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +139,7 @@
 					      d="M28.625 15.97L14.798 2.145 16 .94l15.03 15.03L16 31l-1.202-1.202L28.625 15.97z"
 					      clip-rule="evenodd"/>
 				</svg>
-			</div>
+			</div> -->
 		</div>
 		<div class="publicationsBlockLinkBox">
 				<div class="publicationsBlockLinkBox__btn"></div>
@@ -120,6 +165,56 @@
 </main>
 <script src="js/components/jquery-3.3.1.min.js"></script>
 <script src="js/components/menu.js"></script>
-<script src="js/components/publications.js"></script>
+<!-- <script src="js/components/publications.js"></script> -->
+<script src="js/owl.carousel.js"></script>
+<script>
+	const prevArrow = $('#prev_arrow')
+	const nextArrow = $('#next_arrow')
+	const owl = $('#pub_carousel');
+	owl.owlCarousel({
+		autoWidth:true,
+	});
+	prevArrow.click(function() {
+		owl.trigger('prev.owl.carousel');
+	})
+	// Go to the previous item
+	nextArrow.click(function() {
+		// With optional speed parameter
+		// Parameters has to be in square bracket '[]'
+		owl.trigger('next.owl.carousel');
+	})
+	owl.on('changed.owl.carousel', function(event) {
+		const { item: { count, index } } = event;
+		// console.log(item, 'EVENT!!!');
+		if (index === 0) {
+			prevArrow.hide();
+			$('.publicationsCarousel').removeClass('active');
+		} else {
+			prevArrow.show();
+			$('.publicationsCarousel').addClass('active');
+		}
+		
+	})
+
+	// Filter function
+	let publicationsLink = $(".publicationsBlockLinkBox__link");
+		publicationsLink.click(function () {
+			$(".publicationsBlockLinkBox__link.publicationsBlockLinkBox__link_active")
+				.removeClass("publicationsBlockLinkBox__link_active");
+			$(this).addClass("publicationsBlockLinkBox__link_active");
+
+			const filter = $(this).data('filter'); // determines which tab is clicked
+			// if the picture data attribute 'data-filter' match to the tab attribute 'data-filter' with value 'all', then all pictures are shown
+			owl.trigger('to.owl.carousel', [0, 0]);
+			
+			$(".owl-carousel .item").each(function () {
+				if (filter === 'all' || $(this).data('attr') === filter) {
+					$(this).show();
+				} else {
+					$(this).hide();
+				}
+			});
+		});
+</script>
 </body>
 </html>

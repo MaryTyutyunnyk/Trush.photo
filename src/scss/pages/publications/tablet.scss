@@ -18,7 +18,8 @@ body {
 		flex-direction: column;
 		justify-content: flex-end;
 		//height: calc(100vh - 109px);
-		height: calc(100vh - 85px);
+		// height: calc(100vh - 85px);
+		height: calc(100vh - 72px);
 		overflow: hidden;
 	}
 
@@ -96,8 +97,9 @@ body {
 	}
 
 	.publicationsBlockLinkBox {
-		position: inherit;
-		height: 64px;
+		// position: inherit;
+		// height: 64px;
+		height: 2.5rem;
 		box-shadow: none;
 
 		&__btn {
