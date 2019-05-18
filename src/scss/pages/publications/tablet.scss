@@ -16,10 +16,7 @@ body {
 
 	&__container {
 		flex-direction: column;
-		justify-content: flex-end;
-		//height: calc(100vh - 109px);
-		// height: calc(100vh - 85px);
-		height: calc(100vh - 72px);
+		height: calc(100vh - 64px);
 		overflow: hidden;
 	}
 
@@ -97,9 +94,13 @@ body {
 	}
 
 	.publicationsBlockLinkBox {
+<<<<<<< HEAD
 		// position: inherit;
 		// height: 64px;
 		height: 2.5rem;
+=======
+		height: 64px;
+>>>>>>> 17fcb1e2738cb9519d5724545d48292ce9d12dde
 		box-shadow: none;
 
 		&__btn {
@@ -111,6 +112,10 @@ body {
 			margin-right: 2rem;
 		}
 	}
+}
+
+@media screen and (orientation:portrait) {
+
 }
 
 

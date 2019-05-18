@@ -49,9 +49,9 @@
 	}
 
 
-	//&__item.hide {
-	//	display: none;
-	//}
+	&__item.hide {
+		display: none;
+	}
 
 	&__img {
 		max-width: 100%;
@@ -59,7 +59,7 @@
 	}
 
 	&__title {
-		font-family: $navigation;
+		font-family: $FiraSansRegular;
 		font-size: 1rem;
 		color: $secondary;
 	}
@@ -74,7 +74,7 @@
 		padding: 0.25rem 0.375rem;
 		border-radius: 3px;
 		background-color: rgba(255, 255, 255, 0.5);
-		font-family: $navigation;
+		font-family: $FiraSansRegular;
 		font-size: 0.875rem;
 		color: $secondary;
 	}

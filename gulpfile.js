@@ -86,7 +86,13 @@ gulp.task('img', () => {
 			.pipe(gulp.dest('./dist/svg'))
 });
 
-gulp.task('build', gulpSequence('clean', ['html'], ['scss'], ['js'], ['img']));
+gulp.task('fonts', () => {
+	gulp.src('./src/fonts/**/*.*')
+		.pipe(gulp.dest('./dist/fonts'))
+});
+
+
+gulp.task('build', gulpSequence('clean', ['html'], ['scss'], ['fonts'], ['js'], ['img']));
 
 gulp.task('dev', ['build'], () => {
 	browserSync.init({

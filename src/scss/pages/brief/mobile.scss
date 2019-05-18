@@ -39,9 +39,8 @@
 
 	&__title {
 		margin-bottom: 2rem;
-		font-family: $name;
+		font-family: $FiraSansMedium;
 		font-size: 1.5rem;
-		font-weight: 500;
 		letter-spacing: 0.2px;
 		color: $secondary;
 	}
@@ -55,13 +54,13 @@
 
 		&__label {
 			margin-bottom: 0.5rem;
-			font-family: $navigation;
+			font-family: $FiraSansRegular;
 			font-size: 0.875rem;
 			color: $secondary;
 		}
 
 		&__input {
-			font-family: $navigation;
+			font-family: $FiraSansRegular;
 			font-size: 1rem;
 			padding: 0.75rem 1rem;
 			border-radius: 4px;
@@ -82,7 +81,7 @@
 			}
 
 			&::placeholder {
-				font-family: $navigation;
+				font-family: $FiraSansRegular;
 				font-size: 0.875rem;
 				color: $secondary;
 				opacity: .5;
@@ -91,7 +90,7 @@
 
 		.errorMessage {
 			display: inline-block;
-			font-family: $navigation;
+			font-family: $FiraSansRegular;
 			margin-top: 0.5rem;
 			font-size: 0.75rem;
 			color: #ff0000;
@@ -109,7 +108,7 @@
 			border-radius: 4px;
 			background-color: $primary;
 			color: $secondary_white;
-			font-family: $navigation;
+			font-family: $FiraSansRegular;
 			font-size: 1rem;
 			letter-spacing: 0.2px;
 			transition: .3s;
@@ -125,7 +124,7 @@
 
 			&__title {
 				margin-bottom: 1rem;
-				font-family: $navigation;
+				font-family: $FiraSansRegular;
 				font-size: 0.875rem;
 				color: $secondary;
 			}
@@ -259,7 +258,7 @@
 				position: relative;
 				cursor: pointer;
 				color: #c4c4c4;
-				font-family: $navigation;
+				font-family: $FiraSansRegular;
 				font-size: 0.875rem;
 			}
 		}
@@ -287,7 +286,7 @@
 	}
 
 	&__title {
-		font-family: $navigation;
+		font-family: $FiraSansRegular;
 		font-size: 1.5rem;
 		color: $primary;
 		margin-bottom: 0.5rem;
@@ -296,7 +295,7 @@
 	&__text {
 		margin-bottom: 1.5rem;
 		width: 233px;
-		font-family: $navigation;
+		font-family: $FiraSansRegular;
 		font-size: 1rem;
 		color: $secondary;
 	}

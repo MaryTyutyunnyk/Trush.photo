@@ -2,73 +2,67 @@
 @import "../../common/_mixins.scss";
 @import "../../components/navbar/_desktop.scss";
 
-//.navbar {
-//	&__rectangle {
-//		height: calc(100vh + 8rem);
-//	}
-//}
-
 .homePageContent {
-	//margin-top: 8rem;
 
 	&__container {
-		padding: 0 6.75rem;
+		height: calc(100vh - 72px);
+		padding: 8rem 6.75rem 0;
+	}
 
-		.personalInfo {
-			margin-bottom: 48px;
+	.personalInfo {
+		padding-bottom: 48px;
 
-			&__text {
-				font-size: 1.5rem;
-			}
-
-			.personalInfoImg {
-				width: 128px;
-				height: 128px;
-
-				&__img {
-					width: 96px;
-					height: 96px;
-				}
-			}
-
-			&__line {
-				height: 23rem;
-			}
+		&__text {
+			font-size: 1.5rem;
 		}
 
-		.homePageSlider {
-			width: 520px;
+		&__line {
+			height: 31%;
 		}
+	}
 
-		.contentBlock {
-			margin-right: -6.75rem;
+	.personalInfoImg {
+		width: 128px;
+		height: 128px;
 
-			.contentBlockPicture {
-				&__img {
-					width: 262px;
-					height: 400px;
-				}
+		&__img {
+			width: 96px;
+			height: 96px;
+		}
+	}
+
+	.homePageSlider {
+	}
+
+	.contentBlock {
+		//width: 43%;
+		margin-right: -6.75rem;
+
+		&__title {
+			margin-bottom: 9.5rem;
+
+			&_bold {
+				font-size: 3.25rem;
+				letter-spacing: 0.5625rem;
 			}
 
-			.contentBlockArrow {
-				&__link {
-					width: 262px;
-				}
+			&_light {
+				font-size: 2.75rem;
+				letter-spacing: 0.875rem;
 			}
+		}
+	}
 
-			&__title {
-				margin-bottom: 9.5rem;
+	.contentBlockPicture {
+		&__img {
+			width: 262px;
+			height: 400px;
+		}
+	}
 
-				&_bold {
-					font-size: 3.25rem;
-					letter-spacing: 0.5625rem;
-				}
-
-				&_light {
-					font-size: 2.75rem;
-					letter-spacing: 0.875rem;
-				}
-			}
+	.contentBlockArrow {
+		&__link {
+			width: 262px;
 		}
 	}
 }

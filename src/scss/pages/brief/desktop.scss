@@ -10,5 +10,24 @@
 	&__content {
 		padding: 0 6.75rem 2rem;
 	}
+
+	&__title {
+		font-size: 3rem;
+	}
+
+	&__circle {
+		display: block;
+		position: absolute;
+
+		&_left {
+			left: -272px;
+			top: 51%;
+		}
+
+		&_right {
+			right: -272px;
+			top: 18%;
+		}
+	}
 }
 

@@ -134,7 +134,7 @@
 		.navbarNav {
 			display: flex;
 			flex-direction: column;
-			font-family: $navigation;
+			font-family: $FiraSansRegular;
 
 			&__item {
 				margin-bottom: 2rem;
@@ -206,6 +206,7 @@
 
 			&__link {
 				position: relative;
+				font-family: $FiraMonoRegular;
 				font-size: 1.25rem;
 				color: $secondary;
 				opacity: .2;
