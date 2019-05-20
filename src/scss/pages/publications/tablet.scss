@@ -1,6 +1,8 @@
 @import "../../common/_variables.scss";
 @import "../../common/_mixins.scss";
 @import "../../components/navbar/_tablet.scss";
+//@import "../../vendor/owl.carousel.scss";
+@import "../../vendor/slick.scss";
 
 body {
 	height: 100vh;
@@ -11,11 +13,31 @@ body {
 	z-index: inherit;
 }
 
+@media screen and (max-height: 768px) {
+	.publications {
+		.publicationsCarouselListItem {
+			&__img {
+				width: auto;
+				max-width: none;
+				height: 30vh;
+			}
+		}
+
+		//.owl-item {
+		//	img {
+		//		height: 30vh;
+		//	}
+		//}
+	}
+}
+
 .publications {
+
 	margin-top: 0;
 
 	&__container {
 		flex-direction: column;
+		justify-content: space-between;
 		height: calc(100vh - 64px);
 		overflow: hidden;
 	}
@@ -27,6 +49,14 @@ body {
 		padding: 4.5rem 0 2.5rem 2rem;
 		margin-bottom: 0;
 
+		&.active {
+			padding-left: 0;
+
+			.publicationsCarousel__arrow_next {
+				right: 0 !important;
+			}
+		}
+
 		&__arrow {
 			display: flex;
 			align-items: center;
@@ -37,21 +67,17 @@ body {
 			width: 32px;
 			height: 32px;
 			padding: 12px;
-			z-index: 1;
+			//z-index: 1;
+			z-index: 2;
 			cursor: pointer;
 
 			&_previous {
-				left: 2rem;
+				display: none !important;
+				left: 0;
 			}
 
 			&_next {
 				right: 2rem;
-			}
-
-			&__svg {
-				path {
-					transition: .3s;
-				}
 			}
 
 			&:hover .publicationsCarousel__svg {
@@ -70,18 +96,15 @@ body {
 
 	.publicationsCarouselListItem {
 		display: inline-block;
-		position: relative;
 		margin-bottom: 0;
 		margin-right: 1.125rem;
-
-		&__imgBox {
-			height: 440px;
-			margin-bottom: 1rem;
-		}
+		width: auto;
+		box-sizing: border-box;
 
 		&__img {
-			height: 100%;
+			width: auto;
 			max-width: none;
+			height: 50vh;
 		}
 
 		&__company {
@@ -94,7 +117,8 @@ body {
 	}
 
 	.publicationsBlockLinkBox {
-		height: 2.5rem;
+		position: initial;
+		height: 4rem;
 		box-shadow: none;
 
 		&__btn {
@@ -106,11 +130,31 @@ body {
 			margin-right: 2rem;
 		}
 	}
+
+	//.owl-item {
+	//	img {
+	//		width: auto;
+	//		height: 50vh;
+	//	}
+	//}
 }
 
-@media screen and (orientation:portrait) {
-
+.slick-track {
+	display: flex !important;
+	width: 100% !important;
+	transform: none !important;
 }
+
+.slick-slide,
+.slick-current,
+.slick-active {
+	height: 50vh;
+	//width: 100% !important;
+	box-sizing: border-box;
+}
+
+
+
 
 
 

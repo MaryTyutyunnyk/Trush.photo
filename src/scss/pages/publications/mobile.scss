@@ -2,6 +2,9 @@
 @import "../../common/_variables.scss";
 @import "../../common/_mixins.scss";
 @import "../../components/navbar/_mobile.scss";
+@import "../../vendor/slick.scss";
+//@import "../../vendor/owl.carousel.scss";
+
 
 .navbar {
 	position: fixed;
@@ -35,10 +38,8 @@
 	}
 
 	.publicationsCarousel {
-		padding: 0 1rem;
+		padding: 0 1rem 3rem;
 		width: 100%;
-		//margin-bottom: 4.5rem;
-		margin-bottom: 1.5rem;
 
 		&__arrow {
 			display: none;
@@ -57,10 +58,6 @@
 		width: 100%;
 		margin-bottom: 1.5rem;
 
-		&__imgBox {
-			margin-bottom: 0.5rem;
-		}
-
 		&__img {
 			max-width: 100%;
 		}
@@ -68,8 +65,8 @@
 		&__company {
 			font-family: $FiraSansRegular;
 			font-size: 0.875rem;
-			color: rgba(76, 73, 68, 0.5);;
-			margin-bottom: 0.25rem;
+			color: rgba(76, 73, 68, 0.5);
+			margin-top: 0.5rem;
 		}
 
 		&__title {
@@ -85,7 +82,7 @@
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		height: 48px;
+		height: 3rem;
 		background-color: $secondary_white;
 		box-shadow: 4px 0 8px 0 rgba(76, 73, 68, 0.15);
 
@@ -128,29 +125,24 @@
 			}
 		}
 	}
+
+	//.owl-carousel {
+	//	z-index: initial;
+	//}
+	//
+	//.owl-item {
+	//	img {
+	//		max-width: 100%;
+	//	}
+	//}
 }
 
 
-@media screen and (orientation:portrait and (min-width: 560px)) {
+@media screen and (orientation: portrait and (min-width: 560px)) {
 	.publications {
-		.publicationsCarouselList {
-			justify-content: space-between;
-		}
-
-		.publicationsCarouselListItem {
-			width: 49%;
-
-			&__imgBox {
-				height: 300px;
-			}
-
-			&__img {
-				height: 100%;
-			}
-		}
 
 		.publicationsBlockLinkBox {
-			height: 64px;
+			height: 4rem;
 		}
 	}
 }

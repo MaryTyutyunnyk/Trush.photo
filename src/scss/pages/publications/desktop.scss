@@ -1,6 +1,7 @@
 @import "../../common/_variables.scss";
 @import "../../common/_mixins.scss";
 @import "../../components/navbar/_desktop.scss";
+//@import "../../vendor/slick.scss";
 
 
 .publications {
@@ -13,10 +14,6 @@
 		padding: 5.5rem 0 2.5rem 6.75rem;
 
 		&__arrow {
-			&_previous {
-				left: 6.75rem;
-			}
-
 			&_next {
 				right: 6.75rem;
 			}
@@ -25,10 +22,6 @@
 
 	.publicationsCarouselListItem {
 		margin-right: 1.5rem;
-
-		&__imgBox {
-			height: 605px;
-		}
 
 		&__title {
 			font-size: 1.5rem;

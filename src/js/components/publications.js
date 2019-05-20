@@ -1,56 +1,102 @@
-// Filter function
+// $(function () {
+// 	const prevArrow = $('#prev_arrow');
+// 	const nextArrow = $('#next_arrow');
+// 	const owl = $('#publicationsCarouselList');
+// 	owl.owlCarousel({
+// 		autoWidth: true,
+// 		loop: true,
+// 		items: 1,
+// 	});
+// 	prevArrow.click(function () {
+// 		owl.trigger('prev.owl.carousel');
+// 	});
+// 	// Go to the previous item
+// 	nextArrow.click(function () {
+// 		// With optional speed parameter
+// 		// Parameters has to be in square bracket '[]'
+// 		owl.trigger('next.owl.carousel');
+// 	});
+// 	owl.on('changed.owl.carousel', function (event) {
+// 		const {item: {count, index}} = event;
+// 		// console.log(item, 'EVENT!!!');
+// 		if (index === 0) {
+// 			prevArrow.hide();
+// 			$('.publicationsCarousel').removeClass('active');
+// 		} else {
+// 			prevArrow.show();
+// 			$('.publicationsCarousel').addClass('active');
+// 		}
+// 	});
+//
+// 	// Filter function
+// 	let publicationsLink = $(".publicationsBlockLinkBox__link");
+// 	publicationsLink.click(function () {
+// 		$(".publicationsBlockLinkBox__link.publicationsBlockLinkBox__link_active")
+// 			.removeClass("publicationsBlockLinkBox__link_active");
+// 		$(this).addClass("publicationsBlockLinkBox__link_active");
+//
+// 		const filter = $(this).data('filter'); // determines which tab is clicked
+// 		// if the picture data attribute 'data-filter' match to the tab attribute 'data-filter' with value 'all', then all pictures are shown
+// 		owl.trigger('to.owl.carousel', [0, 0]);
+//
+// 		$(".owl-carousel .publicationsCarouselListItem").each(function () {
+// 			if (filter === 'all' || $(this).data('attr') === filter) {
+// 				$(this).show();
+// 			} else {
+// 				$(this).hide();
+// 			}
+// 		});
+// 	});
+// });
+
 
 $(function () {
-	let publicationToShow = '';
-	let publicationsLink = $(".publicationsBlockLinkBox__link");
-	publicationsLink.click(function () {
-		$(".publicationsBlockLinkBox__link.publicationsBlockLinkBox__link_active").removeClass("publicationsBlockLinkBox__link_active");
-		$(this).addClass("publicationsBlockLinkBox__link_active");
+	const prevArrow = $('#prev_arrow');
+	const nextArrow = $('#next_arrow');
+	$('#publicationsCarouselList').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		nextArrow: nextArrow,
+		prevArrow: prevArrow,
+		variableWidth: true,
 
-		publicationToShow = $(this).attr("data-filter"); // determines which tab is clicked
-		let carouselListItem = $(".publicationsCarouselListItem").attr("data-attr");
-		console.log(carouselListItem)
-		// if the picture data attribute 'data-filter' match to the tab attribute 'data-filter' with value 'all', then all pictures are shown
-		if (publicationToShow === "all") {
-			carouselListItem.show();
+		responsive: [
+			{
+				breakpoint: 959,
+				settings: "unslick"
+			},
+		]
+	});
+
+	$('#publicationsCarouselList').on('afterChange', function (event) {
+		const {item: {count, index}} = event;
+		// console.log(item, 'EVENT!!!');
+		if (index === 0) {
+			prevArrow.hide();
+			$('.publicationsCarousel').removeClass('active');
 		} else {
-			// if the picture data attribute doesn't match to the tab attribute, then the picture is hidden
-			carouselListItem.not(publicationToShow).hide();
-			// if the picture data attribute match to the menu tab attribute, then the picture is shown
-			carouselListItem.filter(publicationToShow).show();
+			prevArrow.show();
+			$('.publicationsCarousel').addClass('active');
 		}
 	});
-});
 
-// publicationsCarousel function
+	// Filter function
+	let publicationsLink = $(".publicationsBlockLinkBox__link");
+	publicationsLink.click(function () {
+		$(".publicationsBlockLinkBox__link.publicationsBlockLinkBox__link_active")
+			.removeClass("publicationsBlockLinkBox__link_active");
+		$(this).addClass("publicationsBlockLinkBox__link_active");
 
-$(function () {
-	$(document).on('click', "#previous_arrow", function () {
-		let carusel = $(this).parents(".publicationsCarousel");
-		leftCarusel(carusel);
-		return false;
-	});
+		const filter = $(this).data('filter'); // determines which tab is clicked
+		// if the picture data attribute 'data-filter' match to the tab attribute 'data-filter' with value 'all', then all pictures are shown
+		//slick.trigger([0, 0]);
 
-	$(document).on('click', "#next_arrow", function () {
-		let carusel = $(this).parents(".publicationsCarousel");
-		rightCarusel(carusel);
-		return false;
-	});
-
-	function leftCarusel(carusel) {
-		let block_width = $(carusel).find(".publicationsCarouselListItem").outerWidth();
-		$(carusel).find(".publicationsCarouselList .publicationsCarouselListItem").eq(-1).clone().prependTo($(carusel).find(".publicationsCarouselList"));
-		$(carusel).find(".publicationsCarouselList").css({"left": "-" + block_width + "px"});
-		$(carusel).find(".publicationsCarouselList .publicationsCarouselListItem").eq(-1).remove();
-		$(carusel).find(".publicationsCarouselList").animate({left: "0px"}, 300);
-	}
-
-	function rightCarusel(carusel) {
-		let block_width = $(carusel).find(".publicationsCarouselListItem").outerWidth();
-		$(carusel).find(".publicationsCarouselList").animate({left: "-" + block_width + "px"}, 300, function () {
-			$(carusel).find(".publicationsCarouselList .publicationsCarouselListItem").eq(0).clone().appendTo($(carusel).find(".publicationsCarouselList"));
-			$(carusel).find(".publicationsCarouselList .publicationsCarouselListItem").eq(0).remove();
-			$(carusel).find(".publicationsCarouselList").css({"left": "0px"});
+		$(".publicationsCarouselList .publicationsCarouselListItem").each(function () {
+			if (filter === 'all' || $(this).data('attr') === filter) {
+				$(this).show();
+			} else {
+				$(this).hide();
+			}
 		});
-	}
+	});
 });

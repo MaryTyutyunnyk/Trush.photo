@@ -173,17 +173,23 @@ body {
 }
 
 
-@media screen and (min-height: 500px) and (max-height: 768px) {
+@media screen and (max-height: 615px) {
+	.portfolio {
+		.portfolioCarouselListItem {
+			&::after {
+				height: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-height: 768px) {
 	.portfolio {
 		.portfolioBlock {
 			padding: 2.5rem 0 0 2rem;
 		}
 
 		.portfolioCarouselListItem {
-			&::after {
-				height: 0;
-			}
-
 			&__img {
 				width: 30vh;
 			}
