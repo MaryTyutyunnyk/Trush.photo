@@ -1,7 +1,7 @@
 @import "../../common/_variables.scss";
 @import "../../common/_mixins.scss";
 @import "../../components/navbar/_tablet.scss";
-
+@import "../../vendor/slick.scss";
 
 html, body {
 	height: 100vh;
@@ -11,7 +11,7 @@ html, body {
 
 	&__container {
 		display: flex;
-		height: calc(100vh - 64px);
+		height: calc(100vh - 70px);
 		padding: 4.5rem 2rem 0;
 		flex-direction: row;
 		align-items: flex-end;
