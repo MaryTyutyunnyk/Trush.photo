@@ -54,6 +54,7 @@ $(function () {
 	const prevArrow = $('#prev_arrow');
 	const nextArrow = $('#next_arrow');
 	$('#publicationsCarouselList').slick({
+		infinite: false,
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		nextArrow: nextArrow,
@@ -68,8 +69,13 @@ $(function () {
 		]
 	});
 
+	$('.your-element').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		console.log(nextSlide);
+	});
+
+
 	$('#publicationsCarouselList').on('afterChange', function (event) {
-		const {item: {count, index}} = event;
+		const {item: {index}} = event;
 		// console.log(item, 'EVENT!!!');
 		if (index === 0) {
 			prevArrow.hide();

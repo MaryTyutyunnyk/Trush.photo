@@ -14,16 +14,9 @@
 	.about {
 		.portraitSection {
 			&__portrait {
-				width: 496px;
-				height: 496px;
-
 				&::after {
 					bottom: 110px;
 				}
-			}
-
-			.socialSection {
-				left: 15%;
 			}
 		}
 
