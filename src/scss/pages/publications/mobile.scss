@@ -2,9 +2,7 @@
 @import "../../common/_variables.scss";
 @import "../../common/_mixins.scss";
 @import "../../components/navbar/_mobile.scss";
-@import "../../vendor/slick.scss";
-//@import "../../vendor/owl.carousel.scss";
-
+@import "../../vendor/owl.carousel.scss";
 
 .navbar {
 	position: fixed;
@@ -125,16 +123,16 @@
 			}
 		}
 	}
+}
 
-	//.owl-carousel {
-	//	z-index: initial;
-	//}
-	//
-	//.owl-item {
-	//	img {
-	//		max-width: 100%;
-	//	}
-	//}
+.owl-carousel {
+	z-index: initial;
+}
+
+.owl-item {
+	img {
+		max-width: 100%;
+	}
 }
 
 

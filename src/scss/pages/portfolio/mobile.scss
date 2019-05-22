@@ -2,6 +2,7 @@
 @import "../../common/_variables.scss";
 @import "../../common/_mixins.scss";
 @import "../../components/navbar/_mobile.scss";
+@import "../../vendor/owl.carousel.scss";
 
 .navbar {
 	position: fixed;
@@ -112,7 +113,7 @@
 		}
 	}
 
-	.portfolioBlockLinkBox {
+	.portfolioTitleBlock {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -140,7 +141,7 @@
 		}
 	}
 
-	.portfolioBlockLinkBoxBtn {
+	.portfolioLinkBtn {
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
@@ -162,7 +163,7 @@
 			}
 		}
 
-		&:hover .portfolioBlockLinkBoxBtn__arrow {
+		&:hover .portfolioLinkBtn__arrow {
 			path {
 				fill-opacity: 1;
 			}
@@ -250,11 +251,11 @@
 			padding: 0 0.5rem 0 0.5rem;
 		}
 
-		.portfolioBlockLinkBox {
+		.portfolioTitleBlock {
 			height: 64px;
 		}
 
-		.portfolioBlockLinkBoxBtn {
+		.portfolioLinkBtn {
 			height: 64px;
 		}
 	}

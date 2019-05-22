@@ -2,8 +2,8 @@
 @import "../../common/_variables.scss";
 @import "../../common/_mixins.scss";
 @import "../../components/navbar/_mobile.scss";
-@import "../../vendor/slick.scss";
-@import "../../vendor/slick-theme.scss";
+//@import "../../vendor/slick.scss";
+//@import "../../vendor/slick-theme.scss";
 
 
 .homePageContent {
@@ -146,52 +146,52 @@
 	}
 }
 
-.slick-dots {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	position: absolute;
-	left: 32px;
-	bottom: 45%;
-
-	li {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin: 0 0 0.5rem 0;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-
-		button {
-			display: block;
-			width: 8px;
-			height: 8px;
-			padding: 0;
-			border-radius: 50%;
-			border: solid 1px $secondary_white;
-			background: transparent;
-			outline: none;
-			line-height: 0;
-			font-size: 0;
-			color: transparent;
-			cursor: pointer;
-
-			&::before {
-				content: none;
-				width: 0;
-				height: 0;
-			}
-		}
-	}
-
-	.slick-active {
-		button {
-			background-color: $secondary_white;
-		}
-	}
-}
+//.slick-dots {
+//	display: flex;
+//	flex-direction: column;
+//	justify-content: center;
+//	position: absolute;
+//	left: 32px;
+//	bottom: 45%;
+//
+//	li {
+//		display: flex;
+//		align-items: center;
+//		justify-content: center;
+//		margin: 0 0 0.5rem 0;
+//
+//		&:last-child {
+//			margin-bottom: 0;
+//		}
+//
+//		button {
+//			display: block;
+//			width: 8px;
+//			height: 8px;
+//			padding: 0;
+//			border-radius: 50%;
+//			border: solid 1px $secondary_white;
+//			background: transparent;
+//			outline: none;
+//			line-height: 0;
+//			font-size: 0;
+//			color: transparent;
+//			cursor: pointer;
+//
+//			&::before {
+//				content: none;
+//				width: 0;
+//				height: 0;
+//			}
+//		}
+//	}
+//
+//	.slick-active {
+//		button {
+//			background-color: $secondary_white;
+//		}
+//	}
+//}
 
 
 @media screen and (min-width: 560px) {

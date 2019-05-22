@@ -1,41 +1,63 @@
 $(function () {
 	const prevArrow = $('#previous_arrow');
 	const nextArrow = $('#next_arrow');
-	$('#portfolioCarouselListImage').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		nextArrow: nextArrow,
-		prevArrow: prevArrow,
-		variableWidth: true,
-		adaptiveHeight: true,
-		responsive: [
-			{
-				breakpoint: 959,
-				settings: "unslick"
-			},
-		]
+	const owl = $('#portfolioCarouselListImage');
+	owl.owlCarousel({
+		autoWidth: true,
+		loop: true,
+
+	});
+	prevArrow.click(function () {
+		owl.trigger('prev.owl.carousel');
+	});
+	nextArrow.click(function () {
+		owl.trigger('next.owl.carousel');
+	});
+	owl.on('changed.owl.carousel', function (event) {
+		const {item: {count, index}} = event;
+		if (index === 0) {
+			prevArrow.hide();
+			// $('.portfolioCarousel').removeClass('active');
+		} else {
+			prevArrow.show();
+			// $('.portfolioCarousel').addClass('active');
+		}
 	});
 });
-
 
 $(function () {
 	const prevArrow = $('#left_arrow');
 	const nextArrow = $('#right_arrow');
-	$('#portfolioCarouselListCatalogue').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		nextArrow: nextArrow,
-		prevArrow: prevArrow,
-		variableWidth: true,
-		adaptiveHeight: true,
-		responsive: [
-			{
-				breakpoint: 959,
-				settings: "unslick"
-			},
-		]
+	const owl = $('#portfolioCarouselListCatalogue');
+	owl.owlCarousel({
+		autoWidth: true,
+	});
+	prevArrow.click(function () {
+		owl.trigger('prev.owl.carousel');
+	});
+	nextArrow.click(function () {
+		owl.trigger('next.owl.carousel');
+	});
+	owl.on('changed.owl.carousel', function (event) {
+		const {item: {count, index}} = event;
+		if (index === 0) {
+			prevArrow.hide();
+			$('.portfolioCarousel').removeClass('active');
+		} else {
+			prevArrow.show();
+			$('.portfolioCarousel').addClass('active');
+		}
 	});
 });
+
+// Remove function on mobile devices
+
+// $(window).resize(function(){
+// 	if($(window).width() < 960){
+// 		owl.trigger('destroy.owl.carousel');
+// 	}
+// });
+
 
 // Portfolio function for switching between two blocks - portfolioBlockImage and portfolioBlockCatalogue
 

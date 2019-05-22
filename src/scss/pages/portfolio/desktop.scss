@@ -1,7 +1,7 @@
 @import "../../common/_variables.scss";
 @import "../../common/_mixins.scss";
 @import "../../components/navbar/_desktop.scss";
-
+@import "../../vendor/owl.carousel.scss";
 
 .portfolio {
 	&__container {
@@ -28,13 +28,14 @@
 		}
 	}
 
-	.portfolioBlockLinkBox {
-		&__title {
-			font-size: 3rem;
-		}
-	}
+	//.portfolioTitleBlock{
+	//	&__title {
+	//		font-size: 3rem;
+	//	}
+	//}
 
-	.portfolioBlockLinkBoxBtn {
+	.portfolioLinkBtn {
+		width: 27%;
 		margin-left: -6.75rem;
 	}
 

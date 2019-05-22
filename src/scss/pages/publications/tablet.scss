@@ -1,8 +1,7 @@
 @import "../../common/_variables.scss";
 @import "../../common/_mixins.scss";
 @import "../../components/navbar/_tablet.scss";
-//@import "../../vendor/owl.carousel.scss";
-@import "../../vendor/slick.scss";
+@import "../../vendor/owl.carousel.scss";
 
 body {
 	height: 100vh;
@@ -11,24 +10,6 @@ body {
 .navbar {
 	position: inherit;
 	z-index: inherit;
-}
-
-@media screen and (max-height: 768px) {
-	.publications {
-		.publicationsCarouselListItem {
-			&__img {
-				width: auto;
-				max-width: none;
-				height: 30vh;
-			}
-		}
-
-		//.owl-item {
-		//	img {
-		//		height: 30vh;
-		//	}
-		//}
-	}
 }
 
 .publications {
@@ -67,17 +48,20 @@ body {
 			width: 32px;
 			height: 32px;
 			padding: 12px;
-			//z-index: 1;
 			z-index: 2;
 			cursor: pointer;
 
 			&_previous {
-				display: none !important;
+				display: none;
 				left: 0;
 			}
 
 			&_next {
 				right: 2rem;
+			}
+
+			&:hover {
+				background-color: $primary_dark;
 			}
 
 			&:hover .publicationsCarousel__svg {
@@ -92,6 +76,7 @@ body {
 		flex-direction: row;
 		justify-content: flex-start;
 		flex-wrap: nowrap;
+		height: 100%;
 	}
 
 	.publicationsCarouselListItem {
@@ -130,31 +115,34 @@ body {
 			margin-right: 2rem;
 		}
 	}
-
-	//.owl-item {
-	//	img {
-	//		width: auto;
-	//		height: 50vh;
-	//	}
-	//}
 }
 
-.slick-track {
-	display: flex !important;
-	width: 100% !important;
-	transform: none !important;
+//.owl-stage-outer,
+//.owl-stage,
+//.owl-item {
+//    height: 100%;
+//}
+
+.owl-stage {
+	display: flex;
 }
 
-.slick-slide,
-.slick-current,
-.slick-active {
-	height: 50vh;
-	//width: 100% !important;
-	box-sizing: border-box;
+.owl-item {
+	img {
+		width: auto !important;
+		max-width: none;
+		height: 50vh;
+	}
 }
 
 
-
+@media (max-height: 768px) {
+	.publications {
+		.publicationsCarousel {
+			padding: 2.5rem 0 2.5rem 2rem;
+		}
+	}
+}
 
 
 
