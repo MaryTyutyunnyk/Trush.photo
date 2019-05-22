@@ -88,6 +88,7 @@
 	.homePageSliderList {
 		display: flex;
 		flex-wrap: nowrap;
+		margin-bottom: 0;
 
 		&__img {
 			width: 100%;
@@ -154,7 +155,10 @@
 	bottom: 45%;
 
 	li {
-		margin-bottom: 0.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 0 0.5rem 0;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -164,21 +168,28 @@
 			display: block;
 			width: 8px;
 			height: 8px;
+			padding: 0;
 			border-radius: 50%;
-			//border: solid 1px $secondary_white;
-			border: 0;
+			border: solid 1px $secondary_white;
 			background: transparent;
 			outline: none;
 			line-height: 0;
 			font-size: 0;
 			color: transparent;
-			padding: 5px;
 			cursor: pointer;
+
+			&::before {
+				content: none;
+				width: 0;
+				height: 0;
+			}
 		}
 	}
 
 	.slick-active {
-		background-color: $secondary_white;
+		button {
+			background-color: $secondary_white;
+		}
 	}
 }
 
