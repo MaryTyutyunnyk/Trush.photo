@@ -5,7 +5,6 @@ $(function () {
 	owl.owlCarousel({
 		autoWidth: true,
 		loop: true,
-
 	});
 	prevArrow.click(function () {
 		owl.trigger('prev.owl.carousel');
@@ -31,6 +30,7 @@ $(function () {
 	const owl = $('#portfolioCarouselListCatalogue');
 	owl.owlCarousel({
 		autoWidth: true,
+		loop: true,
 	});
 	prevArrow.click(function () {
 		owl.trigger('prev.owl.carousel');

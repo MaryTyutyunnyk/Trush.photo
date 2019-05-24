@@ -1,13 +1,12 @@
 @import "../../common/_variables.scss";
 @import "../../common/_mixins.scss";
 @import "../../components/navbar/_desktop.scss";
-//@import "../../vendor/slick.scss";
 
 .homePageContent {
 
 	&__container {
 		height: calc(100vh - 72px);
-		padding: 8rem 6.75rem 0;
+		padding: 4.5rem 6.75rem 0;
 	}
 
 	.personalInfo {
@@ -36,7 +35,6 @@
 	}
 
 	.contentBlock {
-		//width: 43%;
 		margin-right: -6.75rem;
 
 		&__title {
@@ -54,16 +52,10 @@
 		}
 	}
 
-	.contentBlockPicture {
-		&__img {
-			width: 262px;
-			height: 400px;
-		}
-	}
-
-	.contentBlockArrow {
-		&__link {
-			width: 262px;
-		}
-	}
+	//.contentBlockPicture {
+	//	&__img {
+	//		width: 262px;
+	//		height: 400px;
+	//	}
+	//}
 }

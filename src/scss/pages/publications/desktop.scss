@@ -10,7 +10,7 @@
 	}
 
 	.publicationsCarousel {
-		padding: 5.5rem 0 2.5rem 6.75rem;
+		padding: 4.5rem 0 2.5rem 6.75rem;
 
 		&__arrow {
 			&_next {
@@ -30,6 +30,14 @@
 	.publicationsBlockLinkBox {
 		&__btn {
 			width: 188px;
+		}
+	}
+}
+
+@media (min-width: 1200px) and (max-height: 767px) {
+	.publications {
+		.publicationsCarousel {
+			padding: 2.5rem 0 2.5rem 6.75rem;
 		}
 	}
 }

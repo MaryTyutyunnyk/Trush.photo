@@ -12,16 +12,28 @@
 
 .error {
 	&__container {
-		padding: 3rem 2.375rem 1.375rem;
+		padding: 2.5rem 0 2rem;
+	}
+
+	&__box {
+		position: relative;
+		background-image: url("../../../svg/404_tablet.svg");
+		background-position: top, center;
+		background-repeat: no-repeat;
+		height: calc(100vh - 70px);
 	}
 
 	&__content {
-		background-image: url("../../../svg/404_tablet.svg");
-		background-size: initial;
+		position: relative;
+		top: 196px;
 	}
 
 	&__text {
-		width: 322px;
+		width: 332px;
+	}
+
+	&__camera {
+		display: none;
 	}
 }
 

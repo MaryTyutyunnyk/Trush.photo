@@ -119,64 +119,6 @@
 			display: block;
 		}
 
-		.logoDark {
-			display: flex;
-			margin-bottom: 3rem;
-
-			&__svg {
-				display: inline-block;
-				width: 174px;
-				height: 32px;
-				background-image: url('../../../svg/logo_mob_dark.svg');
-			}
-		}
-
-		.navbarNav {
-			display: flex;
-			flex-direction: column;
-			font-family: $FiraSansRegular;
-
-			&__item {
-				margin-bottom: 2rem;
-			}
-
-			&__link {
-				font-size: 1.25rem;
-				color: $secondary;
-
-				&_active {
-					color: $primary;
-				}
-			}
-
-			&__arrow {
-				display: none;
-			}
-
-			.navbarNavSubMenu {
-				margin-top: 1rem;
-				padding-left: 1rem;
-
-				&__item {
-					margin-bottom: 1rem;
-
-					&:last-child {
-						margin-bottom: 0;
-					}
-				}
-
-				&__link {
-					font-size: 1rem;
-					color: $secondary;
-					transition: .3s;
-
-					&:hover {
-						color: $primary;
-					}
-				}
-			}
-		}
-
 		&__btn {
 			@include btn_brief;
 			margin-bottom: 2rem;
@@ -191,44 +133,109 @@
 			background-color: $secondary;
 			opacity: .5;
 		}
+	}
 
-		.navbarLanguage {
-			display: flex;
+	.logoDark {
+		display: flex;
+		margin-bottom: 3rem;
 
-			&__item {
-				margin-right: 2rem;
+		&__svg {
+			display: inline-block;
+			width: 174px;
+			height: 32px;
+			background-image: url('../../../svg/logo_mob_dark.svg');
+		}
+	}
 
-				&:last-child {
-					margin-right: 0;
-				}
-			}
+	.navbarNav {
+		display: flex;
+		flex-direction: column;
+		font-family: $FiraSansRegular;
 
-			&__link {
-				position: relative;
-				font-family: $FiraMonoRegular;
-				font-size: 1.25rem;
-				color: $secondary;
-				opacity: .2;
+		&__item {
+			margin-bottom: 2rem;
+		}
 
-				&_active {
-					opacity: 1;
+		&__link {
+			font-size: 1.25rem;
+			color: $secondary;
 
-					&::after {
-						position: absolute;
-						bottom: -.25rem;
-						left: 0;
-						width: 100%;
-						height: 1px;
-						background-color: $secondary;
-						content: "";
-						visibility: visible;
+			&_active {
+				color: $primary;
+
+				.navbarNav__arrow {
+					path {
+						fill: $primary;
 					}
 				}
 			}
+		}
 
-			&__arrow {
-				display: none;
+		&__arrow {
+			display: none;
+		}
+	}
+
+	.navbarNavSubMenu {
+		margin-top: 1rem;
+		padding-left: 1rem;
+
+		&__item {
+			margin-bottom: 1rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&__link {
+			font-size: 1rem;
+			color: $secondary;
+			transition: .3s;
+
+			&:hover {
+				color: $primary;
 			}
 		}
 	}
+
+	.navbarLanguage {
+		display: flex;
+
+		&__item {
+			margin-right: 2rem;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&__link {
+			position: relative;
+			font-family: $FiraMonoRegular;
+			font-size: 1.25rem;
+			color: $secondary;
+			opacity: .2;
+
+			&_active {
+				opacity: 1;
+
+				&::after {
+					position: absolute;
+					bottom: -.25rem;
+					left: 0;
+					width: 100%;
+					height: 1px;
+					background-color: $secondary;
+					content: "";
+					visibility: visible;
+				}
+			}
+		}
+
+		&__arrow {
+			display: none;
+		}
+	}
 }
+

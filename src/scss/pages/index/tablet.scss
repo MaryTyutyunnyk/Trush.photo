@@ -1,7 +1,6 @@
 @import "../../common/_variables.scss";
 @import "../../common/_mixins.scss";
 @import "../../components/navbar/_tablet.scss";
-//@import "../../vendor/slick.scss";
 
 html, body {
 	height: 100vh;
@@ -12,7 +11,7 @@ html, body {
 	&__container {
 		display: flex;
 		height: calc(100vh - 70px);
-		padding: 4.5rem 2rem 0;
+		padding: 2.5rem 2rem 0;
 		flex-direction: row;
 		align-items: flex-end;
 		justify-content: space-between;
@@ -23,6 +22,7 @@ html, body {
 		padding-bottom: 67px;
 		width: 11%;
 		height: 100%;
+		margin-right: 3rem;
 
 		&__line {
 			margin-bottom: 6rem;
@@ -61,7 +61,9 @@ html, body {
 	.homePageSlider {
 		width: 53vh;
 		padding: 0 0 0 0;
+		margin-right: 2%;
 	}
+
 	.homePageSliderBox {
 		width: 100%;
 	}
@@ -78,7 +80,7 @@ html, body {
 			position: absolute;
 			bottom: 0;
 			width: 2px;
-			height: 78%;
+			height: 70%;
 			background-color: $secondary;
 			content: "";
 		}
@@ -101,6 +103,12 @@ html, body {
 				font-size: 2rem;
 				letter-spacing: 0.625rem;
 			}
+		}
+	}
+
+	.contentBlockPicture {
+		&__darkRectangle {
+			display: none;
 		}
 	}
 }

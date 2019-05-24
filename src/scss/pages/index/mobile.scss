@@ -2,9 +2,6 @@
 @import "../../common/_variables.scss";
 @import "../../common/_mixins.scss";
 @import "../../components/navbar/_mobile.scss";
-//@import "../../vendor/slick.scss";
-//@import "../../vendor/slick-theme.scss";
-
 
 .homePageContent {
 	&__container {
@@ -111,8 +108,14 @@
 		}
 
 		&__img {
-			width: 188px;
-			height: 287px;
+			&_vertical {
+				width: 188px;
+				height: 287px;
+			}
+
+			&_horizontal {
+				display: none;
+			}
 		}
 	}
 
@@ -212,13 +215,29 @@
 		}
 
 		.personalInfo {
+			left: 4%;
 			bottom: 54px;
 		}
 
 		.contentBlockPicture {
 			&__img {
-				width: 198px;
-				height: 302px;
+				&_vertical {
+					display: none;
+				}
+
+				&_horizontal {
+					display: block;
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			&__darkRectangle {
+				flex: 0 1 140px;
+			}
+
+			&__box {
+				flex: 1 1 430px;
 			}
 		}
 
@@ -226,7 +245,7 @@
 			height: 64px;
 
 			&__link {
-				width: 198px;
+				width: 50%;
 			}
 		}
 	}

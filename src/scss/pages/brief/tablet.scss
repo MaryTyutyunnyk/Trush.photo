@@ -10,7 +10,7 @@
 	&__content {
 		position: relative;
 		overflow: hidden;
-		padding: 0 2rem 2rem;
+		padding: 1.5rem 2rem 2rem;
 	}
 
 	&__title {
@@ -73,14 +73,17 @@
 
 	&__content {
 		background-image: url("../../../svg/camera_desktop.svg");
+		background-position: center;
+		background-repeat: no-repeat;
 		background-color: $secondary_white;
-		padding: 5rem 0;
+		padding: 3.5rem 0;
+		height: 55vh;
 	}
 
 	&__envelope {
 		width: 80px;
 		height: 72px;
-		margin-top: 0;
+		margin-top: 1.5rem;
 	}
 
 	&__title {
@@ -91,5 +94,9 @@
 	&__text {
 		margin-bottom: 2rem;
 		width: 313px;
+	}
+
+	&__camera {
+		display: none;
 	}
 }
