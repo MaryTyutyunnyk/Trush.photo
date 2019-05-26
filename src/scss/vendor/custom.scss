@@ -1,27 +1,21 @@
-//.publicationsCarouselList,
-//.owl-stage-outer,
-//.owl-stage,
-//.owl-item {
-//    height: 100%;
-//}
-//
-//.publications_carousel {
-//
-//}
-//.owl-stage-outer {
-//
-//}
-//.owl-stage {
-//
-//}
-//.owl-item {
-//    .item {
-//        height: 100%;
-//        margin-right: 10px;
-//        img {
-//            height: 100%;
-//            width: auto;
-//        }
-//    }
-//}
-//
+.owl-stage-outer,
+.owl-stage,
+.owl-item {
+    height: 100%;
+}
+
+.owl-carousel {
+    &.horizontal {
+        .owl-item {
+            .item {
+                height: 100%;
+                margin-right: 10px;
+                img {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+

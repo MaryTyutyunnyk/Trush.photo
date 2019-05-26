@@ -71,19 +71,24 @@
 
 .briefSent {
 
-	&__content {
+	padding-top: 2.5rem;
+
+	&__container {
+		position: relative;
+		min-height: 660px;
 		background-image: url("../../../svg/camera_desktop.svg");
-		background-position: center;
+		background-position: top, center;
 		background-repeat: no-repeat;
-		background-color: $secondary_white;
-		padding: 3.5rem 0;
-		height: 55vh;
+	}
+
+	&__content {
+		position: relative;
+		top: 80px;
 	}
 
 	&__envelope {
 		width: 80px;
 		height: 72px;
-		margin-top: 1.5rem;
 	}
 
 	&__title {
@@ -94,6 +99,10 @@
 	&__text {
 		margin-bottom: 2rem;
 		width: 313px;
+	}
+
+	&__btn {
+		margin-bottom: 0;
 	}
 
 	&__camera {

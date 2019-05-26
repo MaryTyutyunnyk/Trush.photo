@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/pages/index/mobile.css">
 	<link rel="stylesheet" href="css/pages/index/tablet.css" media="(min-width: 960px)">
 	<link rel="stylesheet" href="css/pages/index/desktop.css" media="(min-width: 1440px)">
+<!--	<link rel="stylesheet" href="css/vendor/custom.css">-->
 </head>
 <body>
 //= ../components/navbar.html
@@ -39,16 +40,17 @@
 		</div>
 		<section class="homePageSlider">
 			<div class="homePageSliderBox">
-				<div id="homePageSliderList" class="homePageSliderList">
-					<img src="./png/img1_large.png" class="homePageSliderList__img" alt="girl">
-					<img src="./png/img2_large.png" class="homePageSliderList__img" alt="girl">
-					<img src="./png/img3_large.png" class="homePageSliderList__img" alt="girl">
+				<div id="index_carousel" class="owl-carousel homePageSliderList">
+					<div class="homePageSliderList__item no-margin">
+						<img src="./png/img1_large.png" alt="Photo" class="homePageSliderList__img">
+					</div>
+					<div class="homePageSliderList__item no-margin">
+						<img src="./png/img1_large.png" alt="Photo" class="homePageSliderList__img">
+					</div>
+					<div class="homePageSliderList__item no-margin">
+						<img src="./png/img1_large.png" alt="Photo" class="homePageSliderList__img">
+					</div>
 				</div>
-<!--				<div id="homePageSliderDots" class="homePageSliderDots">-->
-<!--					<span class="homePageSliderDots__item homePageSliderDots__item_active"></span>-->
-<!--					<span class="homePageSliderDots__item"></span>-->
-<!--					<span class="homePageSliderDots__item"></span>-->
-<!--				</div>-->
 			</div>
 		</section>
 		<section class="contentBlock">
@@ -64,7 +66,7 @@
 				</a>
 			</div>
 			<div class="contentBlockArrow">
-				<a href="/portfolio.html" class="contentBlockArrow__link">
+				<a href="/error.html" class="contentBlockArrow__link">
 					<svg
 							class="contentBlockArrow__arrow"
 							xmlns="http://www.w3.org/2000/svg"
@@ -82,8 +84,8 @@
 	</div>
 </main>
 <script src="js/components/jquery-3.3.1.min.js"></script>
-<!--<script src="js/components/slick.js"></script>-->
 <script src="js/components/menu.js"></script>
+<script src="js/components/owl.carousel.js"></script>
 <script src="js/components/index.js"></script>
 </body>
 </html>

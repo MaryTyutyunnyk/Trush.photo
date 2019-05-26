@@ -1,6 +1,8 @@
 @import "../../common/_variables.scss";
 @import "../../common/_mixins.scss";
 @import "../../components/navbar/_desktop.scss";
+@import "../../vendor/owl.carousel.scss";
+@import "../../vendor/animate.scss";
 
 .homePageContent {
 
@@ -51,11 +53,4 @@
 			}
 		}
 	}
-
-	//.contentBlockPicture {
-	//	&__img {
-	//		width: 262px;
-	//		height: 400px;
-	//	}
-	//}
 }

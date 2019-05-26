@@ -11,25 +11,27 @@
 }
 
 .error {
-	&__container {
-		padding: 2.5rem 0 2rem;
-	}
+	padding-top: 2.5rem;
 
-	&__box {
+	&__container {
 		position: relative;
 		background-image: url("../../../svg/404_tablet.svg");
+		min-height: 660px;
 		background-position: top, center;
 		background-repeat: no-repeat;
-		height: calc(100vh - 70px);
 	}
 
 	&__content {
 		position: relative;
-		top: 196px;
+		top: 200px;
 	}
 
 	&__text {
 		width: 332px;
+	}
+
+	&__btn {
+		margin-bottom: 0;
 	}
 
 	&__camera {
@@ -37,4 +39,6 @@
 	}
 }
 
+@media (min-height: 769px) {
 
+}
