@@ -175,6 +175,10 @@ body {
 		display: flex;
 		height: 100%;
 	}
+
+	.orientationModal {
+		display: none;
+	}
 }
 
 
@@ -202,6 +206,21 @@ body {
 				font-family: $FiraSansLight;
 				font-size: 2rem;
 			}
+		}
+	}
+}
+
+@media screen and (orientation: portrait) {
+
+	main {
+		filter: blur(40px);
+	}
+
+	.blurModal {
+		@include blurModal;
+
+		&__svg {
+			@include rotateScreenIcon;
 		}
 	}
 }
