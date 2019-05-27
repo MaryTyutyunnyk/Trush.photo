@@ -24,11 +24,17 @@ $(function () {
 
 	// Remove function on mobile devices
 
-	// $(window).resize(function(){
-	// 	if($(window).width() < 960){
-	// 		owl.trigger('destroy.owl.carousel');
-	// 	}
-	// });
+	$(window).resize(function(){
+		if($(window).width() < 960){
+			if (owl.hasClass('owl-loaded')) {
+				owl.trigger('destroy.owl.carousel');
+			}
+		} else {
+			if (!owl.hasClass('owl-loaded')) {
+				owl.trigger('initialize.owl.carousel');
+			}
+		}
+	});
 
 
 	// Filter function

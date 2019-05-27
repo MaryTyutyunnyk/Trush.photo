@@ -50,6 +50,18 @@ $(function () {
 	});
 });
 
+$(window).resize(function(){
+	if($(window).width() < 960){
+		if (owl.hasClass('owl-loaded')) {
+			owl.trigger('destroy.owl.carousel');
+		}
+	} else {
+		if (!owl.hasClass('owl-loaded')) {
+			owl.trigger('initialize.owl.carousel');
+		}
+	}
+});
+
 // Remove function on mobile devices
 
 // $(window).resize(function(){
