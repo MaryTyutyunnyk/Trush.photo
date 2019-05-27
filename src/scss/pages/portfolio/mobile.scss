@@ -247,17 +247,13 @@
 
 .owl-stage {
 	width: 100% !important;
+	transform: none !important;
 }
-
-//.owl-stage {
-//	width: 100% !important;
-//	transform: none !important;
-//}
 
 .owl-dots,
 .owl-nav {
-	display: none;
-}
+	 display: none;
+ }
 
 .blurModal {
 	display: none;
