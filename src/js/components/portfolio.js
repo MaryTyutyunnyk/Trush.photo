@@ -52,23 +52,17 @@ $(function () {
 
 $(window).resize(function(){
 	if($(window).width() < 960){
+		console.log($(window).width())
 		if (owl.hasClass('owl-loaded')) {
 			owl.trigger('destroy.owl.carousel');
 		}
 	} else {
+		console.log($(window).width())
 		if (!owl.hasClass('owl-loaded')) {
 			owl.trigger('initialize.owl.carousel');
 		}
 	}
 });
-
-// Remove function on mobile devices
-
-// $(window).resize(function(){
-// 	if($(window).width() < 960){
-// 		owl.trigger('destroy.owl.carousel');
-// 	}
-// });
 
 
 // Portfolio function for switching between two blocks - portfolioBlockImage and portfolioBlockCatalogue

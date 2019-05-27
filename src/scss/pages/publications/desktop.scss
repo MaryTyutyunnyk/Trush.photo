@@ -41,3 +41,18 @@
 		}
 	}
 }
+
+@media screen and (orientation: portrait) {
+
+	main {
+		filter: blur(40px);
+	}
+
+	.blurModal {
+		@include blurModal;
+
+		&__svg {
+			@include rotateScreenIcon;
+		}
+	}
+}
