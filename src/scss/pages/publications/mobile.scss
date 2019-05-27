@@ -130,10 +130,19 @@
 	z-index: initial;
 }
 
+.owl-stage {
+	width: 100% !important;
+}
+
 .owl-item {
 	img {
 		max-width: 100%;
 	}
+}
+
+.owl-dots,
+.owl-nav {
+	display: none;
 }
 
 .blurModal {

@@ -235,6 +235,30 @@
 	}
 }
 
+//.owl-item {
+//	width: 100%;
+//}
+
+.owl-item {
+	img {
+		max-width: 100%;
+	}
+}
+
+.owl-stage {
+	width: 100% !important;
+}
+
+//.owl-stage {
+//	width: 100% !important;
+//	transform: none !important;
+//}
+
+.owl-dots,
+.owl-nav {
+	display: none;
+}
+
 .blurModal {
 	display: none;
 }

@@ -42,22 +42,23 @@ $(function () {
 		const {item: {count, index}} = event;
 		if (index === 0) {
 			prevArrow.hide();
-			$('.portfolioCarousel').removeClass('active');
+			//$('.portfolioCarousel').removeClass('active');
 		} else {
 			prevArrow.show();
-			$('.portfolioCarousel').addClass('active');
+			//$('.portfolioCarousel').addClass('active');
 		}
 	});
 });
 
-$(window).resize(function(){
+$(window).resize(function() {
+	//let owl = $('#portfolioCarouselListImage');
 	if($(window).width() < 960){
-		console.log($(window).width())
+		console.log("Mobile");
 		if (owl.hasClass('owl-loaded')) {
 			owl.trigger('destroy.owl.carousel');
 		}
 	} else {
-		console.log($(window).width())
+		console.log("Desktop");
 		if (!owl.hasClass('owl-loaded')) {
 			owl.trigger('initialize.owl.carousel');
 		}
