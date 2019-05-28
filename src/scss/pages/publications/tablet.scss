@@ -102,8 +102,10 @@ body {
 	}
 
 	.publicationsBlockLinkBox {
+		position: inherit;
 		height: 4rem;
 		box-shadow: none;
+		z-index: 5;
 
 		&__btn {
 			width: 94px;

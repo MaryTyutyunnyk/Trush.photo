@@ -37,7 +37,7 @@
 		box-shadow: none;
 
 		&__btn {
-			margin-right: 1rem;
+			margin-right: 0.5rem;
 			margin-bottom: 0;
 		}
 
@@ -72,6 +72,9 @@
 
 		&__arrow {
 			display: inline-block;
+			position: relative;
+			bottom: 3px;
+			right: 0;
 		}
 	}
 
@@ -161,11 +164,11 @@
 	}
 
 	.navbarLanguageDesktop {
-		display: flex;
-		align-items: center;
-		justify-content: center;
 
 		&__link {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			position: relative;
 			font-family: $FiraMonoRegular;
 			font-size: 1.25rem;
@@ -178,6 +181,9 @@
 
 		&__arrow {
 			display: inline-block;
+			position: relative;
+			bottom: 3px;
+			right: 0;
 		}
 	}
 

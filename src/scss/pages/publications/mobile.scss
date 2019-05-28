@@ -84,6 +84,7 @@
 		height: 3rem;
 		background-color: $secondary_white;
 		box-shadow: 4px 0 8px 0 rgba(76, 73, 68, 0.15);
+		overflow-x: auto;
 
 		&__btn {
 			display: block;
@@ -96,28 +97,11 @@
 		&__list {
 			display: flex;
 			align-items: center;
-
-			.owl-stage {
-				display: flex;
-
-				.owl-item {
-					width: auto !important;
-					margin-right: 1rem;
-
-					&:last-child {
-						margin-right: 0;
-					}
-				}
-			}
 		}
 
 		&__item {
 			margin-right: 1rem;
 			cursor: pointer;
-
-			&:last-child {
-				margin-right: 0;
-			}
 		}
 
 		&__link {

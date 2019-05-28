@@ -27,7 +27,7 @@ $(function () {
 			}
 		});
 		owlInitiated = true;
-	}
+	};
 	initCarousel();
 
 	// Remove function on mobile devices
@@ -44,18 +44,6 @@ $(function () {
 			}
 		}
 	});
-
-	// Filter carousel swipping
-
-	const owlFilterCarousel = $('#publicationsFilterList');
-	owlFilterCarousel.owlCarousel({
-		dots: false,
-		nav: false,
-		mouseDrag: true,
-		touchDrag: true,
-		pullDrag: false,
-	});
-
 
 	// Filter function
 	let publicationsLink = $(".publicationsBlockLinkBox__link");
