@@ -1,8 +1,12 @@
-// Function for portfolio submenu
+// Function for portfolio submenu demonstration
 
 $(function () {
-	$('#portfolioItem').click(function (e) {
-		e.stopPropagation();
+	$('#portfolioItem').click(function (event) {
+		event.stopPropagation();
 		$('.navbarNavSubMenu').toggleClass('open');
+	});
+
+	$('html').click(function () {
+		$('.navbarNavSubMenu').removeClass("open");
 	});
 });

@@ -49,8 +49,6 @@ $(function () {
 	});
 
 
-
-
 	// Filter function
 	let publicationsLink = $(".publicationsBlockLinkBox__link");
 	publicationsLink.click(function () {
