@@ -2,13 +2,12 @@
 @import "../../common/_mixins.scss";
 
 .brief {
-
 	&__crossBlock {
 		padding: 1rem 6.75rem 1rem;
 	}
 
 	&__content {
-		padding: 3.5rem 6.75rem 2rem;
+		padding: 0 6.75rem 2rem;
 	}
 
 	&__title {
@@ -32,8 +31,6 @@
 }
 
 .briefSent {
-	padding-top: 3.5rem;
-
 	&__container {
 		min-height: 930px;
 	}
@@ -43,10 +40,6 @@
 	.briefSent {
 		&__container {
 			background-size: cover;
-		}
-
-		&__content {
-			//top: 315px;
 		}
 
 		&__text {

@@ -10,7 +10,7 @@
 	&__content {
 		position: relative;
 		overflow: hidden;
-		padding: 1.5rem 2rem 2rem;
+		padding: 0 2rem 2rem;
 	}
 
 	&__title {
@@ -70,12 +70,9 @@
 }
 
 .briefSent {
-
-	padding-top: 2.5rem;
-
 	&__container {
 		position: relative;
-		min-height: 660px;
+		min-height: 768px;
 		background-image: url("../../../svg/camera_desktop.svg");
 		background-position: top, center;
 		background-repeat: no-repeat;

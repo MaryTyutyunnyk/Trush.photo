@@ -96,6 +96,19 @@
 		&__list {
 			display: flex;
 			align-items: center;
+
+			.owl-stage {
+				display: flex;
+
+				.owl-item {
+					width: auto !important;
+					margin-right: 1rem;
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
 		}
 
 		&__item {
@@ -140,8 +153,8 @@
 	}
 }
 
-.owl-dots,
-.owl-nav {
+.owl-nav,
+.owl-dots {
 	display: none;
 }
 

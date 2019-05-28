@@ -4,6 +4,7 @@ $(function () {
 	const owl = $('#publicationsCarouselList');
 	owl.owlCarousel({
 		autoWidth: true,
+		dots: false,
 	});
 	prevArrow.click(function () {
 		owl.trigger('prev.owl.carousel');
@@ -35,6 +36,19 @@ $(function () {
 			}
 		}
 	});
+
+	// Filter carousel swipping
+
+	const owlFilterCarousel = $('#publicationsFilterList');
+	owlFilterCarousel.owlCarousel({
+		dots: false,
+		nav: false,
+		mouseDrag: true,
+		touchDrag: true,
+		pullDrag: false,
+	});
+
+
 
 
 	// Filter function

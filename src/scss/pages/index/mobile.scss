@@ -178,6 +178,10 @@
 	}
 }
 
+.owl-carousel.owl-drag .owl-item {
+	touch-action: pan-y;
+}
+
 
 @media screen and (min-width: 560px) {
 	.navbar {

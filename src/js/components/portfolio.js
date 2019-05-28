@@ -5,6 +5,7 @@ $(function () {
 	owl.owlCarousel({
 		autoWidth: true,
 		loop: true,
+		dots: false,
 	});
 	prevArrow.click(function () {
 		owl.trigger('prev.owl.carousel');
@@ -31,6 +32,7 @@ $(function () {
 	owl.owlCarousel({
 		autoWidth: true,
 		loop: true,
+		dots: false,
 	});
 	prevArrow.click(function () {
 		owl.trigger('prev.owl.carousel');
@@ -50,8 +52,24 @@ $(function () {
 	});
 });
 
+
 $(window).resize(function() {
-	//let owl = $('#portfolioCarouselListImage');
+	let owl = $('#portfolioCarouselListImage');
+	if($(window).width() < 960){
+		console.log("Mobile");
+		if (owl.hasClass('owl-loaded')) {
+			owl.trigger('destroy.owl.carousel');
+		}
+	} else {
+		console.log("Desktop");
+		if (!owl.hasClass('owl-loaded')) {
+			owl.trigger('initialize.owl.carousel');
+		}
+	}
+});
+
+$(window).resize(function() {
+	let owl = $('#portfolioCarouselListCatalogue');
 	if($(window).width() < 960){
 		console.log("Mobile");
 		if (owl.hasClass('owl-loaded')) {
@@ -87,9 +105,6 @@ const addListeners = element => {
 		$(".modal").css({"display": "block"});
 	});
 };
-// $(".portfolioCarouselListItem__imgBox").on('click', function () {
-// 	$(".modal").css({"display": "block"});
-// });
 const imgBox = $(".portfolioCarouselListItem__imgBox");
 addListeners(imgBox);
 

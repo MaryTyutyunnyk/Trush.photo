@@ -6,8 +6,19 @@ $("#index_carousel").owlCarousel({
 	autoplayHoverPause: true,
 	animateOut: 'slideOutUp',
 	animateIn: 'slideInUp',
-	mouseDrag: false,
-	touchDrag: true,
+	mouseDrag: true,
+	touchDrag: false,
 	pullDrag: false,
 	freeDrag: false,
+	responsiveClass:true,
+	responsive: {
+		0: {
+			mouseDrag: false,
+			touchDrag: true
+		},
+		960: {
+			mouseDrag: true,
+			touchDrag: false
+		},
+	}
 });

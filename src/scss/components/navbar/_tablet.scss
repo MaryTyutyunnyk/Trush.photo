@@ -60,9 +60,9 @@
 			&_portfolio {
 				position: relative;
 
-				&:hover .navbarNavSubMenu {
-					display: block;
-				}
+				//&:hover .navbarNavSubMenu {
+				//	display: block;
+				//}
 			}
 		}
 
@@ -91,6 +91,10 @@
 		box-sizing: border-box;
 		box-shadow: 0 4px 8px 0 rgba(76, 73, 68, 0.15);
 		background-color: $secondary_white;
+
+		.open {
+			display: block;
+		}
 
 		&__item {
 			margin-bottom: 1rem;

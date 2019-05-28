@@ -42,7 +42,7 @@ body {
 			justify-content: center;
 			background-color: $primary;
 			position: absolute;
-			bottom: 59%;
+			bottom: 66%;
 			width: 32px;
 			height: 32px;
 			padding: 12px;
@@ -83,6 +83,17 @@ body {
 		flex-wrap: nowrap;
 		height: 100%;
 		overflow: hidden;
+	}
+
+	.owl-stage {
+		display: flex;
+		height: 100%;
+	}
+
+	.owl-item {
+		img {
+			max-width: none;
+		}
 	}
 
 	.portfolioCarouselListItem {
@@ -169,11 +180,6 @@ body {
 				width: 59vh;
 			}
 		}
-	}
-
-	.owl-stage {
-		display: flex;
-		height: 100%;
 	}
 
 	.orientationModal {

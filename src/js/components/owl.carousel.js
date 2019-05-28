@@ -947,7 +947,7 @@
 
 		if ($.support.transform3d && $.support.transition) {
 			this.$stage.css({
-				transform: 'translate3d(' + coordinate + 'px,0px,0px)',
+				transform: 'translate(' + coordinate + 'px' + ',0px)',
 				transition: (this.speed() / 1000) + 's' + (
 					this.settings.slideTransition ? ' ' + this.settings.slideTransition : ''
 				)
