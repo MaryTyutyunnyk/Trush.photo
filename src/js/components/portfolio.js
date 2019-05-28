@@ -1,88 +1,96 @@
 $(function () {
+	// first carousel initiation
+	let owlInitiated = false;
 	const prevArrow = $('#previous_arrow');
 	const nextArrow = $('#next_arrow');
 	const owl = $('#portfolioCarouselListImage');
-	owl.owlCarousel({
-		autoWidth: true,
-		loop: true,
-		dots: false,
-	});
-	prevArrow.click(function () {
-		owl.trigger('prev.owl.carousel');
-	});
-	nextArrow.click(function () {
-		owl.trigger('next.owl.carousel');
-	});
-	owl.on('changed.owl.carousel', function (event) {
-		const {item: {count, index}} = event;
-		if (index === 0) {
-			prevArrow.hide();
-			// $('.portfolioCarousel').removeClass('active');
-		} else {
-			prevArrow.show();
-			// $('.portfolioCarousel').addClass('active');
-		}
-	});
-});
+	const $window = $(window);
 
-$(function () {
-	const prevArrow = $('#left_arrow');
-	const nextArrow = $('#right_arrow');
-	const owl = $('#portfolioCarouselListCatalogue');
-	owl.owlCarousel({
-		autoWidth: true,
-		loop: true,
-		dots: false,
-	});
-	prevArrow.click(function () {
-		owl.trigger('prev.owl.carousel');
-	});
-	nextArrow.click(function () {
-		owl.trigger('next.owl.carousel');
-	});
-	owl.on('changed.owl.carousel', function (event) {
-		const {item: {count, index}} = event;
-		if (index === 0) {
-			prevArrow.hide();
-			//$('.portfolioCarousel').removeClass('active');
-		} else {
-			prevArrow.show();
-			//$('.portfolioCarousel').addClass('active');
-		}
-	});
-});
-
-
-$(window).resize(function() {
-	let owl = $('#portfolioCarouselListImage');
-	if($(window).width() < 960){
-		console.log("Mobile");
-		if (owl.hasClass('owl-loaded')) {
-			owl.trigger('destroy.owl.carousel');
-		}
-	} else {
-		console.log("Desktop");
-		if (!owl.hasClass('owl-loaded')) {
-			owl.trigger('initialize.owl.carousel');
-		}
+	const initCarousel = () => {
+		owl.owlCarousel({
+			autoWidth: true,
+			loop: true,
+			dots: false,
+		});
+		prevArrow.click(function () {
+			owl.trigger('prev.owl.carousel');
+		});
+		nextArrow.click(function () {
+			owl.trigger('next.owl.carousel');
+		});
+		owl.on('changed.owl.carousel', function (event) {
+			const {item: {count, index}} = event;
+			if (index === 0) {
+				prevArrow.hide();
+			} else {
+				prevArrow.show();
+			}
+		});
+		owlInitiated = true;
 	}
-});
+	initCarousel();
 
-$(window).resize(function() {
-	let owl = $('#portfolioCarouselListCatalogue');
-	if($(window).width() < 960){
-		console.log("Mobile");
-		if (owl.hasClass('owl-loaded')) {
-			owl.trigger('destroy.owl.carousel');
+	// Remove function on mobile devices
+
+	$window.resize(function() {
+		if($window.width() < 960){
+			if (owlInitiated) {
+				owl.trigger('destroy.owl.carousel');
+				owlInitiated = false;
+			}
+		} else {
+			if (!owlInitiated) {
+				initCarousel();
+			}
 		}
-	} else {
-		console.log("Desktop");
-		if (!owl.hasClass('owl-loaded')) {
-			owl.trigger('initialize.owl.carousel');
-		}
+	});
+
+
+	// second carousel initiation
+	let owlInitiated2 = false;
+	const prevArrow2 = $('#left_arrow');
+	const nextArrow2 = $('#right_arrow');
+	const owl2 = $('#portfolioCarouselListCatalogue');
+
+	const initCarousel2 = () => {
+		owl2.owlCarousel({
+			autoWidth: true,
+			loop: true,
+			dots: false,
+		});
+		prevArrow2.click(function () {
+			owl2.trigger('prev.owl.carousel');
+		});
+		nextArrow2.click(function () {
+			owl2.trigger('next.owl.carousel');
+		});
+		owl2.on('changed.owl.carousel', function (event) {
+			const {item: {count, index}} = event;
+			if (index === 0) {
+				prevArrow2.hide();
+			} else {
+				prevArrow2.show();
+			}
+		});
+		owlInitiated2 = true;
 	}
-});
+	initCarousel2();
 
+	// Remove function on mobile devices
+
+	$window.resize(function() {
+		if($window.width() < 960){
+			if (owlInitiated2) {
+				owl2.trigger('destroy.owl.carousel');
+				owlInitiated2 = false;
+			}
+		} else {
+			if (!owlInitiated2) {
+				initCarousel2();
+			}
+		}
+	});
+});
 
 // Portfolio function for switching between two blocks - portfolioBlockImage and portfolioBlockCatalogue
 

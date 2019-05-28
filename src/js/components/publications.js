@@ -1,38 +1,46 @@
 $(function () {
+	let owlInitiated = false;
 	const prevArrow = $('#prev_arrow');
 	const nextArrow = $('#next_arrow');
 	const owl = $('#publicationsCarouselList');
-	owl.owlCarousel({
-		autoWidth: true,
-		dots: false,
-	});
-	prevArrow.click(function () {
-		owl.trigger('prev.owl.carousel');
-	});
-	nextArrow.click(function () {
-		owl.trigger('next.owl.carousel');
-	});
-	owl.on('changed.owl.carousel', function (event) {
-		const {item: {count, index}} = event;
-		if (index === 0) {
-			prevArrow.hide();
-			$('.publicationsCarousel').removeClass('active');
-		} else {
-			prevArrow.show();
-			$('.publicationsCarousel').addClass('active');
-		}
-	});
+	const $window = $(window);
+
+	const initCarousel = () => {
+		owl.owlCarousel({
+			autoWidth: true,
+			dots: false,
+		});
+		prevArrow.click(function () {
+			owl.trigger('prev.owl.carousel');
+		});
+		nextArrow.click(function () {
+			owl.trigger('next.owl.carousel');
+		});
+		owl.on('changed.owl.carousel', function (event) {
+			const {item: {count, index}} = event;
+			if (index === 0) {
+				prevArrow.hide();
+				$('.publicationsCarousel').removeClass('active');
+			} else {
+				prevArrow.show();
+				$('.publicationsCarousel').addClass('active');
+			}
+		});
+		owlInitiated = true;
+	}
+	initCarousel();
 
 	// Remove function on mobile devices
 
-	$(window).resize(function(){
-		if($(window).width() < 960){
-			if (owl.hasClass('owl-loaded')) {
+	$window.resize(function(){
+		if($window.width() < 960){
+			if (owlInitiated) {
 				owl.trigger('destroy.owl.carousel');
+				owlInitiated = false;
 			}
 		} else {
-			if (!owl.hasClass('owl-loaded')) {
-				owl.trigger('initialize.owl.carousel');
+			if (!owlInitiated) {
+				initCarousel();
 			}
 		}
 	});
