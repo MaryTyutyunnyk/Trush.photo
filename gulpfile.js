@@ -5,8 +5,8 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const gulpSequence = require('gulp-sequence');
 const clean = require('gulp-clean');
-const rigger = require('gulp-rigger'); // Для блочного использования частей кода
-const plumber = require('gulp-plumber'); // Для отслеживания ошибок
+const rigger = require('gulp-rigger'); // To use code blocks as components
+const plumber = require('gulp-plumber'); // To track bugs
 
 //Styles
 const sass = require('gulp-sass');
@@ -15,8 +15,8 @@ const autoprefixer = require('gulp-autoprefixer');
 
 // JS
 const sourcemaps = require('gulp-sourcemaps');
-const concat = require('gulp-concat'); // Объединение файлов
-const uglify = require('gulp-uglify'); // Сжатие JS файлов
+const concat = require('gulp-concat'); // For files concatination
+const uglify = require('gulp-uglify'); // Compress JS files
 
 // Images
 const imagemin = require('gulp-imagemin');
@@ -30,7 +30,7 @@ gulp.task('clean', () =>
         .pipe(clean())
 );
 
-gulp.task('html', () => { // возможно нужно сжать html
+gulp.task('html', () => {
 	gulp.src('./src/html/pages/*.html')
 		.pipe(rigger())
 		.pipe(gulp.dest('./dist'))
@@ -38,8 +38,8 @@ gulp.task('html', () => { // возможно нужно сжать html
 
 gulp.task('scss', () =>
 	gulp.src('./src/scss/**/*.scss')
-		.pipe(plumber()) // Отслеживание ошибок
-		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError)) // означает проганяем файлы .scss через плагин и, если есть ошибки, выводим в консоль.
+		.pipe(plumber())
+		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 		.pipe(autoprefixer({
 		  browsers: ['last 5 versions'],
 		  cascade: false
@@ -51,13 +51,13 @@ gulp.task('scss', () =>
 
 gulp.task('js', () =>
 	gulp.src('./src/js/**/*.js')
-		.pipe(sourcemaps.init())
-		.pipe(rigger())
 		.pipe(plumber())
-		// .pipe(uglify())
+		.pipe(sourcemaps.init())
+		//.pipe(uglify())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('./dist/js'))
 );
+
 
 gulp.task('img', () => {
 	gulp.src('./src/img/**/*.jpeg')
