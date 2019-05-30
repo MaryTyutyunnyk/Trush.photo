@@ -48,7 +48,7 @@ body {
 			padding: 12px;
 			z-index: 2;
 			cursor: pointer;
-			transition: .6s;
+			transition: .3s;
 
 			&_previous {
 				display: none;
@@ -61,7 +61,7 @@ body {
 
 			&__svg {
 				path {
-					transition: .6s;
+					transition: .3s;
 				}
 			}
 
@@ -103,7 +103,6 @@ body {
 		margin-right: 0;
 		margin-bottom: 0;
 		padding: 0 1.5rem 0 0;
-		transition: left 1.2s ease-in-out 1s;
 
 		&::after {
 			content: "";
@@ -149,6 +148,7 @@ body {
 		&__title {
 			font-family: $FiraSansLight;
 			font-size: 2.5rem;
+			line-height: 3rem;
 		}
 	}
 
@@ -211,6 +211,7 @@ body {
 			&__title {
 				font-family: $FiraSansLight;
 				font-size: 2rem;
+				line-height: 3rem;
 			}
 		}
 	}

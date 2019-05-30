@@ -4,12 +4,11 @@
 
 .about {
 	&__container {
-		padding: 2.5rem 2rem 8rem;
+		padding: 2.5rem 2rem 2rem;
 		width: 100%;
 	}
 
 	.portraitSection {
-
 		&__portrait {
 			width: 386px;
 			height: 386px;
@@ -21,98 +20,95 @@
 				height: 4px;
 			}
 		}
+	}
 
-		.socialSection {
-			left: 0;
-			bottom: -64px;
+	.socialNetworks {
+		left: 0;
+		bottom: -64px;
 
-			&__item {
-				margin-right: 1.5rem;
+		&__item {
+			margin-right: 1.5rem;
 
-				&:last-child {
-					margin-right: 0;
-				}
+			&:last-child {
+				margin-right: 0;
 			}
+		}
 
-			&__link {
-				align-items: center;
-			}
+		&__link {
+			align-items: center;
+		}
 
-			&__svg {
-				width: 40px;
-				height: 40px;
-				fill: $primary;
-			}
+		&__svg {
+			width: 40px;
+			height: 40px;
+			fill: $primary;
+		}
 
-			&__name {
-				display: inline-block;
-				font-family: $FiraSansRegular;
-				font-size: 1rem;
-				color: #4c4944;
-			}
+		&__name {
+			display: inline-block;
+			font-family: $FiraSansRegular;
+			font-size: 1rem;
+			color: #4c4944;
 		}
 	}
 
 	.infoSection {
-
 		&__name {
 			font-size: 3rem;
-		}
-
-		.infoSectionContacts {
-			margin: 2rem 0 1.5rem;
-
-			&__icon {
-				width: 24px;
-				height: 24px;
-				margin-right: 0.5rem;
-			}
-
-			&__name {
-				font-size: 1rem;
-			}
-		}
-
-		&__description {
-			margin-bottom: 4.5rem;
-		}
-
-		&__descriptionText {
-			font-size: 1rem;
 		}
 
 		&__title {
 			font-size: 1.5rem;
 			margin-bottom: 1rem;
 		}
+	}
 
-		.infoSectionClients {
-			margin-bottom: 4.5rem;
+	.infoSectionContacts {
+		margin: 2rem 0 1.5rem;
 
-			&__text {
-				font-size: 1rem;
-			}
+		&__icon {
+			width: 24px;
+			height: 24px;
+			margin-right: 0.5rem;
 		}
 
-		.infoSectionCertificates {
-			.infoSectionCertificatesLogo {
-				&__img {
-					margin-right: 3rem;
+		&__text {
+			font-size: 1rem;
+		}
+	}
 
-					&:last-child {
-						margin-right: 0;
-					}
+	.infoSectionDescription {
+		margin-bottom: 4.5rem;
 
-					&_QEP {
-						width: 100px;
-						height: 95px;
-					}
+		&__text {
+			font-size: 1rem;
+		}
+	}
 
-					&_UAPF {
-						width: 228px;
-						height: 93px;
-					}
-				}
+	.infoSectionClients {
+		margin-bottom: 4.5rem;
+
+		&__text {
+			font-size: 1rem;
+		}
+	}
+
+	.infoSectionCertificatesLogo {
+		&__img {
+			margin-right: 3rem;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&_QEP {
+				width: 100px;
+				height: 95px;
+			}
+
+			&_UAPF {
+				width: 228px;
+				height: 93px;
 			}
 		}
 	}

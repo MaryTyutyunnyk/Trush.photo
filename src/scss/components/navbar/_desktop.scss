@@ -16,9 +16,25 @@
 	&__rectangle {
 		width: 37%;
 	}
-
-	&__content {
-		width: 63%;
-	}
 }
 
+@media (min-width: 1400px) {
+	.navbar {
+
+		&__content {
+			width: 63%;
+		}
+
+		.navbarNav {
+			&__item {
+				margin-right: 3rem;
+			}
+		}
+
+		.navbarMenu {
+			&__btn {
+				margin-right: 2rem;
+			}
+		}
+	}
+}

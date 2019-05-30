@@ -1,16 +1,25 @@
 $(function () {
-	// first carousel initiation
+	// portfolioBlockImage carousel initiation
 	let owlInitiated = false;
 	const prevArrow = $('#previous_arrow');
 	const nextArrow = $('#next_arrow');
 	const owl = $('#portfolioCarouselListImage');
 	const $window = $(window);
 
-	const initCarousel = () => {
+	const initPortfolioBlockImageCarousel = () => {
 		owl.owlCarousel({
 			autoWidth: true,
 			loop: true,
 			dots: false,
+			responsiveClass:true,
+			responsive: {
+				0: {
+					loop: false,
+				},
+				960: {
+					loop: true,
+				},
+			}
 		});
 		prevArrow.click(function () {
 			owl.trigger('prev.owl.carousel');
@@ -27,10 +36,10 @@ $(function () {
 			}
 		});
 		owlInitiated = true;
-	}
-	initCarousel();
+	};
+	initPortfolioBlockImageCarousel();
 
-	// Remove function on mobile devices
+	// Remove portfolioBlockImage carousel on mobile devices
 
 	$window.resize(function() {
 		if($window.width() < 960){
@@ -40,23 +49,32 @@ $(function () {
 			}
 		} else {
 			if (!owlInitiated) {
-				initCarousel();
+				initPortfolioBlockImageCarousel();
 			}
 		}
 	});
 
 
-	// second carousel initiation
+	// portfolioBlockCatalogue carousel initiation
 	let owlInitiated2 = false;
 	const prevArrow2 = $('#left_arrow');
 	const nextArrow2 = $('#right_arrow');
 	const owl2 = $('#portfolioCarouselListCatalogue');
 
-	const initCarousel2 = () => {
+	const initPortfolioBlockCatalogueCarousel = () => {
 		owl2.owlCarousel({
 			autoWidth: true,
 			loop: true,
 			dots: false,
+			responsiveClass:true,
+			responsive: {
+				0: {
+					loop: false,
+				},
+				960: {
+					loop: true,
+				},
+			}
 		});
 		prevArrow2.click(function () {
 			owl2.trigger('prev.owl.carousel');
@@ -73,10 +91,10 @@ $(function () {
 			}
 		});
 		owlInitiated2 = true;
-	}
-	initCarousel2();
+	};
+	initPortfolioBlockCatalogueCarousel();
 
-	// Remove function on mobile devices
+	// Remove PortfolioBlockCatalogue on mobile devices
 
 	$window.resize(function() {
 		if($window.width() < 960){
@@ -86,7 +104,7 @@ $(function () {
 			}
 		} else {
 			if (!owlInitiated2) {
-				initCarousel2();
+				initPortfolioBlockCatalogueCarousel();
 			}
 		}
 	});

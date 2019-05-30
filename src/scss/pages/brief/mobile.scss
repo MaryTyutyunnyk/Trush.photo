@@ -3,7 +3,6 @@
 @import "../../common/_mixins.scss";
 
 .brief {
-
 	&__crossBlock {
 		padding: 1rem;
 		text-align: right;
@@ -30,7 +29,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 0 1rem 2.5rem;
+		padding: 0 1rem 2rem;
 	}
 
 	&__circle {
@@ -49,7 +48,8 @@
 		&__block {
 			display: flex;
 			flex-direction: column;
-			margin-bottom: 2rem;
+			margin-bottom: 1rem;
+			height: 97px;
 		}
 
 		&__label {
@@ -88,18 +88,6 @@
 			}
 		}
 
-		.errorMessage {
-			display: inline-block;
-			font-family: $FiraSansRegular;
-			margin-top: 0.5rem;
-			font-size: 0.75rem;
-			color: #ff0000;
-		}
-
-		.errorBorder {
-			border: solid 1px #ff0000;
-		}
-
 		&__btn {
 			width: 115px;
 			height: 40px;
@@ -118,149 +106,161 @@
 				background-color: $primary_dark;
 			}
 		}
+	}
 
-		.briefFormFieldset {
-			margin-bottom: 2rem;
+	.errorMessage {
+		display: inline-block;
+		font-family: $FiraSansRegular;
+		margin-top: 0.5rem;
+		font-size: 0.75rem;
+		color: #ff0000;
+	}
 
-			&__title {
-				margin-bottom: 1rem;
-				font-family: $FiraSansRegular;
-				font-size: 0.875rem;
-				color: $secondary;
-			}
+	.errorBorder {
+		border: solid 1px #ff0000;
+	}
 
-			&__container {
+	.briefFormFieldset {
+		margin-bottom: 2rem;
+
+		&__title {
+			margin-bottom: 1rem;
+			font-family: $FiraSansRegular;
+			font-size: 0.875rem;
+			color: $secondary;
+		}
+
+		&__container {
+			display: flex;
+			flex-direction: column;
+
+			&_flex {
 				display: flex;
 				flex-direction: column;
-
-				&_flex {
-					display: flex;
-					flex-direction: column;
-					margin-bottom: 1rem;
-
-					&:last-child {
-						margin-bottom: 0;
-					}
-				}
-
-				&_radio {
-					display: flex;
-					flex-direction: row;
-				}
-			}
-
-			&__block {
-				display: flex;
-				align-items: baseline;
 				margin-bottom: 1rem;
 
 				&:last-child {
 					margin-bottom: 0;
 				}
-
-				&_flex {
-					margin-bottom: 1rem;
-
-					&:last-child {
-						margin-bottom: 0;
-					}
-				}
-
-				&_radio {
-					margin-bottom: 0;
-					margin-right: 1rem;
-
-					&:last-child {
-						margin-right: 0;
-					}
-				}
 			}
 
-			&__checkbox {
-				position: absolute;
-				opacity: 0;
-				cursor: pointer;
-
-				& + label:before {
-					content: '';
-					margin-right: 0.5rem;
-					display: inline-flex;
-					width: 16px;
-					height: 16px;
-					border-radius: 2px;
-					border: solid 1px #c4c4c4;
-				}
-
-				&:checked + label:before,
-				&:hover + label:before {
-					border: solid 1px $secondary;
-				}
-
-				&:checked + label,
-				&:hover + label {
-					color: $secondary;
-				}
-
-				&:checked + label:after {
-					content: '';
-					position: absolute;
-					left: 5px;
-					top: 1px;
-					width: 6px;
-					height: 9px;
-					border: solid $secondary;
-					border-width: 0 2px 2px 0;
-					transform: rotate(45deg);
-					color: $secondary;
-				}
-			}
-
-			&__radio {
-				position: absolute;
-				opacity: 0;
-				cursor: pointer;
-
-				& + label:before {
-					content: '';
-					margin-right: 0.5rem;
-					display: inline-flex;
-					width: 14px;
-					height: 14px;
-					border-radius: 50%;
-					border: solid 1px #c4c4c4;
-				}
-
-				&:checked + label:before,
-				&:hover + label:before {
-					border: solid 1px $secondary;
-				}
-
-				&:checked + label,
-				&:hover + label {
-					color: $secondary;
-				}
-
-				&:checked + label:after {
-					content: '';
-					position: absolute;
-					left: 4px;
-					top: 4px;
-					width: 8px;
-					height: 8px;
-					border-radius: 50%;
-					background-color: $secondary;
-				}
-			}
-
-			&__label {
+			&_radio {
 				display: flex;
-				align-items: center;
-				position: relative;
-				cursor: pointer;
-				color: #c4c4c4;
-				font-family: $FiraSansRegular;
-				font-size: 0.875rem;
+				flex-direction: row;
 			}
+		}
+
+		&__block {
+			display: flex;
+			align-items: baseline;
+			margin-bottom: 1rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&_flex {
+				margin-bottom: 1rem;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			&_radio {
+				margin-bottom: 0;
+				margin-right: 1rem;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+		&__checkbox {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+
+			& + label:before {
+				content: '';
+				margin-right: 0.5rem;
+				display: inline-flex;
+				width: 16px;
+				height: 16px;
+				border-radius: 2px;
+				border: solid 1px #c4c4c4;
+			}
+
+			&:checked + label:before,
+			&:hover + label:before {
+				border: solid 1px $secondary;
+			}
+
+			&:checked + label,
+			&:hover + label {
+				color: $secondary;
+			}
+
+			&:checked + label:after {
+				content: '';
+				position: absolute;
+				left: 5px;
+				top: 3px;
+				width: 6px;
+				height: 9px;
+				border: solid $secondary;
+				border-width: 0 2px 2px 0;
+				transform: rotate(45deg);
+				color: $secondary;
+			}
+		}
+
+		&__radio {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+
+			& + label:before {
+				content: '';
+				margin-right: 0.5rem;
+				display: inline-flex;
+				width: 14px;
+				height: 14px;
+				border-radius: 50%;
+				border: solid 1px #c4c4c4;
+			}
+
+			&:checked + label:before,
+			&:hover + label:before {
+				border: solid 1px $secondary;
+			}
+
+			&:checked + label,
+			&:hover + label {
+				color: $secondary;
+			}
+
+			&:checked + label:after {
+				content: '';
+				position: absolute;
+				left: 4px;
+				top: 7px;
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background-color: $secondary;
+			}
+		}
+
+		&__label {
+			display: flex;
+			align-items: center;
+			position: relative;
+			cursor: pointer;
+			color: #c4c4c4;
+			font-family: $FiraSansRegular;
+			font-size: 0.875rem;
 		}
 	}
 }

@@ -99,15 +99,8 @@
 			display: block;
 		}
 
-		&__item {
-			margin-bottom: 1rem;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-
 		&__link {
+			font-size: 1.25rem;
 			border-bottom: 1px solid transparent;
 
 			&:hover {
@@ -116,7 +109,6 @@
 			}
 		}
 	}
-
 
 	.navbarLanguage {
 		display: none;
@@ -168,6 +160,7 @@
 	}
 
 	.navbarLanguageDesktop {
+		display: inline-block;
 		position: relative;
 
 		&__link {
@@ -231,3 +224,12 @@
 	}
 }
 
+@media (min-width: 1024px) {
+	.navbar {
+		.navbarNav {
+			&__item {
+				margin-right: 1.5rem;
+			}
+		}
+	}
+}

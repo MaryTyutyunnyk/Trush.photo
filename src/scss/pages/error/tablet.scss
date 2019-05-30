@@ -11,7 +11,7 @@
 }
 
 .error {
-	padding-top: 2.5rem;
+	padding: 2.5rem 0 2rem;
 
 	&__container {
 		position: relative;
@@ -37,8 +37,4 @@
 	&__camera {
 		display: none;
 	}
-}
-
-@media (min-height: 769px) {
-
 }

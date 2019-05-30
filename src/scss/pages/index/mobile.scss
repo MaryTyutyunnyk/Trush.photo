@@ -136,14 +136,20 @@
 			background-color: $secondary;
 		}
 
+		&__box {
+			&_small {
+				display: flex;
+			}
+
+			&_big {
+				display: none;
+			}
+		}
+
 		&__img {
 			&_vertical {
 				width: 188px;
 				height: 287px;
-			}
-
-			&_horizontal {
-				display: none;
 			}
 		}
 	}
@@ -179,7 +185,7 @@
 }
 
 .owl-carousel.owl-drag .owl-item {
-	touch-action: pan-y;
+	touch-action: none;
 }
 
 
@@ -206,24 +212,27 @@
 		}
 
 		.contentBlockPicture {
-			&__img {
-				&_vertical {
-					display: none;
-				}
-
-				&_horizontal {
-					display: block;
-					width: 100%;
-					height: 100%;
-				}
-			}
 
 			&__darkRectangle {
 				flex: 0 1 140px;
 			}
 
 			&__box {
-				flex: 1 1 430px;
+				&_small {
+					display: none;
+				}
+
+				&_big {
+					display: block;
+					flex: 1 1 430px;
+				}
+			}
+
+			&__img {
+				&_horizontal {
+					display: block;
+					max-width: 100%;
+				}
 			}
 		}
 

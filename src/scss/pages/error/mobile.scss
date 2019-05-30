@@ -26,6 +26,8 @@ body {
 }
 
 .error {
+	padding: 1rem 0 2rem;
+
 	&__content {
 		display: flex;
 		flex-direction: column;

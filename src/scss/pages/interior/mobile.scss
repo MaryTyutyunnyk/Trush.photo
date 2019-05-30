@@ -29,8 +29,9 @@
 
 .interior {
 	margin-top: 64px;
+
 	&__container {
-		padding: 0 1rem 0 1rem;
+		padding: 0 1rem 2rem;
 	}
 
 	.grid-sizer {
@@ -46,11 +47,6 @@
 		position: relative;
 		margin-bottom: 1.5rem;
 		cursor: pointer;
-	}
-
-
-	&__item.hide {
-		display: none;
 	}
 
 	&__img {
@@ -81,8 +77,8 @@
 
 	&__loader {
 		display: flex;
+		align-items: center;
 		justify-content: center;
-		margin-top: 1.5rem;
 		height: 47px;
 	}
 

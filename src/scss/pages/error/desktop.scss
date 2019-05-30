@@ -3,12 +3,11 @@
 @import "../../components/navbar/_desktop.scss";
 
 .error {
-	padding-top: 4.5rem;
-
 	&__container {
 		min-height: 930px;
 	}
 }
+
 
 @media (min-width: 1440px) {
 	.error {

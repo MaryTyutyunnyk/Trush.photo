@@ -10,7 +10,7 @@
 	}
 
 	.publicationsCarousel {
-		padding: 4.5rem 0 2.5rem 6.75rem;
+		padding: 2.5rem 0 2.5rem 6.75rem;
 
 		&__arrow {
 			&_next {
@@ -34,16 +34,8 @@
 	}
 }
 
-@media (min-width: 1200px) and (max-height: 767px) {
-	.publications {
-		.publicationsCarousel {
-			padding: 2.5rem 0 2.5rem 6.75rem;
-		}
-	}
-}
 
 @media screen and (orientation: portrait) {
-
 	main {
 		filter: blur(40px);
 	}

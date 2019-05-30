@@ -6,6 +6,7 @@ $(function () {
 		event.stopPropagation();
 		$('.navbarNavSubMenu').toggleClass('open');
 		$(".navbarNav__arrow").toggleClass('arrowUp');
+		$('.navbarLanguageDesktopSubMenu').removeClass("open");
 	});
 
 	$('html').click(function () {
@@ -20,6 +21,7 @@ $(function () {
 		event.stopPropagation();
 		$('.navbarLanguageDesktopSubMenu').toggleClass('open');
 		$(".navbarLanguageDesktop__arrow").toggleClass('upArrow');
+		$('.navbarNavSubMenu').removeClass("open");
 	});
 
 	$('html').click(function () {

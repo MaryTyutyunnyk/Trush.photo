@@ -50,6 +50,7 @@ body {
 			padding: 12px;
 			z-index: 2;
 			cursor: pointer;
+			transition: .3s;
 
 			&_previous {
 				display: none;
@@ -58,6 +59,12 @@ body {
 
 			&_next {
 				right: 2rem;
+			}
+
+			&__svg {
+				path {
+					transition: .3s;
+				}
 			}
 
 			&:hover {

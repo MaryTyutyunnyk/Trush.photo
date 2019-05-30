@@ -11,7 +11,7 @@
 	margin-top: 0;
 
 	&__container {
-		padding: 4.5rem 2rem 5.5625rem 2rem;
+		padding: 2.5rem 2rem 2rem;
 	}
 
 	.grid-sizer {
@@ -23,6 +23,7 @@
 	}
 
 	&__header {
+		align-items: initial;
 		margin-bottom: 1.5rem;
 	}
 
@@ -32,7 +33,7 @@
 	}
 
 	&__title {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 
 	&__item {
