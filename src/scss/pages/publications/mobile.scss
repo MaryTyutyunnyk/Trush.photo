@@ -49,7 +49,7 @@
 		flex-wrap: wrap;
 	}
 
-	.publicationsCarouselListItem {
+	.publicationsCarouselItem {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -74,7 +74,7 @@
 		}
 	}
 
-	.publicationsBlockLinkBox {
+	.publicationsFilter {
 		display: flex;
 		align-items: center;
 		position: fixed;
@@ -86,7 +86,7 @@
 		box-shadow: 4px 0 8px 0 rgba(76, 73, 68, 0.15);
 		overflow-x: auto;
 
-		&__btn {
+		&__rectangle {
 			display: block;
 			margin-right: 1rem;
 			width: 24px;
@@ -148,7 +148,7 @@
 
 @media screen and (orientation: portrait and (min-width: 560px)) {
 	.publications {
-		.publicationsBlockLinkBox {
+		.publicationsFilter {
 			height: 4rem;
 		}
 	}

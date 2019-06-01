@@ -52,6 +52,13 @@ html, body {
 		height: 100px;
 		border: solid 2px rgba(255, 255, 255, 0.5);
 		border-radius: 50%;
+		transition: .3s;
+
+		&:hover,
+		&:focus,
+		&:active {
+			border: solid 2px $secondary_white;
+		}
 
 		&__img {
 			width: 80px;
@@ -73,23 +80,22 @@ html, body {
 	.contentBlock {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: flex-end;
 		position: relative;
 		width: 40%;
 		height: 100%;
-		padding-top: 60px;
 		box-sizing: border-box;
 		margin-right: -2rem;
 
-		&::before {
-			display: inline-block;
-			position: absolute;
-			bottom: 0;
-			width: 2px;
-			height: 430px;;
-			background-color: $secondary;
-			content: "";
-		}
+		//&::before {
+		//	display: inline-block;
+		//	position: absolute;
+		//	bottom: 0;
+		//	width: 2px;
+		//	height: 430px;
+		//	background-color: $secondary;
+		//	content: "";
+		//}
 
 		&__title {
 			display: inline-block;
@@ -97,6 +103,7 @@ html, body {
 			color: $secondary;
 			text-align: left;
 			line-height: 2.5rem;
+			margin-bottom: 7rem;
 
 			&_bold {
 				font-size: 2.5rem;
@@ -120,7 +127,8 @@ html, body {
 }
 
 
-@media (min-width: 960px) and (max-height: 767px) {
+@media screen and (min-width: 960px) and (max-height: 767px) {
+
 	.homePageContent {
 		.personalInfo {
 			&__line {
@@ -129,23 +137,18 @@ html, body {
 		}
 
 		.contentBlock {
-			padding-top: 0;
-
-			&::before {
-				height: 400px;
+			&__title {
+				margin-bottom: 2rem;
 			}
+			//&::before {
+			//	height: 400px;
+			//}
 		}
 	}
 }
 
-@media (min-width: 960px) and (min-height: 1024px) {
+@media screen and (min-width: 960px) and (min-height: 1024px) {
 	.homePageContent {
-		.personalInfo {
-			&__line {
-				height: 48%;
-			}
-		}
-
 		.contentBlock {
 			width: 45%;
 		}
@@ -171,6 +174,81 @@ html, body {
 
 		&__svg {
 			@include rotateScreenIcon;
+		}
+	}
+}
+
+@media screen and (min-width: 960px) and (max-height: 650px) {
+	html, body {
+		height: auto;
+	}
+
+	.navbar {
+		.logo {
+			&__svg {
+				fill: $secondary;
+			}
+		}
+
+		&__rectangle {
+			display: none;
+		}
+	}
+
+	.homePageContent {
+		&__container {
+			height: auto;
+		}
+
+		.personalInfo {
+			&__line {
+				background-color: $primary;
+				height: 157px;
+			}
+
+			&__text {
+				color: $primary;
+			}
+		}
+
+		.personalInfoSocial {
+			circle {
+				stroke: $primary;
+			}
+
+			path {
+				fill: $primary;
+			}
+
+			&__img {
+				&:hover circle {
+					stroke-opacity: 1;
+				}
+
+				&:hover path {
+					fill-opacity: 1;
+				}
+			}
+		}
+
+		.personalInfoImg {
+			border: solid 2px rgba(241, 109, 100, 0.5);
+
+			&:hover,
+			&:focus,
+			&:active {
+				border: solid 2px rgba(241, 109, 100, 1);
+			}
+		}
+
+		.homePageSlider {
+			width: 40%;
+		}
+
+		.contentBlock {
+			&__title {
+				margin-bottom: 5rem;
+			}
 		}
 	}
 }

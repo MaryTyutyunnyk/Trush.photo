@@ -19,7 +19,7 @@
 		}
 	}
 
-	.publicationsCarouselListItem {
+	.publicationsCarouselItem {
 		margin-right: 1.5rem;
 
 		&__title {
@@ -27,8 +27,8 @@
 		}
 	}
 
-	.publicationsBlockLinkBox {
-		&__btn {
+	.publicationsFilter {
+		&__rectangle {
 			width: 188px;
 		}
 	}

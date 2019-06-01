@@ -12,7 +12,7 @@
 		padding: 2.5rem 0 0 6.75rem;
 	}
 
-	.portfolioCarousel {
+	.carousel {
 		&__arrow {
 			&_next {
 				right: 108px;
@@ -20,7 +20,7 @@
 		}
 	}
 
-	.portfolioCarouselListItem {
+	.carouselItem {
 		padding: 0 2rem 0 0;
 
 		&__text {
@@ -34,7 +34,7 @@
 	}
 
 	.portfolioBlockCatalogue {
-		.portfolioCarouselListItem {
+		.carouselItem {
 			padding: 0 2rem 0 0;
 		}
 	}
@@ -53,7 +53,7 @@
 
 @media (min-width: 960px) and (max-height: 767px) {
 	.portfolio {
-		.portfolioCarouselListItem {
+		.carouselItem {
 			&__imgBox {
 				width: auto;
 				box-sizing: border-box;
@@ -74,7 +74,7 @@
 
 @media screen and (min-width: 1440px) and (min-height: 1024px) {
 	.portfolio {
-		.portfolioCarouselListItem {
+		.carouselItem {
 			&__title {
 				font-size: 2rem;
 			}

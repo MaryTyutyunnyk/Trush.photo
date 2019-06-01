@@ -1,12 +1,12 @@
 $(function () {
 	// portfolioBlockImage carousel initiation
-	let owlInitiated = false;
+	let carouselListImageInitiated = false;
 	const prevArrow = $('#previous_arrow');
 	const nextArrow = $('#next_arrow');
-	const owl = $('#portfolioCarouselListImage');
+	const owl = $('#carouselListImage');
 	const $window = $(window);
 
-	const initPortfolioBlockImageCarousel = () => {
+	const initCarouselListImage = () => {
 		owl.owlCarousel({
 			autoWidth: true,
 			loop: true,
@@ -35,33 +35,33 @@ $(function () {
 				prevArrow.show();
 			}
 		});
-		owlInitiated = true;
+		carouselListImageInitiated = true;
 	};
-	initPortfolioBlockImageCarousel();
+	initCarouselListImage();
 
 	// Remove portfolioBlockImage carousel on mobile devices
 
 	$window.resize(function() {
 		if($window.width() < 960){
-			if (owlInitiated) {
+			if (carouselListImageInitiated) {
 				owl.trigger('destroy.owl.carousel');
-				owlInitiated = false;
+				carouselListImageInitiated = false;
 			}
 		} else {
-			if (!owlInitiated) {
-				initPortfolioBlockImageCarousel();
+			if (!carouselListImageInitiated) {
+				initCarouselListImage();
 			}
 		}
 	});
 
 
 	// portfolioBlockCatalogue carousel initiation
-	let owlInitiated2 = false;
+	let carouselListCatalogueInitiated = false;
 	const prevArrow2 = $('#left_arrow');
 	const nextArrow2 = $('#right_arrow');
-	const owl2 = $('#portfolioCarouselListCatalogue');
+	const owl2 = $('#carouselListCatalogue');
 
-	const initPortfolioBlockCatalogueCarousel = () => {
+	const initCarouselListCatalogue = () => {
 		owl2.owlCarousel({
 			autoWidth: true,
 			loop: true,
@@ -90,21 +90,21 @@ $(function () {
 				prevArrow2.show();
 			}
 		});
-		owlInitiated2 = true;
+		carouselListCatalogueInitiated = true;
 	};
-	initPortfolioBlockCatalogueCarousel();
+	initCarouselListCatalogue();
 
 	// Remove PortfolioBlockCatalogue on mobile devices
 
 	$window.resize(function() {
 		if($window.width() < 960){
-			if (owlInitiated2) {
+			if (carouselListCatalogueInitiated) {
 				owl2.trigger('destroy.owl.carousel');
-				owlInitiated2 = false;
+				carouselListCatalogueInitiated = false;
 			}
 		} else {
-			if (!owlInitiated2) {
-				initPortfolioBlockCatalogueCarousel();
+			if (!carouselListCatalogueInitiated) {
+				initCarouselListCatalogue();
 			}
 		}
 	});
@@ -131,7 +131,7 @@ const addListeners = element => {
 		$(".modal").css({"display": "block"});
 	});
 };
-const imgBox = $(".portfolioCarouselListItem__imgBox");
+const imgBox = $(".carouselItem__imgBox");
 addListeners(imgBox);
 
 $(function () {

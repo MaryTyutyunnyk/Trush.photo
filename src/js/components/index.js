@@ -6,19 +6,8 @@ $("#homePageSliderList").owlCarousel({
 	autoplayHoverPause: true,
 	animateOut: 'slideOutUp',
 	animateIn: 'slideInUp',
-	mouseDrag: true,
+	mouseDrag: false,
 	touchDrag: false,
 	pullDrag: false,
 	freeDrag: false,
-	responsiveClass:true,
-	responsive: {
-		0: {
-			mouseDrag: false,
-			touchDrag: true
-		},
-		960: {
-			mouseDrag: true,
-			touchDrag: false
-		},
-	}
 });

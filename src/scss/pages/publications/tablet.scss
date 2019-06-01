@@ -86,7 +86,7 @@ body {
 		height: 100%;
 	}
 
-	.publicationsCarouselListItem {
+	.publicationsCarouselItem {
 		display: inline-block;
 		margin-bottom: 0;
 		margin-right: 1.125rem;
@@ -108,13 +108,13 @@ body {
 		}
 	}
 
-	.publicationsBlockLinkBox {
+	.publicationsFilter {
 		position: inherit;
 		height: 4rem;
 		box-shadow: none;
 		z-index: 5;
 
-		&__btn {
+		&__rectangle {
 			width: 94px;
 			margin-right: 1.5rem;
 		}
