@@ -61,28 +61,28 @@ gulp.task('js', () =>
 
 gulp.task('img', () => {
 	gulp.src('./src/img/**/*.jpeg')
-		// .pipe(imagemin([
-		// 	imageminWebp({
-		// 		quality: 100,
-		// 		lossless: true
-		// 	}),
-		// ]))
+		.pipe(imagemin([
+			imageminWebp({
+				quality: 100,
+				lossless: true
+			}),
+		]))
 		.pipe(gulp.dest('./dist/jpeg'));
 		gulp.src('./src/img/**/*.png')
-			// .pipe(imagemin([
-			// 	imageminWebp({
-			// 		quality: 100,
-			// 		lossless: true
-			// 	})
-			// ]))
+			.pipe(imagemin([
+				imageminWebp({
+					quality: 100,
+					lossless: true
+				})
+			]))
 			.pipe(gulp.dest('./dist/png'));
 		gulp.src('./src/img/**/*.svg')
-			// .pipe(imagemin([
-			// 	imageminWebp({
-			// 		quality: 100,
-			// 		lossless: true
-			// 	})
-			// ]))
+			.pipe(imagemin([
+				imageminWebp({
+					quality: 100,
+					lossless: true
+				})
+			]))
 			.pipe(gulp.dest('./dist/svg'))
 });
 
