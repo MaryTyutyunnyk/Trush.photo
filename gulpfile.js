@@ -20,8 +20,6 @@ const uglify = require('gulp-uglify'); // Compress JS files
 
 // Images
 const imagemin = require('gulp-imagemin');
-const imageminWebp = require('imagemin-webp');
-
 
 gulp.task('clean', () =>
  	gulp.src('./dist', {
@@ -60,30 +58,10 @@ gulp.task('js', () =>
 
 
 gulp.task('img', () => {
-	gulp.src('./src/img/**/*.jpeg')
-		.pipe(imagemin([
-			imageminWebp({
-				quality: 100,
-				lossless: true
-			}),
-		]))
-		.pipe(gulp.dest('./dist/jpeg'));
-		gulp.src('./src/img/**/*.png')
-			.pipe(imagemin([
-				imageminWebp({
-					quality: 100,
-					lossless: true
-				})
-			]))
-			.pipe(gulp.dest('./dist/png'));
-		gulp.src('./src/img/**/*.svg')
-			.pipe(imagemin([
-				imageminWebp({
-					quality: 100,
-					lossless: true
-				})
-			]))
-			.pipe(gulp.dest('./dist/svg'))
+	gulp.src('./src/img/*')
+		.pipe(imagemin())
+		.pipe(gulp.dest('dist/img'))
+
 });
 
 gulp.task('fonts', () => {
