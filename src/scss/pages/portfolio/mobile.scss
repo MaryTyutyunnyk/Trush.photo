@@ -36,11 +36,8 @@
 	}
 
 	.portfolioBlock {
-		padding: 0 1rem 3rem;
-	}
-
-	.portfolioBlock.portfolioBlockImage {
 		display: flex;
+		padding: 0 1rem 3rem;
 	}
 
 	.carousel {
@@ -192,10 +189,6 @@
 		}
 	}
 
-	.portfolioBlock.portfolioBlockCatalogue {
-		display: none;
-	}
-
 	.modal {
 		display: none;
 		position: fixed;
@@ -257,8 +250,6 @@
 	}
 }
 
-
-
 .blurModal {
 	display: none;
 }
@@ -274,7 +265,6 @@
 		}
 
 		.carouselItem {
-			//width: 50%;
 			padding: 0 0.5rem 0 0.5rem;
 		}
 
@@ -285,10 +275,6 @@
 		.portfolioLinkBtn {
 			height: 64px;
 		}
-
-		//.owl-item {
-		//	width: 50% !important;
-		//}
 	}
 }
 

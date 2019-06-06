@@ -110,20 +110,6 @@ $(function () {
 	});
 });
 
-// Portfolio function for switching between two blocks - portfolioBlockImage and portfolioBlockCatalogue
-
-$(function () {
-	$("#portfolioImageBtn").on('click', function () {
-		$(".portfolioBlockImage").css({"display": "none"});
-		$(".portfolioBlockCatalogue").css({"display": "flex"});
-	});
-
-	$("#portfolioCatalogueBtn").on('click', function () {
-		$(".portfolioBlockCatalogue").css({"display": "none"});
-		$(".portfolioBlockImage").css({"display": "flex"});
-	});
-});
-
 // Function for modal window
 
 const addListeners = element => {
