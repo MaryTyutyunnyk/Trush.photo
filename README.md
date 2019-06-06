@@ -1,3 +1,5 @@
+You can see the finished project here - https://marytyutyunnyk.github.io/Trush.photo/
+
 Trush.photo - website for photographer
 
 How to start ?
