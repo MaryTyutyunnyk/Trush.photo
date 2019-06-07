@@ -72,6 +72,10 @@
 			color: $secondary;
 			outline: none;
 
+			&_group {
+				margin-bottom: 1rem;
+			}
+
 			&:hover {
 				border: solid 1px rgba(167, 156, 133, 0.5);
 			}
@@ -177,6 +181,11 @@
 			}
 		}
 
+		&__row {
+			display: flex;
+			flex-direction: column;
+		}
+
 		&__checkbox {
 			position: absolute;
 			opacity: 0;
@@ -261,6 +270,10 @@
 			color: #c4c4c4;
 			font-family: $FiraSansRegular;
 			font-size: 0.875rem;
+		}
+
+		&__input {
+
 		}
 	}
 }

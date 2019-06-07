@@ -26,6 +26,12 @@
 		&__input {
 			width: 392px;
 
+			&_group {
+				width: 177px;
+				margin-right: 1rem;
+				margin-bottom: 0;
+			}
+
 			&::placeholder {
 				font-size: 1rem;
 			}
@@ -54,6 +60,11 @@
 		&__block {
 			margin-right: 1rem;
 			margin-bottom: 0;
+		}
+
+		&__row {
+			flex-direction: row;
+			align-items: center;
 		}
 
 		&__radio {
