@@ -162,6 +162,12 @@
 
 			&:hover {
 				color: $primary;
+
+				.navbarNav__arrow {
+					path {
+						fill: $primary;
+					}
+				}
 			}
 
 			&_active {

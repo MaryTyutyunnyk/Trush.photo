@@ -7,8 +7,6 @@
 	}
 
 	&__content {
-		position: relative;
-		overflow: hidden;
 		padding: 0 0 3rem;
 	}
 
@@ -65,18 +63,6 @@
 		&__row {
 			flex-direction: row;
 			align-items: center;
-		}
-
-		&__radio {
-			&:checked + label:after {
-				top: 9px;
-			}
-		}
-
-		&__checkbox {
-			&:checked + label:after {
-				top: 5px;
-			}
 		}
 
 		&__label {
