@@ -188,64 +188,57 @@
 			}
 		}
 	}
+}
 
-	.modal {
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $secondary_white;
+	z-index: 9;
+
+	&__crossBlock {
+		text-align: right;
+		padding: 1rem;
+	}
+
+	&__crossLink {
+		display: inline-flex;
+		cursor: pointer;
+	}
+
+	.modalCarousel {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 1rem;
+
+		&__arrow {
+			display: none;
+		}
+	}
+
+	.owl-stage {
+		display: flex;
+	}
+
+	.owl-stage-outer {
+		overflow-x: hidden;
+	}
+
+	.owl-dots,
+	.owl-nav {
 		display: none;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: $secondary_white;
-		z-index: 9;
+	}
 
-		&__crossBlock {
-			text-align: right;
-			padding: 1rem;
-		}
+	.modalCarouselList {
+		overflow-x: hidden;
 
-		&__crossLink {
-			display: inline-flex;
-			cursor: pointer;
-		}
-
-		.modalCarousel {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			padding: 0 1rem;
-
-			&__arrow {
-				cursor: pointer;
-				transition: .3s;
-
-				&:hover .modalCarousel__svg {
-					path {
-						fill: $primary;
-					}
-				}
-			}
-		}
-
-		.modalCarouselList {
-			width: 70%;
-			height: 100%;
-
-			&__item {
-				display: none;
-				height: 100%;
-				width: 100%;
-
-				&_current {
-					display: inline-block;
-				}
-			}
-
-			&__img {
-				width: 100%;
-				height: auto;
-				display: block;
-			}
+		&__img {
+			width: 100%;
 		}
 	}
 }

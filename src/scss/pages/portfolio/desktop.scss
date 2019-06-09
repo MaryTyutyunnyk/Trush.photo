@@ -32,18 +32,13 @@
 		width: 30%;
 		margin-left: -6.75rem;
 	}
-
-	.modal {
-		.modalCarousel {
-			padding: 0 6.75rem;
-		}
-
-		.modalCarouselList {
-			padding: 0 18rem;
-		}
-	}
 }
 
+.modal {
+	.modalCarousel {
+		padding: 0 6.75rem;
+	}
+}
 
 @media (min-width: 960px) and (max-height: 767px) {
 	.portfolio {
