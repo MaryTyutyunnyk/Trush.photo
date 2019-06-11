@@ -12,7 +12,7 @@ html, body {
 
 	&__container {
 		display: flex;
-		height: calc(100vh - 70px);
+		height: calc(100vh - 64px);
 		padding: 2.5rem 2rem 0;
 		flex-direction: row;
 		align-items: flex-end;
@@ -140,9 +140,6 @@ html, body {
 			&__title {
 				margin-bottom: 2rem;
 			}
-			//&::before {
-			//	height: 400px;
-			//}
 		}
 	}
 }
@@ -159,9 +156,10 @@ html, body {
 @media screen and (orientation: portrait) {
 	.homePageContent {
 		.contentBlock {
-			&__title {
-				display: none;
-			}
+			display: none;
+			//&__title {
+			//	display: none;
+			//}
 		}
 	}
 

@@ -7,7 +7,7 @@
 .homePageContent {
 
 	&__container {
-		height: calc(100vh - 72px);
+		height: calc(100vh - 64px);
 		padding: 2.5rem 6.75rem 0;
 	}
 
@@ -125,9 +125,10 @@
 @media screen and (orientation: portrait) {
 	.homePageContent {
 		.contentBlock {
-			&__title {
-				display: none;
-			}
+			display: none;
+			//&__title {
+			//	display: none;
+			//}
 		}
 	}
 
