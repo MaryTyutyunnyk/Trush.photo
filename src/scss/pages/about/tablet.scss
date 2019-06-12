@@ -1,119 +1,337 @@
-@import "../../common/_variables.scss";
-@import "../../common/_mixins.scss";
-@import "../../components/navbar/_tablet.scss";
-
-.about {
-	&__container {
-		padding: 2.5rem 2rem 2rem;
-		width: 100%;
-	}
-
-	.portraitSection {
-		&__portrait {
-			width: 386px;
-			height: 386px;
-
-			&::after {
-				right: -38px;
-				bottom: 62px;
-				width: 176px;
-				height: 4px;
-			}
-		}
-	}
-
-	.socialNetworks {
-		left: 0;
-		bottom: -64px;
-
-		&__item {
-			margin-right: 1.5rem;
-
-			&:last-child {
-				margin-right: 0;
-			}
+@media screen and (min-width: 960px) {
+	.navbar {
+		&__container {
+			padding: 1rem 2rem 0;
 		}
 
-		&__link {
+		&__content {
+			width: 69%;
+		}
+
+		#navbarBurger {
+			display: none;
+		}
+
+		.navbarMenu {
+			display: flex;
 			align-items: center;
+			justify-content: flex-end;
+			position: inherit;
+			padding: 0;
+			z-index: 3;
+			background-color: transparent;
+			box-shadow: none;
+
+			&__btn {
+				margin-right: 0.5rem;
+				margin-bottom: 0;
+			}
+
+			&__line {
+				display: none;
+			}
 		}
 
-		&__svg {
-			width: 40px;
-			height: 40px;
-			fill: $primary;
+		.logoDark {
+			display: none;
 		}
 
-		&__name {
-			display: inline-block;
-			font-family: $FiraSansRegular;
-			font-size: 1rem;
-			color: #4c4944;
+		.navbarNav {
+			flex-direction: row;
+
+			&__item {
+				margin-right: 1rem;
+				margin-bottom: 0;
+
+				&_portfolio {
+					position: relative;
+				}
+			}
+
+			&__link {
+				&_portfolio {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+
+			&__arrow {
+				display: inline-block;
+				position: relative;
+				bottom: 3px;
+				right: -2px;
+
+				&.arrowUp {
+					transform: rotate(-180deg);
+					bottom: -4px;
+				}
+			}
 		}
-	}
 
-	.infoSection {
-		&__name {
-			font-size: 3rem;
+		.navbarNavSubMenu {
+			display: none;
+			position: absolute;
+			left: -16px;
+			width: 251px;
+			padding: 1rem;
+			margin-top: .3125rem;
+			text-align: center;
+			box-sizing: border-box;
+			box-shadow: 0 4px 8px 0 rgba(76, 73, 68, 0.15);
+			background-color: $secondary_white;
+
+			&.open {
+				display: block;
+			}
+
+			&__link {
+				font-size: 1.25rem;
+				border-bottom: 1px solid transparent;
+
+				&:hover {
+					color: $secondary;
+					border-bottom: 1px solid rgba(76, 73, 68, 0.5);
+				}
+			}
 		}
 
-		&__title {
-			font-size: 1.5rem;
-			margin-bottom: 1rem;
-		}
-	}
-
-	.infoSectionContacts {
-		margin: 2rem 0 1.5rem;
-
-		&__icon {
-			width: 24px;
+		.navbarLanguage {
+			display: none;
+			flex-direction: column;
+			position: relative;
 			height: 24px;
-			margin-right: 0.5rem;
-		}
+			overflow: hidden;
 
-		&__text {
-			font-size: 1rem;
-		}
-	}
+			&.open {
+				overflow: inherit;
+				position: absolute;
+				left: -16px;
+				width: 66px;
+				padding: 1rem;
+				margin-top: .3125rem;
+				text-align: center;
+				box-sizing: border-box;
+				box-shadow: 0 4px 8px 0 rgba(76, 73, 68, 0.15);
+				background-color: $secondary_white;
+			}
 
-	.infoSectionDescription {
-		margin-bottom: 4.5rem;
-
-		&__text {
-			font-size: 1rem;
-		}
-	}
-
-	.infoSectionClients {
-		margin-bottom: 4.5rem;
-
-		&__text {
-			font-size: 1rem;
-		}
-	}
-
-	.infoSectionCertificatesLogo {
-		&__img {
-			margin-right: 3rem;
-
-			&:last-child {
+			&__item {
 				margin-right: 0;
 			}
 
-			&_QEP {
-				width: 100px;
-				height: 95px;
+			&__link {
+				opacity: 1;
+
+				&_active {
+					opacity: 1;
+
+					&::after {
+						visibility: hidden;
+					}
+
+					&:hover .navbarLanguage.open {
+						height: 100%;
+					}
+				}
+
+				&:hover {
+					border-bottom: 1px solid $secondary;
+				}
 			}
 
-			&_UAPF {
-				width: 228px;
-				height: 93px;
+			&__arrow {
+				display: inline-block;
+			}
+		}
+
+		.navbarLanguageDesktop {
+			display: inline-block;
+			position: relative;
+
+			&__link {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-family: $FiraMonoRegular;
+				font-size: 1.25rem;
+				color: $secondary;
+			}
+
+			&__arrow {
+				display: inline-block;
+				position: relative;
+				bottom: 1px;
+				right: 0;
+
+				&.upArrow {
+					transform: rotate(-180deg);
+					bottom: -6px;
+				}
+			}
+		}
+
+		.navbarLanguageDesktopSubMenu {
+			display: none;
+			position: absolute;
+			left: 0;
+			width: 66px;
+			padding: 1rem;
+			margin-top: 0.5rem;;
+			font-family: $FiraMonoRegular;
+			font-size: 1.25rem;
+			color: $secondary;
+			text-align: center;
+			box-sizing: border-box;
+			box-shadow: 0 4px 8px 0 rgba(76, 73, 68, 0.15);
+			background-color: $secondary_white;
+
+			&.open {
+				display: block;
+			}
+
+			&__item {
+				margin-bottom: 1rem;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			&__link {
+				color: $secondary;
+				border-bottom: 1px solid transparent;
+
+				&:hover {
+					color: $secondary;
+					border-bottom: 1px solid rgba(76, 73, 68, 0.5);
+				}
+			}
+		}
+	}
+
+	.about {
+		&__container {
+			padding: 2.5rem 2rem 2rem;
+			width: 100%;
+		}
+
+		.portraitSection {
+			&__portrait {
+				width: 386px;
+				height: 386px;
+
+				&::after {
+					right: -38px;
+					bottom: 62px;
+					width: 176px;
+					height: 4px;
+				}
+			}
+		}
+
+		.socialNetworks {
+			left: 0;
+			bottom: -64px;
+
+			&__item {
+				margin-right: 1.5rem;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			&__link {
+				align-items: center;
+			}
+
+			&__svg {
+				width: 40px;
+				height: 40px;
+				fill: $primary;
+			}
+
+			&__name {
+				display: inline-block;
+				font-family: $FiraSansRegular;
+				font-size: 1rem;
+				color: #4c4944;
+			}
+		}
+
+		.infoSection {
+			&__name {
+				font-size: 3rem;
+			}
+
+			&__title {
+				font-size: 1.5rem;
+				margin-bottom: 1rem;
+			}
+		}
+
+		.infoSectionContacts {
+			margin: 2rem 0 1.5rem;
+
+			&__icon {
+				width: 24px;
+				height: 24px;
+				margin-right: 0.5rem;
+			}
+
+			&__text {
+				font-size: 1rem;
+			}
+		}
+
+		.infoSectionDescription {
+			margin-bottom: 4.5rem;
+
+			&__text {
+				font-size: 1rem;
+			}
+		}
+
+		.infoSectionClients {
+			margin-bottom: 4.5rem;
+
+			&__text {
+				font-size: 1rem;
+			}
+		}
+
+		.infoSectionCertificatesLogo {
+			&__img {
+				margin-right: 3rem;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				&_QEP {
+					width: 100px;
+					height: 95px;
+				}
+
+				&_UAPF {
+					width: 228px;
+					height: 93px;
+				}
 			}
 		}
 	}
 }
 
+@media (min-width: 1024px) {
+	.navbar {
+		.navbarNav {
+			&__item {
+				margin-right: 1.5rem;
+			}
+		}
+	}
+}
 
 
 

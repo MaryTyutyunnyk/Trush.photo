@@ -1,0 +1,36 @@
+@import "./common/_reset.scss";
+@import "./common/_variables.scss";
+@import "./common/_mixins.scss";
+
+@import "./pages/index/mobile.scss";
+@import "./pages/index/tablet.scss";
+@import "./pages/index/desktop.scss";
+
+@import "./pages/about/mobile.scss";
+@import "./pages/about/tablet.scss";
+@import "./pages/about/desktop.scss";
+
+@import "./pages/brief/mobile.scss";
+@import "./pages/brief/tablet.scss";
+@import "./pages/brief/desktop.scss";
+
+@import "./pages/interior/mobile.scss";
+@import "./pages/interior/tablet.scss";
+@import "./pages/interior/desktop.scss";
+
+@import "./pages/interiorGallery/mobile.scss";
+@import "./pages/interiorGallery/tablet.scss";
+@import "./pages/interiorGallery/desktop.scss";
+
+@import "./pages/portfolio/mobile.scss";
+@import "./pages/portfolio/tablet.scss";
+@import "./pages/portfolio/desktop.scss";
+
+@import "./pages/publications/mobile.scss";
+@import "./pages/publications/tablet.scss";
+@import "./pages/publications/desktop.scss";
+
+@import "./pages/error/mobile.scss";
+@import "./pages/error/tablet.scss";
+@import "./pages/error/desktop.scss";
+

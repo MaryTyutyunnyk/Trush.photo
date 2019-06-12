@@ -5,13 +5,13 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const gulpSequence = require('gulp-sequence');
 const clean = require('gulp-clean');
-const rigger = require('gulp-rigger'); // To use code blocks as components
 const plumber = require('gulp-plumber'); // To track bugs
 
 //Styles
 const sass = require('gulp-sass');
 const cssmin = require('gulp-cssmin');
 const autoprefixer = require('gulp-autoprefixer');
+const gcmq = require('gulp-group-css-media-queries');
 
 // JS
 const sourcemaps = require('gulp-sourcemaps');
@@ -30,18 +30,22 @@ gulp.task('clean', () =>
 
 gulp.task('html', () => {
 	gulp.src('./src/html/pages/*.html')
-		.pipe(rigger())
 		.pipe(gulp.dest('./dist'))
 });
 
 gulp.task('scss', () =>
-	gulp.src('./src/scss/**/*.scss')
+	gulp.src('./src/scss/main.scss')
 		.pipe(plumber())
-		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-		.pipe(autoprefixer({
-		  browsers: ['last 5 versions'],
-		  cascade: false
+		.pipe(sourcemaps.init())
+		.pipe(sass({
+			errLogToConsole: true,
+			outputStyle: 'expanded' // Добавление отступов между классами в итоговых стилях
 		}))
+		.pipe(autoprefixer({
+			browsers: ['last 15 versions'],
+			cascade: false
+		}))
+		.pipe(gcmq())
 		.pipe(sourcemaps.write())
 		.pipe(cssmin())
 		.pipe(gulp.dest('./dist/css'))
@@ -61,7 +65,6 @@ gulp.task('img', () => {
 	gulp.src('./src/img/*')
 		.pipe(imagemin())
 		.pipe(gulp.dest('dist/img'))
-
 });
 
 gulp.task('fonts', () => {
@@ -76,19 +79,9 @@ gulp.task('dev', ['build'], () => {
 	browserSync.init({
 		server: "dist"
 	});
-
-	gulp.src('./src/html/index.html')
-		.pipe(rigger())
-		.pipe(gulp.dest('./dist'));
-
 	gulp.watch('./src/js/**/*.js', ['js']).on('change', browserSync.reload);
 	gulp.watch('./src/scss/**/*.scss', ['scss']).on('change', browserSync.reload);
 	gulp.watch('./src/img/**/*', ['img']).on('change', browserSync.reload);
-	gulp.watch('./src/html/**/*.html').on('change', () => {
-		gulp.src('./src/html/index.html')
-			.pipe(rigger())
-			.pipe(gulp.dest('./dist'))
-	});
-	gulp.watch('./src/html/**/*.html').on('change', browserSync.reload)
+	gulp.watch('./src/html/**/*.html').on('change', browserSync.reload);
 });
 

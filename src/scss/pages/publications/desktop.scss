@@ -1,50 +1,65 @@
-@import "../../common/_variables.scss";
-@import "../../common/_mixins.scss";
-@import "../../components/navbar/_desktop.scss";
-@import "../../vendor/owl.carousel.scss";
+@media (min-width: 1200px) {
+	.navbar {
+		&__container {
+			padding: 1rem 6.75rem 0;
+		}
 
-.publications {
-
-	&__container {
-		height: calc(100vh - 72px);
-	}
-
-	.publicationsCarousel {
-		padding: 2.5rem 0 2.5rem 6.75rem;
-
-		&__arrow {
-			&_next {
-				right: 6.75rem;
+		.logo {
+			&__svg {
+				width: 302px;
+				height: 56px;
 			}
 		}
 	}
 
-	.publicationsCarouselItem {
-		margin-right: 1.5rem;
+	.publications {
 
-		&__title {
-			font-size: 1.5rem;
+		&__container {
+			height: calc(100vh - 72px);
 		}
-	}
 
-	.publicationsFilter {
-		&__rectangle {
-			width: 188px;
+		.publicationsCarousel {
+			padding: 2.5rem 0 2.5rem 6.75rem;
+
+			&__arrow {
+				&_next {
+					right: 6.75rem;
+				}
+			}
+		}
+
+		.publicationsCarouselItem {
+			margin-right: 1.5rem;
+
+			&__title {
+				font-size: 1.5rem;
+			}
+		}
+
+		.publicationsFilter {
+			&__rectangle {
+				width: 188px;
+			}
 		}
 	}
 }
 
+@media (min-width: 1400px) {
+	.navbar {
+		&__content {
+			width: 63%;
+		}
 
-@media screen and (orientation: portrait) {
-	main {
-		filter: blur(40px);
-	}
+		.navbarNav {
+			&__item {
+				margin-right: 3rem;
+			}
+		}
 
-	.blurModal {
-		@include blurModal;
-
-		&__svg {
-			@include rotateScreenIcon;
+		.navbarMenu {
+			&__btn {
+				margin-right: 2rem;
+			}
 		}
 	}
 }

@@ -1,204 +1,411 @@
-@import "../../common/_variables.scss";
-@import "../../common/_mixins.scss";
-@import "../../components/navbar/_tablet.scss";
-@import "../../vendor/owl.carousel.scss";
-
-body {
-	height: 100vh;
-}
-
-.navbar {
-	position: inherit;
-	z-index: inherit;
-}
-
-.portfolio {
-	margin-top: 0;
-
-	&__container {
-		height: calc(100vh - 64px);
-		overflow: hidden;
+@media (min-width: 960px) {
+	body {
+		height: 100vh;
 	}
 
-	.portfolioBlock {
-		display: flex;
-		flex-direction: row-reverse;
-		justify-content: flex-end;
-		position: relative;
-		padding: 2.5rem 0 0 2rem;
-		width: 100%;
-	}
+	.navbar {
+		&__fixed {
+			position: inherit;
+			z-index: inherit;
+		}
 
-	.carousel {
-		display: flex;
-		align-items: flex-end;
-		position: relative;
-		width: 75%;
-		height: 100%;
+		&__container {
+			padding: 1rem 2rem 0;
+		}
 
-		&__arrow {
+		&__content {
+			width: 69%;
+		}
+
+		#navbarBurger {
+			display: none;
+		}
+
+		.navbarMenu {
 			display: flex;
 			align-items: center;
-			justify-content: center;
-			background-color: $primary;
-			position: absolute;
-			bottom: 66%;
-			width: 32px;
-			height: 32px;
-			padding: 12px;
-			z-index: 2;
-			cursor: pointer;
-			transition: .3s;
+			justify-content: flex-end;
+			position: inherit;
+			padding: 0;
+			z-index: 3;
+			background-color: transparent;
+			box-shadow: none;
 
-			&_previous {
+			&__btn {
+				margin-right: 0.5rem;
+				margin-bottom: 0;
+			}
+
+			&__line {
 				display: none;
-				left: 0;
 			}
+		}
 
-			&_next {
-				right: 2rem;
-			}
+		.logoDark {
+			display: none;
+		}
 
-			&__svg {
-				path {
-					transition: .3s;
+		.navbarNav {
+			flex-direction: row;
+
+			&__item {
+				margin-right: 1rem;
+				margin-bottom: 0;
+
+				&_portfolio {
+					position: relative;
 				}
 			}
 
-			&:hover {
-				background-color: $primary_dark;
+			&__link {
+				&_portfolio {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
 			}
 
-			&:hover .carousel__svg {
-				path {
-					fill-opacity: 1;
+			&__arrow {
+				display: inline-block;
+				position: relative;
+				bottom: 3px;
+				right: -2px;
+
+				&.arrowUp {
+					transform: rotate(-180deg);
+					bottom: -4px;
 				}
 			}
 		}
-	}
 
-	.carouselList {
-		flex-direction: row;
-		justify-content: flex-start;
-		flex-wrap: nowrap;
-		height: 100%;
-		overflow: hidden;
-	}
-
-	.owl-stage {
-		display: flex;
-		height: 100%;
-	}
-
-	.owl-item {
-		img {
-			max-width: none;
-		}
-	}
-
-	.carouselItem {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		margin-right: 0;
-		margin-bottom: 0;
-		padding: 0 1.5rem 0 0;
-
-		&::after {
-			content: "";
-			display: inline-block;
+		.navbarNavSubMenu {
+			display: none;
 			position: absolute;
-			right: 2px;
-			bottom: 0;
-			width: 1px;
-			height: 12%;
-			background-color: $secondary;
+			left: -16px;
+			width: 251px;
+			padding: 1rem;
+			margin-top: .3125rem;
+			text-align: center;
+			box-sizing: border-box;
+			box-shadow: 0 4px 8px 0 rgba(76, 73, 68, 0.15);
+			background-color: $secondary_white;
+
+			&.open {
+				display: block;
+			}
+
+			&__link {
+				font-size: 1.25rem;
+				border-bottom: 1px solid transparent;
+
+				&:hover {
+					color: $secondary;
+					border-bottom: 1px solid rgba(76, 73, 68, 0.5);
+				}
+			}
 		}
 
-		&__imgBox {
-			display: inline-block;
-			margin-bottom: 1rem;
-			width: auto;
-		}
-
-		&__img {
-			width: auto;
-			max-width: none;
-			height: 50vh;
-		}
-
-		&__title {
-			font-size: 1.25rem;
-			margin-bottom: 0.5rem;
-		}
-	}
-
-	.portfolioTitleBlock {
-		display: block;
-		position: relative;
-		left: 0;
-		bottom: -51%;
-		box-shadow: none;
-		padding: 0;
-
-		&__title {
-			font-family: $FiraSansLight;
-			font-size: 2.5rem;
-			line-height: 3rem;
-		}
-	}
-
-	.portfolioLinkBtn {
-		position: absolute;
-		left: 0;
-		margin-left: -2rem;
-		width: 25%;
-
-		&__arrow {
-			width: 64px;
+		.navbarLanguage {
+			display: none;
+			flex-direction: column;
+			position: relative;
 			height: 24px;
+			overflow: hidden;
+
+			&.open {
+				overflow: inherit;
+				position: absolute;
+				left: -16px;
+				width: 66px;
+				padding: 1rem;
+				margin-top: .3125rem;
+				text-align: center;
+				box-sizing: border-box;
+				box-shadow: 0 4px 8px 0 rgba(76, 73, 68, 0.15);
+				background-color: $secondary_white;
+			}
+
+			&__item {
+				margin-right: 0;
+			}
+
+			&__link {
+				opacity: 1;
+
+				&_active {
+					opacity: 1;
+
+					&::after {
+						visibility: hidden;
+					}
+
+					&:hover .navbarLanguage.open {
+						height: 100%;
+					}
+				}
+
+				&:hover {
+					border-bottom: 1px solid $secondary;
+				}
+			}
+
+			&__arrow {
+				display: inline-block;
+			}
 		}
-	}
 
-	.orientationModal {
-		display: none;
-	}
-}
+		.navbarLanguageDesktop {
+			display: inline-block;
+			position: relative;
 
-.modal {
-	height: 100vh;
+			&__link {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-family: $FiraMonoRegular;
+				font-size: 1.25rem;
+				color: $secondary;
+			}
 
-	.modalCarousel {
-		height: calc(100vh - 68px);
-		padding: 0 2rem;
+			&__arrow {
+				display: inline-block;
+				position: relative;
+				bottom: 1px;
+				right: 0;
 
-		&__arrow {
-			display: flex;
-			cursor: pointer;
-			transition: .3s;
+				&.upArrow {
+					transform: rotate(-180deg);
+					bottom: -6px;
+				}
+			}
+		}
 
-			&:hover .modalCarousel__svg {
-				path {
-					fill: $primary;
+		.navbarLanguageDesktopSubMenu {
+			display: none;
+			position: absolute;
+			left: 0;
+			width: 66px;
+			padding: 1rem;
+			margin-top: 0.5rem;;
+			font-family: $FiraMonoRegular;
+			font-size: 1.25rem;
+			color: $secondary;
+			text-align: center;
+			box-sizing: border-box;
+			box-shadow: 0 4px 8px 0 rgba(76, 73, 68, 0.15);
+			background-color: $secondary_white;
+
+			&.open {
+				display: block;
+			}
+
+			&__item {
+				margin-bottom: 1rem;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			&__link {
+				color: $secondary;
+				border-bottom: 1px solid transparent;
+
+				&:hover {
+					color: $secondary;
+					border-bottom: 1px solid rgba(76, 73, 68, 0.5);
 				}
 			}
 		}
 	}
 
-	.modalCarouselList {
-		height: 100%;
-		padding: 0 10rem;
+	.portfolio {
+		margin-top: 0;
 
-		&__item {
-			text-align: center;
+		&__container {
+			height: calc(100vh - 64px);
+			overflow: hidden;
 		}
 
-		&__img {
-			width: 59vh;
+		.portfolioBlock {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+			position: relative;
+			padding: 2.5rem 0 0 2rem;
+			width: 100%;
+		}
+
+		.carousel {
+			display: flex;
+			align-items: flex-end;
+			position: relative;
+			width: 75%;
+			height: 100%;
+
+			&__arrow {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: $primary;
+				position: absolute;
+				bottom: 66%;
+				width: 32px;
+				height: 32px;
+				padding: 12px;
+				z-index: 2;
+				cursor: pointer;
+				transition: .3s;
+
+				&_previous {
+					display: none;
+					left: 0;
+				}
+
+				&_next {
+					right: 2rem;
+				}
+
+				&__svg {
+					path {
+						transition: .3s;
+					}
+				}
+
+				&:hover {
+					background-color: $primary_dark;
+				}
+
+				&:hover .carousel__svg {
+					path {
+						fill-opacity: 1;
+					}
+				}
+			}
+		}
+
+		.carouselList {
+			flex-direction: row;
+			justify-content: flex-start;
+			flex-wrap: nowrap;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.owl-stage {
+			display: flex;
+			height: 100%;
+		}
+
+		.owl-item {
+			img {
+				max-width: none;
+			}
+		}
+
+		.carouselItem {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			margin-right: 0;
+			margin-bottom: 0;
+			padding: 0 1.5rem 0 0;
+
+			&::after {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				right: 2px;
+				bottom: 0;
+				width: 1px;
+				height: 12%;
+				background-color: $secondary;
+			}
+
+			&__imgBox {
+				display: inline-block;
+				margin-bottom: 1rem;
+				width: auto;
+			}
+
+			&__img {
+				width: auto;
+				max-width: none;
+				height: 50vh;
+			}
+
+			&__title {
+				font-size: 1.25rem;
+				margin-bottom: 0.5rem;
+			}
+		}
+
+		.portfolioTitleBlock {
+			display: block;
+			position: relative;
+			left: 0;
+			bottom: -51%;
+			box-shadow: none;
+			padding: 0;
+
+			&__title {
+				font-family: $FiraSansLight;
+				font-size: 2.5rem;
+				line-height: 3rem;
+			}
+		}
+
+		.portfolioLinkBtn {
+			position: absolute;
+			left: 0;
+			margin-left: -2rem;
+			width: 25%;
+
+			&__arrow {
+				width: 64px;
+				height: 24px;
+			}
+		}
+
+		.orientationModal {
+			display: none;
+		}
+	}
+
+	.modal {
+		height: 100vh;
+
+		.modalCarousel {
+			height: calc(100vh - 68px);
+			padding: 0 2rem;
+
+			&__arrow {
+				display: flex;
+				cursor: pointer;
+				transition: .3s;
+
+				&:hover .modalCarousel__svg {
+					path {
+						fill: $primary;
+					}
+				}
+			}
+		}
+
+		.modalCarouselList {
+			height: 100%;
+			padding: 0 10rem;
+
+			&__item {
+				text-align: center;
+			}
+
+			&__img {
+				width: 59vh;
+			}
 		}
 	}
 }
-
 
 @media (min-width: 960px) and (max-height: 767px) {
 	.portfolio {
@@ -230,7 +437,7 @@ body {
 	}
 }
 
-@media screen and (orientation: portrait) {
+@media (min-width: 960px) and (orientation: portrait) {
 
 	main {
 		filter: blur(40px);
@@ -241,6 +448,16 @@ body {
 
 		&__svg {
 			@include rotateScreenIcon;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.navbar {
+		.navbarNav {
+			&__item {
+				margin-right: 1.5rem;
+			}
 		}
 	}
 }

@@ -1,42 +1,52 @@
-@import "../../common/_variables.scss";
-@import "../../common/_mixins.scss";
-@import "../../components/navbar/_desktop.scss";
-@import "../../vendor/owl.carousel.scss";
+@media (min-width: 1200px) {
+	.navbar {
+		&__container {
+			padding: 1rem 6.75rem 0;
+		}
 
-.portfolio {
-	&__container {
-		height: calc(100vh - 72px);
-	}
-
-	.portfolioBlock {
-		padding: 2.5rem 0 0 6.75rem;
-	}
-
-	.carousel {
-		&__arrow {
-			&_next {
-				right: 108px;
+		.logo {
+			&__svg {
+				width: 302px;
+				height: 56px;
 			}
 		}
 	}
 
-	.carouselItem {
-		padding: 0 2rem 0 0;
+	.portfolio {
+		&__container {
+			height: calc(100vh - 72px);
+		}
 
-		&__text {
-			font-size: 1rem;
+		.portfolioBlock {
+			padding: 2.5rem 0 0 6.75rem;
+		}
+
+		.carousel {
+			&__arrow {
+				&_next {
+					right: 108px;
+				}
+			}
+		}
+
+		.carouselItem {
+			padding: 0 2rem 0 0;
+
+			&__text {
+				font-size: 1rem;
+			}
+		}
+
+		.portfolioLinkBtn {
+			width: 30%;
+			margin-left: -6.75rem;
 		}
 	}
 
-	.portfolioLinkBtn {
-		width: 30%;
-		margin-left: -6.75rem;
-	}
-}
-
-.modal {
-	.modalCarousel {
-		padding: 0 6.75rem;
+	.modal {
+		.modalCarousel {
+			padding: 0 6.75rem;
+		}
 	}
 }
 
@@ -61,7 +71,27 @@
 	}
 }
 
-@media screen and (min-width: 1440px) and (min-height: 1024px) {
+@media (min-width: 1400px) {
+	.navbar {
+		&__content {
+			width: 63%;
+		}
+
+		.navbarNav {
+			&__item {
+				margin-right: 3rem;
+			}
+		}
+
+		.navbarMenu {
+			&__btn {
+				margin-right: 2rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1440px) and (min-height: 1024px) {
 	.portfolio {
 		.carouselItem {
 			&__title {
@@ -82,16 +112,3 @@
 	}
 }
 
-@media screen and (orientation: portrait) {
-	main {
-		filter: blur(40px);
-	}
-
-	.blurModal {
-		@include blurModal;
-
-		&__svg {
-			@include rotateScreenIcon;
-		}
-	}
-}

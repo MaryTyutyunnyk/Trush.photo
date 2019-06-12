@@ -1,41 +1,40 @@
-@import "../../common/_variables.scss";
-@import "../../common/_mixins.scss";
+@media screen and (min-width: 1200px) {
+	.brief {
+		position: relative;
+		overflow: hidden;
 
-.brief {
-	position: relative;
-	overflow: hidden;
-
-	&__crossBlock {
-		padding: 1rem 6.75rem 1rem;
-	}
-
-	&__title {
-		font-size: 3rem;
-	}
-
-	&__circle {
-		display: block;
-		position: absolute;
-
-		&_left {
-			left: -272px;
-			top: 51%;
+		&__crossBlock {
+			padding: 1rem 6.75rem 1rem;
 		}
 
-		&_right {
-			right: -272px;
-			top: 18%;
+		&__title {
+			font-size: 3rem;
+		}
+
+		&__circle {
+			display: block;
+			position: absolute;
+
+			&_left {
+				left: -272px;
+				top: 51%;
+			}
+
+			&_right {
+				right: -272px;
+				top: 18%;
+			}
+		}
+	}
+
+	.briefSent {
+		&__container {
+			min-height: 930px;
 		}
 	}
 }
 
-.briefSent {
-	&__container {
-		min-height: 930px;
-	}
-}
-
-@media (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
 	.briefSent {
 		&__container {
 			background-size: cover;
