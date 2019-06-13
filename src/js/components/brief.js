@@ -1,56 +1,55 @@
 $(function () {
 
-	// Эту функцию надо как-то связать с переключением языков на сайте.
-	// function translateValidationMessages(currentLang) {
-	// 	message = {
-	// 		en: {
-	// 			required: 'Required field',
-	// 			minlength: $.validator.format('Please enter at least {0} characters'),
-	// 			customPhone: 'Please enter correct phone',
-	// 		},
-	// 		uk: {
-	// 			required: 'Поле обов\'язкове для заповнення',
-	// 			minlength: $.validator.format('Будь ласка, введіть не менше {0} символів'),
-	// 			customPhone: 'Будь ласка, введіть коректний номер телефону',
-	// 		},
-	// 		ru: {
-	// 			required: 'Поле обязательно для заполнения',
-	// 			minlength: $.validator.format('Пожалуйста, введите не менее {0} символов'),
-	// 			customPhone: 'Пожалуйста, введите корректный номер телефона',
-	// 		}
-	// 	};
-	// 	console.log('Translating validation messages to: ' + currentLang);
-	//
-	// 	if (currentLang == 'uk') {
-	// 		$.extend($.validator.messages, message.uk);
-	// 	} else if (currentLang == 'ru') {
-	// 		$.extend($.validator.messages, message.ru);
-	// 	} else {
-	// 		$.extend($.validator.messages, message.en);
-	// 	}
-	// }
+// Эту функцию надо как-то связать с переключением языков на сайте.
+// function translateValidationMessages(currentLang) {
+// 	message = {
+// 		en: {
+// 			required: 'Required field',
+// 			minlength: $.validator.format('Please enter at least {0} characters'),
+// 			customPhone: 'Please enter correct phone',
+// 		},
+// 		uk: {
+// 			required: 'Поле обов\'язкове для заповнення',
+// 			minlength: $.validator.format('Будь ласка, введіть не менше {0} символів'),
+// 			customPhone: 'Будь ласка, введіть коректний номер телефону',
+// 		},
+// 		ru: {
+// 			required: 'Поле обязательно для заполнения',
+// 			minlength: $.validator.format('Пожалуйста, введите не менее {0} символов'),
+// 			customPhone: 'Пожалуйста, введите корректный номер телефона',
+// 		}
+// 	};
+// 	console.log('Translating validation messages to: ' + currentLang);
+//
+// 	if (currentLang == 'uk') {
+// 		$.extend($.validator.messages, message.uk);
+// 	} else if (currentLang == 'ru') {
+// 		$.extend($.validator.messages, message.ru);
+// 	} else {
+// 		$.extend($.validator.messages, message.en);
+// 	}
+// }
 
 	$.validator.setDefaults({
 		submitHandler: function () {
 			$('.brief__box')
 				.css({'display': 'none'});
 			$('.briefSent')
-				.css({'display': 'block'})
+				.css({'display': 'block'});
 		},
 		highlight: function (element) {
 			$(element)
 				.closest('.briefForm__input')
-				.addClass('errorBorder')
+				.addClass('errorBorder');
 		},
 		unhighlight: function (element) {
 			$(element)
 				.closest('.briefForm__input')
-				.removeClass('errorBorder')
+				.removeClass('errorBorder');
 		}
 	});
 
 	$.validator.addMethod("customEmail", function (value, element) {
-		console.log(value);
 		return this.optional(element) || /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value);
 	}, 'Пожалуйста, введите корректный адрес электронной почты');
 

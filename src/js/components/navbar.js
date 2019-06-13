@@ -1,6 +1,6 @@
 $(function () {
 
-	// Function for portfolio submenu demonstration
+// Function for portfolio submenu demonstration
 
 	$('#portfolioItem').click(function (event) {
 		event.stopPropagation();
@@ -15,7 +15,7 @@ $(function () {
 	});
 
 
-	// Function for language submenu demonstration
+// Function for language submenu demonstration
 
 	$('#navbarLanguageDesktopLink').click(function (event) {
 		event.stopPropagation();
@@ -29,4 +29,5 @@ $(function () {
 		$(".navbarLanguageDesktop__arrow").removeClass('upArrow');
 	});
 });
+
 

@@ -16,7 +16,6 @@ const gcmq = require('gulp-group-css-media-queries');
 // JS
 const sourcemaps = require('gulp-sourcemaps');
 const concat = require('gulp-concat'); // For files concatination
-const uglify = require('gulp-uglify'); // Compress JS files
 
 // Images
 const imagemin = require('gulp-imagemin');
@@ -51,19 +50,25 @@ gulp.task('scss', () =>
 		.pipe(gulp.dest('./dist/css'))
 );
 
-gulp.task('js', () =>
-	gulp.src('./src/js/**/*.js')
+gulp.task('jsConcat', () =>
+	gulp.src
+	('./src/js/components/*.js')
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
-		//.pipe(uglify())
+		.pipe(concat('main.min.js'))
 		.pipe(sourcemaps.write())
+		.pipe(gulp.dest('./dist/js')),
+);
+
+gulp.task('jsVendor', () =>
+	gulp.src
+	('./src/js/*.js')
 		.pipe(gulp.dest('./dist/js'))
 );
 
-
 gulp.task('img', () => {
 	gulp.src('./src/img/*')
-		.pipe(imagemin())
+		 .pipe(imagemin())
 		.pipe(gulp.dest('dist/img'))
 });
 
@@ -73,13 +78,14 @@ gulp.task('fonts', () => {
 });
 
 
-gulp.task('build', gulpSequence('clean', ['html'], ['scss'], ['fonts'], ['js'], ['img']));
+gulp.task('build', gulpSequence('clean', ['html'], ['scss'], ['fonts'], ['jsVendor'], ['jsConcat'], ['img']));
 
 gulp.task('dev', ['build'], () => {
 	browserSync.init({
 		server: "dist"
 	});
-	gulp.watch('./src/js/**/*.js', ['js']).on('change', browserSync.reload);
+	gulp.watch('./src/js/**/*.js', ['jsVendor']).on('change', browserSync.reload);
+	gulp.watch('./src/js/**/*.js', ['jsConcat']).on('change', browserSync.reload);
 	gulp.watch('./src/scss/**/*.scss', ['scss']).on('change', browserSync.reload);
 	gulp.watch('./src/img/**/*', ['img']).on('change', browserSync.reload);
 	gulp.watch('./src/html/**/*.html').on('change', browserSync.reload);
