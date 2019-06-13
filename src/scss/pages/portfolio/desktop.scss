@@ -29,9 +29,11 @@
 			}
 		}
 
-		.carouselItem {
-			padding: 0 2rem 0 0;
+		.owl-item {
+			margin-right: 2rem;
+		}
 
+		.carouselItem {
 			&__text {
 				font-size: 1rem;
 			}

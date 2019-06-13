@@ -29,7 +29,7 @@
 		}
 
 		.publicationsCarouselItem {
-			margin-right: 1.5rem;
+			//margin-right: 1.5rem;
 
 			&__title {
 				font-size: 1.5rem;
@@ -40,6 +40,10 @@
 			&__rectangle {
 				width: 188px;
 			}
+		}
+
+		.owl-item {
+			margin-right: 1.5rem;
 		}
 	}
 }
