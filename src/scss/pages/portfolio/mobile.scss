@@ -1,5 +1,9 @@
 @import "../../vendor/owl.carousel.scss";
 
+body {
+	position: relative;
+}
+
 .navbar {
 	&__fixed {
 		position: fixed;
@@ -423,11 +427,12 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	bottom: 0;
+	right: 0;
 	width: 100%;
-	height: 100%;
+	height: auto;
 	background-color: $secondary_white;
 	z-index: 999;
-	transition: .3s;
 
 	&__crossBlock {
 		text-align: right;

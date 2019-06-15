@@ -1,8 +1,4 @@
 @media (min-width: 960px) {
-	body {
-		height: 100vh;
-	}
-
 	.navbar {
 		&__fixed {
 			position: inherit;
@@ -375,7 +371,6 @@
 	}
 
 	.modal {
-		height: 100vh;
 
 		.modalCarousel {
 			height: calc(100vh - 68px);

@@ -1,9 +1,4 @@
 @media (min-width: 960px) {
-
-	body {
-		height: 100vh;
-	}
-
 	.navbar {
 		&__fixed {
 			position: inherit;
@@ -296,7 +291,6 @@
 		.publicationsCarouselItem {
 			display: inline-block;
 			margin-bottom: 0;
-			//width: auto;
 			box-sizing: border-box;
 
 			&__img {
