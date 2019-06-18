@@ -116,6 +116,22 @@ $(function () {
 	const addListeners = element => {
 		element.on('click', function () {
 			$(".modal").css({"display": "block"});
+			$.ajax({
+				type: "GET",
+				url: "http://mysite.ru/action.php?resid=`${data.id}`",
+				data: {
+					id: $(this).id
+				},
+				error: function (data, textStatus) {
+
+				},
+				success: function (data, textStatus) {
+
+				},
+				complete: function () {
+
+				}
+			});
 		});
 	};
 	const imgBox = $(".carouselItem__imgBox");
@@ -157,4 +173,7 @@ $(function () {
 		owlModalCarousel.trigger('next.owl.carousel');
 	});
 });
+
+
+
 
