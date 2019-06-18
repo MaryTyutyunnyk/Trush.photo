@@ -118,7 +118,7 @@ $(function () {
 			$(".modal").css({"display": "block"});
 			$.ajax({
 				type: "GET",
-				url: "http://mysite.ru/action.php?resid=`${data.id}`",
+				url: "http://photo.apolokhov.in.ua/getimagemigx?resid=data.id",
 				data: {
 					id: $(this).id
 				},
