@@ -116,17 +116,15 @@ $(function () {
 	const addListeners = element => {
 		element.on('click', function () {
 			$(".modal").css({"display": "block"});
+			const id = $(this).id;
 			$.ajax({
 				type: "GET",
-				url: "http://photo.apolokhov.in.ua/getimagemigx?resid=data.id",
-				data: {
-					id: $(this).id
-				},
+				url: `http://photo.apolokhov.in.ua/getimagemigx?resid=${id}`,
 				error: function (data, textStatus) {
-
+					console("Error");
 				},
 				success: function (data, textStatus) {
-
+					Console.log(data);
 				},
 				complete: function () {
 
