@@ -113,10 +113,10 @@ $(function () {
 
 // Function for modal window
 
-	const addListeners = element => {
+	function addListeners(element) {
 		element.on('click', function () {
 			$(".modal").css({"display": "block"});
-			const id = $(this).data().id;
+			let id = $(this).data("id");
 
 			//removing all owl modal carousel items
 			$('.modalCarouselList__item').each(element => {
@@ -131,20 +131,20 @@ $(function () {
 
 				},
 				success: function (data) {
-					console.log(data);
 					// adding new loaded items
-					data.forEach(({title, image}, index) => {
-						owlModalCarousel.trigger('add.owl.carousel', [
-							`<li class="modalCarouselList__item">
+					if(data) {
+						data.forEach(({title, image}, index) => {
+							owlModalCarousel.trigger('add.owl.carousel', [
+								`<li class="modalCarouselList__item">
 								<img src=".${image}" alt="${title}" class="modalCarouselList__img">
 							</li>`
-						], index);
-					})
+							], index);
+						})
+					} return false;
 				},
 			});
 		});
-	};
-
+	}
 	const imgBox = $(".carouselItem__imgBox");
 	addListeners(imgBox);
 
