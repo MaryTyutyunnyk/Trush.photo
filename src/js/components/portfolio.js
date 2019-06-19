@@ -126,11 +126,12 @@ $(function () {
 
 			$.ajax({
 				type: "GET",
-				url: `http://photo.apolokhov.in.ua/getimagemigx?resid=${id}`,
+				url: `https://photo.apolokhov.in.ua/getimagemigx?resid=${id}`,
 				error: function (data, textStatus) {
 
 				},
 				success: function (data) {
+					console.log(data);
 					// adding new loaded items
 					data.forEach(({title, image}, index) => {
 						owlModalCarousel.trigger('add.owl.carousel', [
