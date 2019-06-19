@@ -116,7 +116,7 @@ $(function () {
 	const addListeners = element => {
 		element.on('click', function () {
 			$(".modal").css({"display": "block"});
-			const id = $(this).id;
+			const id = $(this).data().id;
 
 			//removing all owl modal carousel items
 			$('.modalCarouselList__item').each(element => {
