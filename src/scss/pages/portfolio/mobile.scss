@@ -161,14 +161,12 @@ body {
 
 		&__item {
 			margin-bottom: 2rem;
-		}
 
-		&__link {
-			font-size: 1.25rem;
-			color: $secondary;
-
-			&:hover {
-				color: $primary;
+			&.active {
+				a {
+					font-size: 1.25rem;
+					color: $primary;
+				}
 
 				.navbarNav__arrow {
 					path {
@@ -176,8 +174,13 @@ body {
 					}
 				}
 			}
+		}
 
-			&_active {
+		&__link {
+			font-size: 1.25rem;
+			color: $secondary;
+
+			&:hover {
 				color: $primary;
 
 				.navbarNav__arrow {
@@ -469,6 +472,8 @@ body {
 	}
 
 	.modalCarouselList {
+		display: flex;
+		align-items: center;
 		overflow-x: hidden;
 
 		&__img {

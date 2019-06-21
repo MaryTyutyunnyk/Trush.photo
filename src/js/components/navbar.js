@@ -28,6 +28,16 @@ $(function () {
 		$('.navbarLanguageDesktopSubMenu').removeClass("open");
 		$(".navbarLanguageDesktop__arrow").removeClass('upArrow');
 	});
+
+// Function for navbarNav__link activation
+
+	function addListenerToNavbarNavLink(element) {
+		element.on('click', function () {
+			$(".navbarNav__link").addClass(".active");
+		});
+	}
+	const NavbarNavLink = $(".navbarNav__link");
+	addListenerToNavbarNavLink(NavbarNavLink);
 });
 
 

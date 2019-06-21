@@ -47,3 +47,8 @@ a {
 html, body {
   box-sizing: border-box;
 }
+
+button {
+  -webkit-appearance: none;
+  border-radius: 0;
+}

@@ -156,14 +156,12 @@
 
 		&__item {
 			margin-bottom: 2rem;
-		}
 
-		&__link {
-			font-size: 1.25rem;
-			color: $secondary;
-
-			&:hover {
-				color: $primary;
+			&.active {
+				a {
+					font-size: 1.25rem;
+					color: $primary;
+				}
 
 				.navbarNav__arrow {
 					path {
@@ -171,8 +169,13 @@
 					}
 				}
 			}
+		}
 
-			&_active {
+		&__link {
+			font-size: 1.25rem;
+			color: $secondary;
+
+			&:hover {
 				color: $primary;
 
 				.navbarNav__arrow {

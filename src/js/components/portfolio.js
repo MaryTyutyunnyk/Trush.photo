@@ -116,33 +116,6 @@ $(function () {
 	function addListeners(element) {
 		element.on('click', function () {
 			$(".modal").css({"display": "block"});
-			let id = $(this).data("id");
-
-			//removing all owl modal carousel items
-			$('.modalCarouselList__item').each(element => {
-				owlModalCarousel.trigger('remove.owl.carousel', element);
-				owlModalCarousel.trigger('refresh.owl.carousel');
-			});
-
-			$.ajax({
-				type: "GET",
-				url: `https://photo.apolokhov.in.ua/getimagemigx?resid=${id}`,
-				error: function (data, textStatus) {
-
-				},
-				success: function (data) {
-					// adding new loaded items
-					if(data) {
-						data.forEach(({title, image}, index) => {
-							owlModalCarousel.trigger('add.owl.carousel', [
-								`<li class="modalCarouselList__item">
-								<img src=".${image}" alt="${title}" class="modalCarouselList__img">
-							</li>`
-							], index);
-						})
-					} return false;
-				},
-			});
 		});
 	}
 	const imgBox = $(".carouselItem__imgBox");
