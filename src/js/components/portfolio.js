@@ -10,17 +10,8 @@ $(function () {
 	const initCarouselListImage = () => {
 		owlCarouselListImage.owlCarousel({
 			autoWidth: true,
-			loop: true,
+			loop: false,
 			dots: false,
-			responsiveClass: true,
-			responsive: {
-				0: {
-					loop: false,
-				},
-				960: {
-					loop: true,
-				},
-			}
 		});
 		prevArrow.click(function () {
 			owlCarouselListImage.trigger('prev.owl.carousel');
@@ -65,17 +56,8 @@ $(function () {
 	const initCarouselListCatalogue = () => {
 		owlCarouselListCatalogue.owlCarousel({
 			autoWidth: true,
-			loop: true,
+			loop: false,
 			dots: false,
-			responsiveClass: true,
-			responsive: {
-				0: {
-					loop: false,
-				},
-				960: {
-					loop: true,
-				},
-			}
 		});
 		prevArrow2.click(function () {
 			owlCarouselListCatalogue.trigger('prev.owl.carousel');

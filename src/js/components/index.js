@@ -121,11 +121,24 @@ $(function () {
 $(function () {
 	// Function for brief pop-up
 
-	$(".navbarMenu__btn").on('click', function () {
+	$(".navbarMenu__btn").on("click", function () {
 		$(".brief").css({"display": "block"});
+		$("body").css({"position":"fixed", "overflow":"hidden"});
 	});
 
-	$(".brief__crossButton").on('click', function () {
+	$(".brief__crossButton").on("click", function () {
+		$('.navbarMenu').removeClass('navbarMenu_open');
+		$('.navbarBurger').removeClass('open');
 		$(".brief").css({"display": "none"});
+		$("body").css({"position":"inherit", "overflow":"auto"});
+	});
+});
+
+$(function () {
+	$(".briefSent__btn").on("click", function () {
+		$('.navbarMenu').removeClass('navbarMenu_open');
+		$('.navbarBurger').removeClass('open');
+		$(".brief").css({"display": "none"});
+		$("body").css({"position":"inherit", "overflow":"auto"});
 	});
 });
