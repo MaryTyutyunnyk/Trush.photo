@@ -161,19 +161,6 @@ body {
 
 		&__item {
 			margin-bottom: 2rem;
-
-			&.active {
-				a {
-					font-size: 1.25rem;
-					color: $primary;
-				}
-
-				.navbarNav__arrow {
-					path {
-						fill: $primary;
-					}
-				}
-			}
 		}
 
 		&__link {
@@ -193,6 +180,19 @@ body {
 
 		&__arrow {
 			display: none;
+		}
+	}
+
+	.active {
+		a {
+			font-size: 1.25rem;
+			color: $primary;
+		}
+
+		.navbarNav__arrow {
+			path {
+				fill: $primary;
+			}
 		}
 	}
 
@@ -448,9 +448,6 @@ body {
 	}
 
 	.modalCarousel {
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		padding: 0 1rem;
 
 		&__arrow {
@@ -462,8 +459,10 @@ body {
 		display: flex;
 	}
 
-	.owl-stage-outer {
-		overflow-x: hidden;
+	.owl-item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.owl-dots,
@@ -485,7 +484,6 @@ body {
 .blurModal {
 	display: none;
 }
-
 
 @media (min-width: 560px) {
 	.portfolio {

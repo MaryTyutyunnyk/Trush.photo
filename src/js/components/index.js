@@ -142,3 +142,36 @@ $(function () {
 		$("body").css({"position":"inherit", "overflow":"auto"});
 	});
 });
+
+// $(function () {
+// 	$('.navbarNav .navbarNav__item').each(function () {
+// 		let location = window.location.href;
+// 		let link = this.href;
+// 		if(location === link) {
+// 			$(this).addClass('active');
+// 		}
+// 	});
+// });
+
+// Function for navbarNav__link activation
+
+// $(function () {
+// 	const location = window.location.href;
+// 	const currentUrl = '/' + location.split('/').pop();
+//
+// 	$('.navbarNav li').each(function () {
+// 		let link = $(this).find('a').attr('href');
+//
+// 		if (currentUrl == link) {
+// 			$(this).addClass('active');
+// 		}
+// 	});
+// });
+
+// navbarNavLink toogle function
+
+// let navbarNavLink = $(".navbarNav__link");
+// navbarNavLink.click(function () {
+// 	$(".navbarNav__link.navbarNav__link_active").removeClass("navbarNav__link_active");
+// 	$(this).addClass("navbarNav__link_active");
+// });

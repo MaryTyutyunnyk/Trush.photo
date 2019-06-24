@@ -161,19 +161,6 @@ body {
 
 		&__item {
 			margin-bottom: 2rem;
-
-			&.active {
-				a {
-					font-size: 1.25rem;
-					color: $primary;
-				}
-
-				.navbarNav__arrow {
-					path {
-						fill: $primary;
-					}
-				}
-			}
 		}
 
 		&__link {
@@ -193,6 +180,20 @@ body {
 
 		&__arrow {
 			display: none;
+		}
+	}
+
+
+	.active {
+		a {
+			font-size: 1.25rem;
+			color: $primary;
+		}
+
+		.navbarNav__arrow {
+			path {
+				fill: $primary;
+			}
 		}
 	}
 

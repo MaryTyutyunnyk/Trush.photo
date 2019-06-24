@@ -116,7 +116,12 @@ $(function () {
 	const owlModalCarousel = $('#modalCarouselList');
 	owlModalCarousel.owlCarousel({
 		items: 1,
-		loop: true,
+		loop: false,
+		slideBy: 1,
+		// itemsDesktop: false,
+		// itemsDesktopSmall: false,
+		// itemsTablet: false,
+		// itemsMobile: false,
 		dots: false,
 		mouseDrag: false,
 		touchDrag: false,
